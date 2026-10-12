@@ -23,3 +23,15 @@ npm start
 ```
 
 The app requires no environment variables or external services.
+
+## Pages
+
+- `/`: Home
+- `/dashboard`: Teacher Dashboard
+- `/dashboard/student`: Student Dashboard (sample student: Alex Kim)
+- `/assignments`: Assignments
+- `/question-bank`: Question Bank with expandable answers
+- `/students`: Students
+- `/scores`: Scores
+
+All records are static mock data in `src/lib/mock-data.ts`. The teacher and student views are UI demonstrations, with no access restrictions or persistence.
