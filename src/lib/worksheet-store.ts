@@ -11,6 +11,8 @@ export type Attempt = {
   assignmentId: string;
   student: string;
   submittedAt: string;
+  sheetSyncedAt?: string;
+  sheetSyncError?: string;
   answers: Record<string, string>;
 };
 export type HomeworkState = {
@@ -52,6 +54,8 @@ function isState(value: unknown): value is HomeworkState {
         typeof a.student === "string" &&
         typeof a.submittedAt === "string" &&
         Number.isFinite(Date.parse(a.submittedAt)) &&
+        (a.sheetSyncedAt === undefined || typeof a.sheetSyncedAt === "string") &&
+        (a.sheetSyncError === undefined || typeof a.sheetSyncError === "string") &&
         isAnswers(a.answers),
     )
   );

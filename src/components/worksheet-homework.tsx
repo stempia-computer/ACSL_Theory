@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { SheetSyncStatus, sendAttemptToSheet } from "@/components/sheet-sync";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
@@ -106,6 +107,7 @@ export function HomeworkList({ scoresOnly = false }: { scoresOnly?: boolean }) {
   return (
     <>
       <StudentIdentity />
+      <SheetSyncStatus />
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <label className="text-sm font-medium">
           Division
@@ -224,6 +226,7 @@ export function WorksheetHomework({
   return (
     <>
       <StudentIdentity />
+      <SheetSyncStatus />
       {homework.ready && homework.state.student ? (
         <Exercise
           key={`${assignment.id}:${studentKey(homework.state.student)}:${requestedAttempt || "latest"}`}
@@ -289,6 +292,7 @@ function Exercise({
       delete drafts[key];
       return { ...s, drafts, attempts: [...s.attempts, attempt] };
     });
+    void sendAttemptToSheet(attempt);
     setChosenId(attempt.id);
     setWorking(false);
     setConfirmBlank(false);

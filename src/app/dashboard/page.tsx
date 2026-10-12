@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SheetSyncStatus } from "@/components/sheet-sync";
 import { Card, DashboardTabs, PageHeader, Stats } from "@/components/ui";
 import { worksheetAssignments, worksheetQuestions } from "@/lib/worksheet-data";
 export default function TeacherDashboard() {
@@ -9,6 +10,7 @@ export default function TeacherDashboard() {
         title="Teacher Dashboard"
         description="Computer Number Systems worksheets ready for practice and automatic scoring."
       />
+      <SheetSyncStatus />
       <Stats
         items={[
           { label: "Divisions", value: 3 },
