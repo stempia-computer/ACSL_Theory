@@ -1,22 +1,13 @@
-import { DataTable, PageHeader } from "@/components/ui";
-import { scores } from "@/lib/mock-data";
-
+import { PageHeader } from "@/components/ui";
+import { HomeworkList } from "@/components/worksheet-homework";
 export default function Scores() {
   return (
     <>
       <PageHeader
         title="Scores"
-        description="Sample assignment results across the class."
+        description="Review saved worksheet attempts and return to your incorrect answers."
       />
-      <DataTable
-        headers={["Student", "Assignment", "Score", "Percentage"]}
-        rows={scores.map((s) => [
-          s.student,
-          s.assignment,
-          `${s.earned}/${s.possible}`,
-          `${Math.round((s.earned / s.possible) * 100)}%`,
-        ])}
-      />
+      <HomeworkList scoresOnly />
     </>
   );
 }

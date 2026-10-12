@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <footer className="mx-auto max-w-6xl px-6 py-6 text-sm text-slate-500">
-          ACSL Theory · Sample data for demonstration
+          ACSL Theory · Worksheet practice by Stempia Computer Institute
         </footer>
       </body>
     </html>

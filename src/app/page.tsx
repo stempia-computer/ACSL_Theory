@@ -15,10 +15,10 @@ export default function Home() {
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">
         <Link
-          href="/dashboard"
+          href="/assignments"
           className="rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700"
         >
-          Teacher Dashboard
+          Open worksheet homework
         </Link>
         <Link
           href="/dashboard/student"

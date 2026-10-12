@@ -1,0 +1,2534 @@
+{
+  "assignments": [
+    {
+      "id": "junior-cns-1",
+      "division": "junior",
+      "title": "Junior \u00b7 Computer Number Systems \u00b7 Part 1",
+      "first": 1,
+      "last": 14,
+      "due": "2026-10-16",
+      "questionIds": [
+        "junior-cns-01",
+        "junior-cns-02",
+        "junior-cns-03",
+        "junior-cns-04",
+        "junior-cns-05",
+        "junior-cns-06",
+        "junior-cns-07",
+        "junior-cns-08",
+        "junior-cns-09",
+        "junior-cns-10",
+        "junior-cns-11",
+        "junior-cns-12",
+        "junior-cns-13",
+        "junior-cns-14"
+      ]
+    },
+    {
+      "id": "junior-cns-2",
+      "division": "junior",
+      "title": "Junior \u00b7 Computer Number Systems \u00b7 Part 2",
+      "first": 15,
+      "last": 28,
+      "due": "2026-10-16",
+      "questionIds": [
+        "junior-cns-15",
+        "junior-cns-16",
+        "junior-cns-17",
+        "junior-cns-18",
+        "junior-cns-19",
+        "junior-cns-20",
+        "junior-cns-21",
+        "junior-cns-22",
+        "junior-cns-23",
+        "junior-cns-24",
+        "junior-cns-25",
+        "junior-cns-26",
+        "junior-cns-27",
+        "junior-cns-28"
+      ]
+    },
+    {
+      "id": "intermediate-cns-1",
+      "division": "intermediate",
+      "title": "Intermediate \u00b7 Computer Number Systems \u00b7 Part 1",
+      "first": 1,
+      "last": 20,
+      "due": "2026-10-16",
+      "questionIds": [
+        "intermediate-cns-01",
+        "intermediate-cns-02",
+        "intermediate-cns-03",
+        "intermediate-cns-04",
+        "intermediate-cns-05",
+        "intermediate-cns-06",
+        "intermediate-cns-07",
+        "intermediate-cns-08",
+        "intermediate-cns-09",
+        "intermediate-cns-10",
+        "intermediate-cns-11",
+        "intermediate-cns-12",
+        "intermediate-cns-13",
+        "intermediate-cns-14",
+        "intermediate-cns-15",
+        "intermediate-cns-16",
+        "intermediate-cns-17",
+        "intermediate-cns-18",
+        "intermediate-cns-19",
+        "intermediate-cns-20"
+      ]
+    },
+    {
+      "id": "intermediate-cns-2",
+      "division": "intermediate",
+      "title": "Intermediate \u00b7 Computer Number Systems \u00b7 Part 2",
+      "first": 21,
+      "last": 39,
+      "due": "2026-10-16",
+      "questionIds": [
+        "intermediate-cns-21",
+        "intermediate-cns-22",
+        "intermediate-cns-23",
+        "intermediate-cns-24",
+        "intermediate-cns-25",
+        "intermediate-cns-26",
+        "intermediate-cns-27",
+        "intermediate-cns-28",
+        "intermediate-cns-29",
+        "intermediate-cns-30",
+        "intermediate-cns-31",
+        "intermediate-cns-32",
+        "intermediate-cns-33",
+        "intermediate-cns-34",
+        "intermediate-cns-35",
+        "intermediate-cns-36",
+        "intermediate-cns-37",
+        "intermediate-cns-38",
+        "intermediate-cns-39"
+      ]
+    },
+    {
+      "id": "senior-cns-1",
+      "division": "senior",
+      "title": "Senior \u00b7 Computer Number Systems \u00b7 Part 1",
+      "first": 1,
+      "last": 20,
+      "due": "2026-10-16",
+      "questionIds": [
+        "senior-cns-01",
+        "senior-cns-02",
+        "senior-cns-03",
+        "senior-cns-04",
+        "senior-cns-05",
+        "senior-cns-06",
+        "senior-cns-07",
+        "senior-cns-08",
+        "senior-cns-09",
+        "senior-cns-10",
+        "senior-cns-11",
+        "senior-cns-12",
+        "senior-cns-13",
+        "senior-cns-14",
+        "senior-cns-15",
+        "senior-cns-16",
+        "senior-cns-17",
+        "senior-cns-18",
+        "senior-cns-19",
+        "senior-cns-20"
+      ]
+    },
+    {
+      "id": "senior-cns-2",
+      "division": "senior",
+      "title": "Senior \u00b7 Computer Number Systems \u00b7 Part 2",
+      "first": 21,
+      "last": 40,
+      "due": "2026-10-16",
+      "questionIds": [
+        "senior-cns-21",
+        "senior-cns-22",
+        "senior-cns-23",
+        "senior-cns-24",
+        "senior-cns-25",
+        "senior-cns-26",
+        "senior-cns-27",
+        "senior-cns-28",
+        "senior-cns-29",
+        "senior-cns-30",
+        "senior-cns-31",
+        "senior-cns-32",
+        "senior-cns-33",
+        "senior-cns-34",
+        "senior-cns-35",
+        "senior-cns-36",
+        "senior-cns-37",
+        "senior-cns-38",
+        "senior-cns-39",
+        "senior-cns-40"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "junior-cns-01",
+      "division": "junior",
+      "number": 1,
+      "answer": "10001001111",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-01.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-01.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "junior-cns-02",
+      "division": "junior",
+      "number": 2,
+      "answer": "4CE",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-02.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-02.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "junior-cns-03",
+      "division": "junior",
+      "number": 3,
+      "answer": "B,C,D",
+      "aliases": [],
+      "mode": "set",
+      "base": null,
+      "hint": "Enter all answers separated by commas. Order does not matter; include every answer.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-03.png",
+        "width": 1070,
+        "height": 273
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-03.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "junior-cns-04",
+      "division": "junior",
+      "number": 4,
+      "answer": "A",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-04.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-04.png",
+        "width": 1070,
+        "height": 162
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "junior-cns-05",
+      "division": "junior",
+      "number": 5,
+      "answer": "11101101,A",
+      "aliases": [],
+      "mode": "ordered",
+      "base": null,
+      "hint": "Enter A then B, separated by a comma: larger binary number, hexadecimal difference. Omit base suffixes.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-05.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-05.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "junior-cns-06",
+      "division": "junior",
+      "number": 6,
+      "answer": "131243",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-06.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-06.png",
+        "width": 1070,
+        "height": 162
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "junior-cns-07",
+      "division": "junior",
+      "number": 7,
+      "answer": "13B",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-07.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-07.png",
+        "width": 1070,
+        "height": 163
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "junior-cns-08",
+      "division": "junior",
+      "number": 8,
+      "answer": "1",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-08.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-08.png",
+        "width": 1070,
+        "height": 251
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "junior-cns-09",
+      "division": "junior",
+      "number": 9,
+      "answer": "345",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-09.png",
+        "width": 1070,
+        "height": 223
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-09.png",
+        "width": 1070,
+        "height": 163
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "junior-cns-10",
+      "division": "junior",
+      "number": 10,
+      "answer": "D,A,C,B",
+      "aliases": [],
+      "mode": "ordered",
+      "base": null,
+      "hint": "Enter all answers separated by commas in the requested order.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-10.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-10.png",
+        "width": 1070,
+        "height": 162
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "junior-cns-11",
+      "division": "junior",
+      "number": 11,
+      "answer": "521664",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-11.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-11.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "junior-cns-12",
+      "division": "junior",
+      "number": 12,
+      "answer": "1001",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-12.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-12.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "junior-cns-13",
+      "division": "junior",
+      "number": 13,
+      "answer": "44",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-13.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-13.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "junior-cns-14",
+      "division": "junior",
+      "number": 14,
+      "answer": "13870",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-14.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-14.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "junior-cns-15",
+      "division": "junior",
+      "number": 15,
+      "answer": "7E",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-15.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-15.png",
+        "width": 1070,
+        "height": 219
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "junior-cns-16",
+      "division": "junior",
+      "number": 16,
+      "answer": "B2",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-16.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-16.png",
+        "width": 1070,
+        "height": 249
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "junior-cns-17",
+      "division": "junior",
+      "number": 17,
+      "answer": "50541745",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-17.png",
+        "width": 1070,
+        "height": 223
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-17.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "junior-cns-18",
+      "division": "junior",
+      "number": 18,
+      "answer": "71",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-18.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-18.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "junior-cns-19",
+      "division": "junior",
+      "number": 19,
+      "answer": "A8",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-19.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-19.png",
+        "width": 1070,
+        "height": 273
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "junior-cns-20",
+      "division": "junior",
+      "number": 20,
+      "answer": "8BB",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-20.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-20.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "junior-cns-21",
+      "division": "junior",
+      "number": 21,
+      "answer": "31C2",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-21.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-21.png",
+        "width": 1070,
+        "height": 301
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "junior-cns-22",
+      "division": "junior",
+      "number": 22,
+      "answer": "175316",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-22.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-22.png",
+        "width": 1070,
+        "height": 444
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "junior-cns-23",
+      "division": "junior",
+      "number": 23,
+      "answer": "10F",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-23.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-23.png",
+        "width": 1070,
+        "height": 301
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "junior-cns-24",
+      "division": "junior",
+      "number": 24,
+      "answer": "11001",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-24.png",
+        "width": 1070,
+        "height": 217
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-24.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "junior-cns-25",
+      "division": "junior",
+      "number": 25,
+      "answer": "2471",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-25.png",
+        "width": 1070,
+        "height": 334
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-25.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "junior-cns-26",
+      "division": "junior",
+      "number": 26,
+      "answer": "5B",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-26.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-26.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "junior-cns-27",
+      "division": "junior",
+      "number": 27,
+      "answer": "1B5",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-27.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-27.png",
+        "width": 1070,
+        "height": 273
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "junior-cns-28",
+      "division": "junior",
+      "number": 28,
+      "answer": "7",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/junior/question-28.png",
+        "width": 1070,
+        "height": 1110
+      },
+      "solutionImage": {
+        "src": "/worksheets/junior/solution-28.png",
+        "width": 1070,
+        "height": 336
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "intermediate-cns-01",
+      "division": "intermediate",
+      "number": 1,
+      "answer": "5755",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-01.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-01.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "intermediate-cns-02",
+      "division": "intermediate",
+      "number": 2,
+      "answer": "86D7",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-02.png",
+        "width": 1070,
+        "height": 164
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-02.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "intermediate-cns-03",
+      "division": "intermediate",
+      "number": 3,
+      "answer": "100010011011",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-03.png",
+        "width": 1070,
+        "height": 192
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-03.png",
+        "width": 1070,
+        "height": 220
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "intermediate-cns-04",
+      "division": "intermediate",
+      "number": 4,
+      "answer": "5",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-04.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-04.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "intermediate-cns-05",
+      "division": "intermediate",
+      "number": 5,
+      "answer": "526",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-05.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-05.png",
+        "width": 1070,
+        "height": 300
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "intermediate-cns-06",
+      "division": "intermediate",
+      "number": 6,
+      "answer": "750220",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-06.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-06.png",
+        "width": 1070,
+        "height": 163
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "intermediate-cns-07",
+      "division": "intermediate",
+      "number": 7,
+      "answer": "C",
+      "aliases": [],
+      "mode": "text",
+      "base": null,
+      "hint": "Enter the answer shown by the question.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-07.png",
+        "width": 1070,
+        "height": 301
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-07.png",
+        "width": 1070,
+        "height": 295
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "intermediate-cns-08",
+      "division": "intermediate",
+      "number": 8,
+      "answer": "5",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-08.png",
+        "width": 1070,
+        "height": 238
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-08.png",
+        "width": 1070,
+        "height": 273
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "intermediate-cns-09",
+      "division": "intermediate",
+      "number": 9,
+      "answer": "29/128",
+      "aliases": [
+        "0.2265625",
+        ".2265625"
+      ],
+      "mode": "fraction",
+      "base": null,
+      "hint": "Enter an exact fraction or decimal (no rounding).",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-09.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-09.png",
+        "width": 1070,
+        "height": 196
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "intermediate-cns-10",
+      "division": "intermediate",
+      "number": 10,
+      "answer": "29F",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-10.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-10.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "intermediate-cns-11",
+      "division": "intermediate",
+      "number": 11,
+      "answer": "144",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-11.png",
+        "width": 1070,
+        "height": 219
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-11.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "intermediate-cns-12",
+      "division": "intermediate",
+      "number": 12,
+      "answer": "10357",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-12.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-12.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "intermediate-cns-13",
+      "division": "intermediate",
+      "number": 13,
+      "answer": "C",
+      "aliases": [
+        "124"
+      ],
+      "mode": "text",
+      "base": null,
+      "hint": "Enter the answer shown by the question.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-13.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-13.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "intermediate-cns-14",
+      "division": "intermediate",
+      "number": 14,
+      "answer": "77",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-14.png",
+        "width": 1070,
+        "height": 220
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-14.png",
+        "width": 1070,
+        "height": 327
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "intermediate-cns-15",
+      "division": "intermediate",
+      "number": 15,
+      "answer": "C,B,A,D",
+      "aliases": [],
+      "mode": "ordered",
+      "base": null,
+      "hint": "Enter all answers separated by commas in the requested order.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-15.png",
+        "width": 1070,
+        "height": 301
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-15.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "intermediate-cns-16",
+      "division": "intermediate",
+      "number": 16,
+      "answer": "24256142326",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-16.png",
+        "width": 1070,
+        "height": 219
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-16.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "intermediate-cns-17",
+      "division": "intermediate",
+      "number": 17,
+      "answer": "11",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-17.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-17.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "intermediate-cns-18",
+      "division": "intermediate",
+      "number": 18,
+      "answer": "1",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-18.png",
+        "width": 1070,
+        "height": 245
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-18.png",
+        "width": 1070,
+        "height": 194
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "intermediate-cns-19",
+      "division": "intermediate",
+      "number": 19,
+      "answer": "B",
+      "aliases": [
+        "133337"
+      ],
+      "mode": "text",
+      "base": null,
+      "hint": "Enter the answer shown by the question.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-19.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-19.png",
+        "width": 1070,
+        "height": 273
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "intermediate-cns-20",
+      "division": "intermediate",
+      "number": 20,
+      "answer": "100101010",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-20.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-20.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "intermediate-cns-21",
+      "division": "intermediate",
+      "number": 21,
+      "answer": "C",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-21.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-21.png",
+        "width": 1070,
+        "height": 330
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "intermediate-cns-22",
+      "division": "intermediate",
+      "number": 22,
+      "answer": "2",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-22.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-22.png",
+        "width": 1070,
+        "height": 194
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "intermediate-cns-23",
+      "division": "intermediate",
+      "number": 23,
+      "answer": "103",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-23.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-23.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "intermediate-cns-24",
+      "division": "intermediate",
+      "number": 24,
+      "answer": "6C",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-24.png",
+        "width": 1070,
+        "height": 251
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-24.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "intermediate-cns-25",
+      "division": "intermediate",
+      "number": 25,
+      "answer": "196",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-25.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-25.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "intermediate-cns-26",
+      "division": "intermediate",
+      "number": 26,
+      "answer": "322",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-26.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-26.png",
+        "width": 1070,
+        "height": 219
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "intermediate-cns-27",
+      "division": "intermediate",
+      "number": 27,
+      "answer": "1100011",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-27.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-27.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "intermediate-cns-28",
+      "division": "intermediate",
+      "number": 28,
+      "answer": "41C",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-28.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-28.png",
+        "width": 1070,
+        "height": 273
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "intermediate-cns-29",
+      "division": "intermediate",
+      "number": 29,
+      "answer": "4",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-29.png",
+        "width": 1070,
+        "height": 245
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-29.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "intermediate-cns-30",
+      "division": "intermediate",
+      "number": 30,
+      "answer": "CCF",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-30.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-30.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "intermediate-cns-31",
+      "division": "intermediate",
+      "number": 31,
+      "answer": "241",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-31.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-31.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "intermediate-cns-32",
+      "division": "intermediate",
+      "number": 32,
+      "answer": "678",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-32.png",
+        "width": 1070,
+        "height": 278
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-32.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "intermediate-cns-33",
+      "division": "intermediate",
+      "number": 33,
+      "answer": "20053",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-33.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-33.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "intermediate-cns-34",
+      "division": "intermediate",
+      "number": 34,
+      "answer": "101",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-34.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-34.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "intermediate-cns-35",
+      "division": "intermediate",
+      "number": 35,
+      "answer": "567",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-35.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-35.png",
+        "width": 1070,
+        "height": 278
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "intermediate-cns-36",
+      "division": "intermediate",
+      "number": 36,
+      "answer": "B17",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-36.png",
+        "width": 1070,
+        "height": 245
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-36.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 6
+    },
+    {
+      "id": "intermediate-cns-37",
+      "division": "intermediate",
+      "number": 37,
+      "answer": "A54",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-37.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-37.png",
+        "width": 1070,
+        "height": 301
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 6
+    },
+    {
+      "id": "intermediate-cns-38",
+      "division": "intermediate",
+      "number": 38,
+      "answer": "C",
+      "aliases": [],
+      "mode": "text",
+      "base": null,
+      "hint": "Enter the answer shown by the question.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-38.png",
+        "width": 1070,
+        "height": 245
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-38.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 6
+    },
+    {
+      "id": "intermediate-cns-39",
+      "division": "intermediate",
+      "number": 39,
+      "answer": "103",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/intermediate/question-39.png",
+        "width": 1070,
+        "height": 364
+      },
+      "solutionImage": {
+        "src": "/worksheets/intermediate/solution-39.png",
+        "width": 1070,
+        "height": 833
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 6
+    },
+    {
+      "id": "senior-cns-01",
+      "division": "senior",
+      "number": 1,
+      "answer": "5637",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-01.png",
+        "width": 1070,
+        "height": 164
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-01.png",
+        "width": 1070,
+        "height": 164
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "senior-cns-02",
+      "division": "senior",
+      "number": 2,
+      "answer": "12",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-02.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-02.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "senior-cns-03",
+      "division": "senior",
+      "number": 3,
+      "answer": "1111000001010101",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-03.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-03.png",
+        "width": 1070,
+        "height": 275
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "senior-cns-04",
+      "division": "senior",
+      "number": 4,
+      "answer": "2D9",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-04.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-04.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "senior-cns-05",
+      "division": "senior",
+      "number": 5,
+      "answer": "10F",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-05.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-05.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "senior-cns-06",
+      "division": "senior",
+      "number": 6,
+      "answer": "FE01",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-06.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-06.png",
+        "width": 1070,
+        "height": 163
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "senior-cns-07",
+      "division": "senior",
+      "number": 7,
+      "answer": "B,E",
+      "aliases": [],
+      "mode": "set",
+      "base": null,
+      "hint": "Enter all answers separated by commas. Order does not matter; include every answer.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-07.png",
+        "width": 1070,
+        "height": 301
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-07.png",
+        "width": 1070,
+        "height": 302
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 1
+    },
+    {
+      "id": "senior-cns-08",
+      "division": "senior",
+      "number": 8,
+      "answer": "36",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-08.png",
+        "width": 1070,
+        "height": 203
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-08.png",
+        "width": 1070,
+        "height": 107
+      },
+      "sourceQuestionPage": 1,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "senior-cns-09",
+      "division": "senior",
+      "number": 9,
+      "answer": "-144",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-09.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-09.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "senior-cns-10",
+      "division": "senior",
+      "number": 10,
+      "answer": "3FB",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-10.png",
+        "width": 1070,
+        "height": 164
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-10.png",
+        "width": 1070,
+        "height": 249
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "senior-cns-11",
+      "division": "senior",
+      "number": 11,
+      "answer": "D",
+      "aliases": [],
+      "mode": "text",
+      "base": null,
+      "hint": "Enter the answer shown by the question.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-11.png",
+        "width": 1070,
+        "height": 245
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-11.png",
+        "width": 1070,
+        "height": 301
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "senior-cns-12",
+      "division": "senior",
+      "number": 12,
+      "answer": "110",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-12.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-12.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "senior-cns-13",
+      "division": "senior",
+      "number": 13,
+      "answer": "A,4B",
+      "aliases": [],
+      "mode": "set",
+      "base": null,
+      "hint": "Enter all answers separated by commas. Order does not matter; include every answer.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-13.png",
+        "width": 1070,
+        "height": 164
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-13.png",
+        "width": 1070,
+        "height": 251
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "senior-cns-14",
+      "division": "senior",
+      "number": 14,
+      "answer": "100",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-14.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-14.png",
+        "width": 1070,
+        "height": 325
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 2
+    },
+    {
+      "id": "senior-cns-15",
+      "division": "senior",
+      "number": 15,
+      "answer": "11001",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-15.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-15.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "senior-cns-16",
+      "division": "senior",
+      "number": 16,
+      "answer": "111110A",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-16.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-16.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "senior-cns-17",
+      "division": "senior",
+      "number": 17,
+      "answer": "1",
+      "aliases": [],
+      "mode": "number",
+      "base": 2,
+      "hint": "Enter base 2 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-17.png",
+        "width": 1070,
+        "height": 275
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-17.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 2,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "senior-cns-18",
+      "division": "senior",
+      "number": 18,
+      "answer": "B20",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-18.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-18.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "senior-cns-19",
+      "division": "senior",
+      "number": 19,
+      "answer": "235",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-19.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-19.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "senior-cns-20",
+      "division": "senior",
+      "number": 20,
+      "answer": "5",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-20.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-20.png",
+        "width": 1070,
+        "height": 273
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "senior-cns-21",
+      "division": "senior",
+      "number": 21,
+      "answer": "2",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-21.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-21.png",
+        "width": 1070,
+        "height": 278
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 3
+    },
+    {
+      "id": "senior-cns-22",
+      "division": "senior",
+      "number": 22,
+      "answer": "875A",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-22.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-22.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "senior-cns-23",
+      "division": "senior",
+      "number": 23,
+      "answer": "38D",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-23.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-23.png",
+        "width": 1070,
+        "height": 273
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "senior-cns-24",
+      "division": "senior",
+      "number": 24,
+      "answer": "A,B",
+      "aliases": [],
+      "mode": "set",
+      "base": null,
+      "hint": "Enter all answers separated by commas. Order does not matter; include every answer.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-24.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-24.png",
+        "width": 1070,
+        "height": 273
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "senior-cns-25",
+      "division": "senior",
+      "number": 25,
+      "answer": "A",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-25.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-25.png",
+        "width": 1070,
+        "height": 275
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "senior-cns-26",
+      "division": "senior",
+      "number": 26,
+      "answer": "15ACE",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-26.png",
+        "width": 1070,
+        "height": 251
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-26.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 3,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "senior-cns-27",
+      "division": "senior",
+      "number": 27,
+      "answer": "6EE6",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-27.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-27.png",
+        "width": 1070,
+        "height": 190
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "senior-cns-28",
+      "division": "senior",
+      "number": 28,
+      "answer": "DEED",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-28.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-28.png",
+        "width": 1070,
+        "height": 249
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 4
+    },
+    {
+      "id": "senior-cns-29",
+      "division": "senior",
+      "number": 29,
+      "answer": "17",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-29.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-29.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "senior-cns-30",
+      "division": "senior",
+      "number": 30,
+      "answer": "32 N",
+      "aliases": [],
+      "mode": "text",
+      "base": null,
+      "hint": "Enter hexadecimal distance followed by N or S, e.g. FF N.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-30.png",
+        "width": 1070,
+        "height": 245
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-30.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "senior-cns-31",
+      "division": "senior",
+      "number": 31,
+      "answer": "63",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-31.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-31.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "senior-cns-32",
+      "division": "senior",
+      "number": 32,
+      "answer": "8,-1",
+      "aliases": [],
+      "mode": "set",
+      "base": null,
+      "hint": "Enter all answers separated by commas. Order does not matter; include every answer.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-32.png",
+        "width": 1070,
+        "height": 162
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-32.png",
+        "width": 1070,
+        "height": 249
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "senior-cns-33",
+      "division": "senior",
+      "number": 33,
+      "answer": "203",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-33.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-33.png",
+        "width": 1070,
+        "height": 218
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "senior-cns-34",
+      "division": "senior",
+      "number": 34,
+      "answer": "73B",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-34.png",
+        "width": 1070,
+        "height": 251
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-34.png",
+        "width": 1070,
+        "height": 440
+      },
+      "sourceQuestionPage": 4,
+      "sourceSolutionPage": 5
+    },
+    {
+      "id": "senior-cns-35",
+      "division": "senior",
+      "number": 35,
+      "answer": "B6",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-35.png",
+        "width": 1070,
+        "height": 163
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-35.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 6
+    },
+    {
+      "id": "senior-cns-36",
+      "division": "senior",
+      "number": 36,
+      "answer": "332",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-36.png",
+        "width": 1070,
+        "height": 190
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-36.png",
+        "width": 1070,
+        "height": 273
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 6
+    },
+    {
+      "id": "senior-cns-37",
+      "division": "senior",
+      "number": 37,
+      "answer": "E",
+      "aliases": [],
+      "mode": "text",
+      "base": null,
+      "hint": "Enter the answer shown by the question.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-37.png",
+        "width": 1070,
+        "height": 245
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-37.png",
+        "width": 1070,
+        "height": 273
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 6
+    },
+    {
+      "id": "senior-cns-38",
+      "division": "senior",
+      "number": 38,
+      "answer": "6056",
+      "aliases": [],
+      "mode": "number",
+      "base": 8,
+      "hint": "Enter base 8 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-38.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-38.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 6
+    },
+    {
+      "id": "senior-cns-39",
+      "division": "senior",
+      "number": 39,
+      "answer": "340",
+      "aliases": [],
+      "mode": "number",
+      "base": 10,
+      "hint": "Enter base 10 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-39.png",
+        "width": 1070,
+        "height": 218
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-39.png",
+        "width": 1070,
+        "height": 245
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 6
+    },
+    {
+      "id": "senior-cns-40",
+      "division": "senior",
+      "number": 40,
+      "answer": "400",
+      "aliases": [],
+      "mode": "number",
+      "base": 16,
+      "hint": "Enter base 16 digits only, without a base suffix.",
+      "questionImage": {
+        "src": "/worksheets/senior/question-40.png",
+        "width": 1070,
+        "height": 557
+      },
+      "solutionImage": {
+        "src": "/worksheets/senior/solution-40.png",
+        "width": 1070,
+        "height": 336
+      },
+      "sourceQuestionPage": 5,
+      "sourceSolutionPage": 6
+    }
+  ]
+}
