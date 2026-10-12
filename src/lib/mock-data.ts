@@ -1,47 +1,4 @@
-export const questions = [
-  {
-    id: "Q001",
-    topic: "Number Systems",
-    prompt: "Convert the binary number 101101 to decimal.",
-    difficulty: "Beginner",
-    answer: "45",
-  },
-  {
-    id: "Q002",
-    topic: "Boolean Algebra",
-    prompt: "Simplify the expression A + A · B.",
-    difficulty: "Intermediate",
-    answer: "A",
-  },
-  {
-    id: "Q003",
-    topic: "Data Structures",
-    prompt: "Which data structure follows a first-in, first-out order?",
-    difficulty: "Beginner",
-    answer: "Queue",
-  },
-  {
-    id: "Q004",
-    topic: "Computer Organization",
-    prompt: "How many distinct values can an unsigned 8-bit integer represent?",
-    difficulty: "Beginner",
-    answer: "256",
-  },
-  {
-    id: "Q005",
-    topic: "Prefix / Infix / Postfix",
-    prompt: "Write A + B * C in postfix notation.",
-    difficulty: "Intermediate",
-    answer: "A B C * +",
-  },
-  {
-    id: "Q006",
-    topic: "Graph Theory",
-    prompt: "What is the sum of vertex degrees in a graph with 7 edges?",
-    difficulty: "Intermediate",
-    answer: "14",
-  },
-];
+export { sampleQuestions as questions } from "./questions";
 
 export const assignments = [
   {

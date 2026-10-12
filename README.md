@@ -30,8 +30,8 @@ The app requires no environment variables or external services.
 - `/dashboard`: Teacher Dashboard
 - `/dashboard/student`: Student Dashboard (sample student: Alex Kim)
 - `/assignments`: Assignments
-- `/question-bank`: Question Bank with expandable answers
+- `/question-bank`: Question Bank with search, metadata filters, details, and a four-choice question editor
 - `/students`: Students
 - `/scores`: Scores
 
-All records are static mock data in `src/lib/mock-data.ts`. The teacher and student views are UI demonstrations, with no access restrictions or persistence.
+Classroom records are static mock data in `src/lib/mock-data.ts`. Question types, validation, and illustrative samples are in `src/lib/questions.ts`. Question Bank additions and edits are stored in browser localStorage; they are not shared between users or devices. Source PDF is an optional HTTPS link, not a file upload. The teacher and student views are UI demonstrations, with no access restrictions or persistence.
