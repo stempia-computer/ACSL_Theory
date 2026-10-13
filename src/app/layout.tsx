@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import "./globals.css";
 import { Navigation } from "@/components/navigation";
 
@@ -18,7 +18,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           Skip to content
         </a>
-        <Navigation />
+        <Suspense
+          fallback={
+            <header className="border-b bg-white p-6 font-bold">
+              Stempia Computer Institute
+            </header>
+          }
+        >
+          <Navigation />
+        </Suspense>
         <main id="main-content" className="mx-auto max-w-6xl px-6 py-10">
           {children}
         </main>

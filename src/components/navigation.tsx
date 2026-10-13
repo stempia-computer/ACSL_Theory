@@ -6,8 +6,6 @@ import { usePathname } from "next/navigation";
 const links = [
   ["Dashboard", "/dashboard"],
   ["Assignments", "/assignments"],
-  ["Question Bank", "/question-bank"],
-  ["Students", "/students"],
   ["Scores", "/scores"],
 ];
 

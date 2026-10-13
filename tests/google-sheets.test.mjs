@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
-import vm from "node:vm";
+import { receiver } from "./helpers/apps-script.mjs";
+import { verifiedGoogleEmail } from "../src/lib/auth-policy.ts";
 import { prepareSheetSubmission } from "../src/lib/sheet-submission.ts";
 import { deliverToGoogleSheets } from "../src/lib/google-sheets-transport.ts";
 const data = JSON.parse(
@@ -126,150 +127,234 @@ test("reject untrusted redirects, unknown receipts, and failed or timed out rece
   );
 });
 
-function receiver() {
-  const sheets = new Map();
-  const props = new Map([
-    ["ACSL_SHEETS_TOKEN", "test-token-".repeat(4)],
-    ["SPREADSHEET_ID", "test-sheet"],
-  ]);
-  let failSummary = false,
-    locked = false,
-    available = true;
-  class Sheet {
-    constructor(name) {
-      this.name = name;
-      this.rows = [];
-    }
-    getLastRow() {
-      return this.rows.length;
-    }
-    setFrozenRows() {}
-    getRange(row, col, height, width) {
-      const range = {
-        getValues: () =>
-          Array.from({ length: height }, (_, r) =>
-            Array.from(
-              { length: width },
-              (_, c) => this.rows[row + r - 1]?.[col + c - 1] ?? "",
-            ),
-          ),
-        setValues: (values) => {
-          if (failSummary && this.name === "제출 기록" && row > 1) {
-            failSummary = false;
-            throw new Error("Temporary sheet failure");
-          }
-          values.forEach((r, ri) => {
-            this.rows[row + ri - 1] ??= [];
-            r.forEach((v, ci) => (this.rows[row + ri - 1][col + ci - 1] = v));
-          });
-          return range;
-        },
-        setFontWeight: () => range,
-        setNumberFormat: () => range,
-      };
-      return range;
-    }
-  }
-  const book = {
-    getId: () => "test-sheet",
-    getSheetByName: (name) => sheets.get(name),
-    insertSheet: (name) => {
-      const s = new Sheet(name);
-      sheets.set(name, s);
-      return s;
-    },
-  };
-  const context = vm.createContext({
-    SpreadsheetApp: {
-      getActiveSpreadsheet: () => book,
-      openById: () => book,
-      flush() {},
-      getUi: () => ({ alert() {}, ButtonSet: { OK: "ok" } }),
-    },
-    PropertiesService: {
-      getScriptProperties: () => ({
-        getProperty: (k) => props.get(k),
-        setProperty: (k, v) => props.set(k, v),
-      }),
-    },
-    Utilities: { getUuid: () => "fake-uuid" },
-    LockService: {
-      getScriptLock: () => ({
-        tryLock: () => {
-          locked = available;
-          return available;
-        },
-        hasLock: () => locked,
-        releaseLock: () => {
-          locked = false;
-        },
-      }),
-    },
-    ContentService: {
-      MimeType: { JSON: "json" },
-      createTextOutput: (text) => ({ setMimeType: () => text }),
-    },
+const teacher = "wonup2@gmail.com";
+const student = "student@example.com";
+function classroom() {
+  const r = receiver();
+  const add = r.request(teacher, "saveStudent", {
+    name: "Test Student",
+    email: student,
+    division: "Junior",
+    grade: "6",
+    active: true,
   });
-  vm.runInContext(
-    readFileSync(
-      new URL("../public/setup/acsl-google-sheets.gs", import.meta.url),
-      "utf8",
-    ),
-    context,
-  );
-  context.setup();
-  return {
-    sheets,
-    context,
-    post: (submission, token = props.get("ACSL_SHEETS_TOKEN")) =>
-      JSON.parse(
-        context.doPost({
-          postData: { contents: JSON.stringify({ token, submission }) },
-        }),
-      ),
-    failNextSummary: () => {
-      failSummary = true;
-    },
-    block: () => {
-      available = false;
-    },
-    locked: () => locked,
-  };
+  assert.equal(add.ok, true);
+  return r;
 }
-test("Apps Script authenticates, appends summary/details, deduplicates and preserves setup data", () => {
+test("only verified Google profiles can become actors", () => {
+  assert.equal(
+    verifiedGoogleEmail(
+      { provider: "google" },
+      { email: " Student@Example.com ", email_verified: true },
+    ),
+    null,
+  );
+  assert.equal(
+    verifiedGoogleEmail(
+      { provider: "google" },
+      { email: "Student@Example.com", email_verified: true },
+    ),
+    student,
+  );
+  for (const profile of [
+    { email: student, email_verified: false },
+    { email: student },
+    { email: student, email_verified: "true" },
+    { email: 42, email_verified: true },
+  ])
+    assert.equal(verifiedGoogleEmail({ provider: "google" }, profile), null);
+  assert.equal(
+    verifiedGoogleEmail(
+      { provider: "credentials" },
+      { email: student, email_verified: true },
+    ),
+    null,
+  );
+});
+test("two seed teachers, anonymous/unknown actors rejected, no legacy writes", () => {
   const r = receiver();
-  assert.equal(r.post(prepared(), "wrong-token").ok, false);
-  assert.equal(r.sheets.get("제출 기록").rows.length, 1);
-  assert.equal(r.post(prepared()).ok, true);
-  assert.equal(r.locked(), false);
-  assert.equal(r.sheets.get("제출 기록").rows.length, 2);
-  assert.equal(r.sheets.get("문제별 결과").rows.length, 15);
-  assert.equal(r.post(prepared()).duplicate, true);
-  assert.equal(r.sheets.get("문제별 결과").rows.length, 15);
+  assert.deepEqual(
+    r.request(teacher, "load").data.teachers.map((t) => t.email),
+    [teacher, "seanlee611@gmail.com"],
+  );
+  assert.equal(r.request(teacher, "load", {}, "wrong-token").ok, false);
+  assert.equal(r.request("unknown@example.com", "load").code, "FORBIDDEN");
+  assert.equal(r.legacy().ok, false);
   r.context.setup();
-  assert.equal(r.sheets.get("제출 기록").rows.length, 2);
+  assert.equal(r.request(teacher, "load").data.teachers.length, 2);
 });
-test("Apps Script resumes a partial write without duplicated question rows", () => {
-  const r = receiver();
+test("student registration validates fields, normalizes email and rejects duplicates", () => {
+  const r = classroom();
+  for (const changes of [
+    { email: "bad" },
+    { name: "" },
+    { division: "Other" },
+    { grade: "13" },
+    { active: "true" },
+    { id: "unknown" },
+  ])
+    assert.equal(
+      r.request(teacher, "saveStudent", {
+        name: "Other",
+        email: "other@example.com",
+        division: "Junior",
+        grade: "6",
+        active: true,
+        ...changes,
+      }).code,
+      "INVALID",
+    );
+  assert.equal(
+    r.request(teacher, "saveStudent", {
+      name: "Duplicate",
+      email: " STUDENT@EXAMPLE.COM ",
+      division: "Junior",
+      grade: "6",
+      active: true,
+    }).code,
+    "INVALID",
+  );
+  assert.equal(
+    r.request(teacher, "saveTeacher", {
+      name: "Duplicate role",
+      email: student,
+      active: true,
+    }).code,
+    "INVALID",
+  );
+});
+test("student reads only own answers; cannot manage accounts or submit as another student", () => {
+  const r = classroom();
+  const other = r.request(teacher, "saveStudent", {
+    name: "Other",
+    email: "other@example.com",
+    division: "Junior",
+    grade: "7",
+    active: true,
+  }).data.member;
+  const submission = {
+    ...prepared(),
+    studentId: other.id,
+    email: other.email,
+    student: "Other",
+  };
+  assert.equal(r.request(student, "submit", submission).ok, true);
+  const mine = r.request(student, "load").data;
+  assert.equal(mine.students.length, 0);
+  assert.equal(mine.teachers.length, 0);
+  assert.equal(mine.attempts.length, 1);
+  assert.equal(mine.attempts[0].email, student);
+  assert.equal(mine.attempts[0].student, "Test Student");
+  assert.equal(
+    r.request(other.email, "load", { studentId: mine.member.id }).data.attempts
+      .length,
+    0,
+  );
+  assert.equal(
+    r.request(student, "saveTeacher", {
+      email: student,
+      name: "Evil",
+      active: true,
+    }).code,
+    "FORBIDDEN",
+  );
+  assert.equal(r.request(student, "saveStudent", other).code, "FORBIDDEN");
+  assert.equal(r.request(teacher, "load").data.attempts.length, 1);
+  assert.equal(
+    r.request(student, "submit", { ...prepared(), division: "senior" }).code,
+    "INVALID",
+  );
+  assert.equal(r.request(teacher, "submit", prepared()).code, "FORBIDDEN");
+});
+test("immutable, idempotent attempts and cross-student ID conflicts", () => {
+  const r = classroom();
+  const first = r.request(student, "submit", prepared()).data.attempt;
+  const changed = prepared();
+  changed.results[0].answer = "changed";
+  assert.equal(
+    r.request(student, "submit", changed).data.attempt.results[0].answer,
+    first.results[0].answer,
+  );
+  assert.equal(r.sheets.get("계정별 제출").rows.length, 2);
+  assert.equal(r.sheets.get("문제별 결과").rows.length, 15);
+  r.request(teacher, "saveStudent", {
+    name: "Other",
+    email: "other@example.com",
+    division: "Junior",
+    grade: "7",
+    active: true,
+  });
+  assert.equal(
+    r.request("other@example.com", "submit", prepared()).code,
+    "CONFLICT",
+  );
+});
+test("partial projection write retries repair without duplicate canonical or question records", () => {
+  const r = classroom();
   r.failNextSummary();
-  assert.equal(r.post(prepared()).ok, false);
+  assert.equal(r.request(student, "submit", prepared()).ok, false);
+  assert.equal(r.sheets.get("계정별 제출").rows.length, 2);
   assert.equal(r.sheets.get("문제별 결과").rows.length, 15);
-  assert.equal(r.sheets.get("제출 기록").rows.length, 1);
-  assert.equal(r.post(prepared()).ok, true);
-  assert.equal(r.sheets.get("문제별 결과").rows.length, 15);
+  assert.equal(r.request(student, "submit", prepared()).ok, true);
   assert.equal(r.sheets.get("제출 기록").rows.length, 2);
+  assert.equal(r.sheets.get("문제별 결과").rows.length, 15);
 });
-test("Apps Script escapes spreadsheet formulas and reports lock failure", () => {
-  const r = receiver();
+test("revocation takes effect immediately, teacher creation and last teacher protection", () => {
+  const r = classroom();
+  const member = r.request(student, "load").data.member;
+  r.request(student, "submit", prepared());
+  assert.equal(
+    r.request(teacher, "saveStudent", { ...member, active: false }).ok,
+    true,
+  );
+  assert.equal(r.request(student, "load").code, "FORBIDDEN");
+  assert.equal(r.request(student, "submit", prepared()).code, "FORBIDDEN");
+  assert.equal(r.request(teacher, "load").data.attempts.length, 1);
+  const teachers = r.request(teacher, "load").data.teachers;
+  assert.equal(
+    r.request(teacher, "saveTeacher", { ...teachers[1], active: false }).ok,
+    true,
+  );
+  assert.equal(
+    r.request(teacher, "saveTeacher", { ...teachers[0], active: false }).code,
+    "INVALID",
+  );
+  r.context.setup();
+  assert.equal(r.request("seanlee611@gmail.com", "load").code, "FORBIDDEN");
+  assert.equal(
+    r.request(teacher, "saveTeacher", {
+      name: "New Teacher",
+      email: "newteacher@example.com",
+      active: true,
+    }).ok,
+    true,
+  );
+  assert.equal(
+    r.request("newteacher@example.com", "load").data.students.length,
+    1,
+  );
+});
+test("formula escaping, stable student ID on email edits, and locking", () => {
+  const r = classroom();
+  const member = r.request(student, "load").data.member;
+  r.request(teacher, "saveStudent", {
+    ...member,
+    name: '=HYPERLINK("https://example.test")',
+  });
   const submission = prepared();
-  submission.student = '=HYPERLINK("https://example.test")';
   submission.results[0].answer = "+1";
-  assert.equal(r.post(submission).ok, true);
+  assert.equal(r.request(student, "submit", submission).ok, true);
   assert.ok(r.sheets.get("제출 기록").rows[1][3].startsWith("'="));
   assert.equal(r.sheets.get("문제별 결과").rows[1][5], "'+1");
-  r.block();
+  r.request(teacher, "saveStudent", {
+    ...member,
+    email: "updated@example.com",
+  });
+  assert.equal(r.request(student, "load").code, "FORBIDDEN");
   assert.equal(
-    r.post({ ...submission, id: "22222222-2222-4222-8222-222222222222" }).ok,
-    false,
+    r.request("updated@example.com", "load").data.attempts.length,
+    1,
   );
+  r.block();
+  assert.equal(r.request(teacher, "load").ok, false);
 });

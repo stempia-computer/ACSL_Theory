@@ -1,60 +1,55 @@
 # ACSL Theory
 
-A Next.js web app for Stempia Computer Institute, using TypeScript, Tailwind CSS, and the App Router.
+Next.js / TypeScript / Tailwind classroom for Stempia Computer Institute.
 
-## Development
+## Run
 
-Use Node.js 20.9 or later and npm.
+Use Node.js 22.18+ (Node.js 24 recommended).
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open http://localhost:3000 to view the home page. Edit `src/app/page.tsx` to update it.
+Google login and Google Sheets account storage are required for classroom pages. Copy `.env.local.example` to `.env.local` and follow [the Korean account setup guide](docs/login-setup.ko.md), also available at `/login-setup`. Keep all secret values out of Git. Unconfigured installations show setup instructions, never a mock signed-in account.
 
-## Validation and production
+## Accounts and records
 
-```sh
-npm run lint
-npx tsc --noEmit
-npm run build
-npm start
-```
-
-Local practice requires no environment variables. Optional Google Sheets score sharing uses server-only settings in `.env.local.example`; follow [the Korean setup guide](docs/google-sheets-setup.ko.md) or open `/google-sheets-setup`. Never commit `.env.local` or share its token.
+- Initial teachers: wonup2@gmail.com and seanlee611@gmail.com. Google must verify the login email.
+- Teachers register/edit students (name, email, division, grade), add/edit/disable teachers, and view all student attempts and wrong answers. Both initial teachers have equal management permissions. The last active teacher cannot be disabled.
+- Students see only their own division assignments, saved scores and answer reviews. Ownership is a stable server-side student ID, never the name/email posted by the browser.
+- Every data request checks the current account and active role in Sheets. Server routes grade answers independently; Apps Script rejects old anonymous writes, protects mutations with a lock, and deduplicates submission IDs.
+- Apps Script version 2 creates account tabs without deleting old submission/solution tabs or changing the token. Update Code.gs, run setup and deploy a new version of the existing deployment. Google OAuth client setup is separate from Apps Script authorization.
+- Prior anonymous records are retained in the sheet but not assigned to students automatically. The authenticated dashboard reads new account-based attempts only. No new student records/answers are stored in browser localStorage. Unsubmitted answers stay in the current tab until the server confirms storage.
+- Sharing the Google spreadsheet is for teachers only, with view access. Account JSON columns should be changed through the app, not edited directly in Sheets.
 
 ## Pages
 
-- `/`: Home
-- `/dashboard`: Teacher Dashboard
-- `/dashboard/student`: Student Dashboard with worksheet progress and attempt history
-- `/assignments`: Six Computer Number Systems homework assignments
-- `/assignments/[id]`: Original worksheet images, answer entry, scoring, and review
-- `/question-bank`: Question Bank with search, metadata filters, details, and a four-choice question editor
-- `/students`: Students
-- `/scores`: Scores
+`/login`, `/dashboard`, `/dashboard/student`, `/students`, `/teachers`, `/assignments`, `/assignments/[id]`, `/scores`, `/question-bank`, `/login-setup`, `/google-sheets-setup`.
 
-Classroom records are static mock data in `src/lib/mock-data.ts`. Question types, validation, and illustrative samples are in `src/lib/questions.ts`. Question Bank additions and edits are stored in browser localStorage; they are not shared between users or devices. Source PDF is an optional HTTPS link, not a file upload. The student roster remains a demonstration. No authentication or shared database is connected.
+The current six homework assignments use the original Computer Number Systems worksheets, due October 16, 2026:
 
-## Worksheet homework
+| Division | Part 1 | Part 2 |
+| --- | --- | --- |
+| Junior | 1–14 | 15–28 |
+| Intermediate | 1–20 | 21–39 |
+| Senior | 1–20 | 21–40 |
 
-The uploaded Computer Number Systems worksheets are available as six assignments, due October 16, 2026:
+The teacher score matrix uses the latest submission per assignment. All attempts remain available. Students can review every answer, filter incorrect answers, open the original solutions and retry missed questions.
 
-| Division     | Part 1 | Part 2 |
-| ------------ | ------ | ------ |
-| Junior       | 1–14   | 15–28  |
-| Intermediate | 1–20   | 21–39  |
-| Senior       | 1–20   | 21–40  |
+This is worksheet practice, not a secure exam: original question/solution images are public static assets. Teacher-only Question Bank editing remains a local-browser feature; student records and worksheet attempts are shared through Sheets. Sheets is intended for small classes, with Apps Script usage limits and increasing latency as records grow. Login requires a Google account, including a compatible school account.
 
-Students enter a name, open an assignment, type answers, and submit for immediate grading. Unanswered questions require confirmation before submission. Results include the original solution images, an incorrect-only review filter, and repeat attempts. Drafts and attempts are stored under the entered name in localStorage (`acsl-worksheet-homework-v1`). Names are not authenticated accounts. All previous attempts are retained and may be reopened from Scores. JSON exports include submitted answers and scores.
+Localhost works only on the computer running the server. A public HTTPS deployment, matching Google redirect URI, and server-side secrets are still required for students at home. Never distribute server secrets to student computers.
 
-Images in `public/worksheets` preserve original notation. Question metadata and the supplied solution keys are in `src/data/worksheet-homework.json`. One point per question; all parts of a multi-answer question must be correct. Hexadecimal case and insignificant whitespace are ignored. Explicit `_base` / `(base)` suffixes and leading zeros are accepted for numeric answers; bare suffix digits remain significant. Unordered answers are compared as complete sets; ordered responses retain their order. Fraction answers use exact rational comparison. Source solution keys are used, including both roots for Senior question 32.
-
-The JSON keys and solution images are bundled with this practice app; this is not a secured exam. Drafts and review history remain local to the current browser. When Google Sheets is configured, submissions are regraded on the server and sent to the shared teacher score sheet. Failed and older submissions can be retried without duplicate rows. Google Sheets does not sync student review history across devices. A local development server is not a publicly accessible classroom site.
-
-Run grading regression checks with Node.js 22.18+ (or Node.js 24):
+## Checks
 
 ```sh
+npm run lint
+npm run build
 node --experimental-strip-types --test tests/worksheet-grading.test.mjs tests/google-sheets.test.mjs
+node --test tests/classroom-api.test.mjs
 ```
+
+Optional browser coverage (Python Playwright and `/usr/bin/chromium` required): `ACSL_BROWSER_TEST=1 node --test tests/classroom-api.test.mjs`.
+
+The API integration suite runs a built production server with synthetic signed sessions and an in-memory Apps Script fixture. It exercises actual Next.js authorization and rendering without contacting Google. It is not a live OAuth or Sheets test; complete the real-account checks in the setup guide before classroom use.

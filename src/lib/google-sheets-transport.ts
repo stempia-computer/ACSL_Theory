@@ -1,14 +1,14 @@
-export async function deliverToGoogleSheets(
+export async function callGoogleSheets(
   url: string,
   token: string,
-  submission: { id: string },
+  payload: Record<string, unknown>,
   fetcher: typeof fetch = fetch,
 ) {
   const signal = AbortSignal.timeout(20000);
   let response = await fetcher(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ token, submission }),
+    body: JSON.stringify({ token, ...payload }),
     redirect: "manual",
     signal,
     cache: "no-store",
@@ -33,6 +33,15 @@ export async function deliverToGoogleSheets(
   }
   if (!response.ok) throw new Error("Receiver unavailable");
   const receipt = await response.json();
+  return receipt;
+}
+export async function deliverToGoogleSheets(
+  url: string,
+  token: string,
+  submission: { id: string },
+  fetcher: typeof fetch = fetch,
+) {
+  const receipt = await callGoogleSheets(url, token, { submission }, fetcher);
   if (receipt.ok !== true || receipt.id !== submission.id)
     throw new Error("Write not confirmed");
 }

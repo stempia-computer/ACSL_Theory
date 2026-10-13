@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageHeader } from "@/components/ui";
 import { CopySheetScript } from "@/components/google-sheets-setup";
 
@@ -8,6 +9,13 @@ export default function GoogleSheetsSetup() {
         title="Google Sheets 연결"
         description="한 번 설정하면 학생 제출 결과가 선생님들의 공유 점수표에 기록됩니다."
       />
+      <div className="mb-6 rounded-xl bg-indigo-50 p-5">
+        이미 시트를 연결했다면 새로 만들지 마세요.{" "}
+        <Link className="text-indigo-700 underline" href="/login-setup">
+          학생·선생님 로그인 업그레이드 안내
+        </Link>
+        에 따라 아래 코드를 업데이트하세요.
+      </div>
       <div className="space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-6">
           <h2 className="text-lg font-semibold">1. Google 점수표 만들기</h2>
@@ -38,7 +46,8 @@ export default function GoogleSheetsSetup() {
           <p className="mt-3 text-sm leading-7 text-slate-600">
             Apps Script 상단 함수 목록에서 setup을 선택하고 실행하세요. 본인
             Google 계정으로 이 스크립트의 스프레드시트 접근을 승인하면 제출
-            기록과 문제별 결과 탭이 생깁니다.
+            기록·문제별 결과·학생 계정·선생님 계정·계정별 제출 탭이 생깁니다.
+            완료 알림 팝업 없이 실행이 끝납니다.
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-600">
             왼쪽 톱니바퀴 프로젝트 설정 → 스크립트 속성에서 ACSL_SHEETS_TOKEN
@@ -69,22 +78,21 @@ export default function GoogleSheetsSetup() {
           </p>
           <pre className="mt-4 overflow-x-auto rounded-lg bg-slate-100 p-4 text-xs">{`ACSL_SHEETS_WEBHOOK_URL=웹_앱_URL\nACSL_SHEETS_TOKEN=스크립트_속성의_토큰`}</pre>
           <p className="mt-3 text-sm leading-7 text-slate-600">
-            검은 창에서 Ctrl+C 후 npm run dev로 다시 실행하세요. Dashboard의
-            Google Sheets 안내가 설정됨 상태로 바뀝니다.
+            기존 .env.local 파일이 있다면 주소와 토큰을 유지하세요. 로그인 설정
+            안내에서 Google OAuth 설정도 완료한 뒤 서버를 재시작하세요.
           </p>
         </section>
         <section className="rounded-xl border border-slate-200 bg-white p-6">
           <h2 className="text-lg font-semibold">6. 실제 전송 확인</h2>
           <p className="mt-3 text-sm leading-7 text-slate-600">
-            테스트 학생 이름으로 숙제를 제출하고 Google Sheets의 제출
-            기록·문제별 결과에 행이 생기는지 확인하세요. 사이트에서 sent로
-            표시돼야 전송 완료입니다. 이전 기록은 Retry sending saved results로
-            보낼 수 있습니다. 같은 제출을 다시 보내도 중복 기록하지 않습니다.
+            선생님으로 로그인해 학생을 등록하고, 등록된 학생 계정으로 숙제를
+            제출하세요. 저장 완료 메시지와 Google Sheets의 새 행을 확인하세요.
+            실패 시 같은 답안 다시 전송을 누르면 중복 없이 재시도합니다.
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-600">
             이 연결은 점수표 공유 기능입니다. 학생들의 집에서 웹사이트에
-            접속하려면 별도의 사이트 배포가 필요합니다. 현재 학생 이름은 직접
-            입력하므로 로그인으로 본인 확인하는 기능은 아직 없습니다.
+            접속하려면 별도의 사이트 배포가 필요합니다. Google 점수표는
+            선생님에게만 공유하고 학생에게는 공유하지 마세요.
           </p>
         </section>
       </div>
