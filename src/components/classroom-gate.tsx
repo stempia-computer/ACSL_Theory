@@ -1,3 +1,4 @@
+import { isStaff } from "@/lib/classroom-types";
 import { connection } from "next/server";
 import { Suspense } from "react";
 import Link from "next/link";
@@ -45,13 +46,13 @@ async function Content({
       </div>
     );
   }
-  if (["students", "teachers"].includes(view) && data.member.role !== "teacher")
+  if (["students", "teachers"].includes(view) && !isStaff(data.member))
     redirect("/dashboard/student");
   if (view === "dashboard" && data.member.role === "student")
     redirect("/dashboard/student");
   const assignments = worksheetAssignments.filter(
     (a) =>
-      data.member.role === "teacher" ||
+      isStaff(data.member) ||
       a.division === data.member.division?.toLowerCase(),
   );
   const assignment = assignments.find((a) => a.id === assignmentId);

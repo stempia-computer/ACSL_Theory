@@ -45,8 +45,9 @@ function rows_(sheet, width) {
 function members_(ss, sheetName) {
   return rows_(ensureSheet_(ss, sheetName, MEMBER_HEADERS), MEMBER_HEADERS.length).map(function(r) { return JSON.parse(r[6]); });
 }
+function isStaff_(member) { return member.role === 'admin' || member.role === 'teacher'; }
 function writeMember_(ss, member) {
-  var sheet = ensureSheet_(ss, member.role === 'teacher' ? TEACHERS : STUDENTS, MEMBER_HEADERS);
+  var sheet = ensureSheet_(ss, isStaff_(member) ? TEACHERS : STUDENTS, MEMBER_HEADERS);
   var all = rows_(sheet, MEMBER_HEADERS.length);
   var index = all.findIndex(function(r) { return r[0] === member.id; });
   var row = [member.id, safeText_(member.email), safeText_(member.name), member.division || '', member.grade || '', member.active ? '활성' : '비활성', JSON.stringify(member)];
@@ -62,6 +63,11 @@ function setupAccounts_(ss) {
       writeMember_(ss, { id: Utilities.getUuid(), email: email, name: email.split('@')[0], role: 'teacher', active: true });
     });
   }
+  // Upgrade existing sheets as well as fresh installations. Preserve all other accounts.
+  var adminEmail = 'stempiacomputer@gmail.com';
+  var existing = members_(ss, TEACHERS).find(function(m) { return m.email === adminEmail; });
+  if (members_(ss, STUDENTS).some(function(m) { return m.email === adminEmail; })) throw new Error('관리자 이메일이 학생으로 등록되어 있습니다. 학생 이메일을 수정한 뒤 setup을 다시 실행하세요.');
+  if (!existing || existing.role !== 'admin') writeMember_(ss, { id: existing ? existing.id : Utilities.getUuid(), email: adminEmail, name: 'Stempia Computer', role: 'admin', active: true });
 }
 function fail_(code) { return json_({ ok: false, version: 2, code: code }); }
 function ok_(data) { return json_({ ok: true, version: 2, data: data }); }
@@ -84,21 +90,22 @@ function doPost(e) {
     var attemptRows = rows_(attemptSheet, ACCOUNT_HEADERS.length);
     if (body.action === 'load') {
       // Filter before returning data: students never receive another student's record.
-      var allowed = attemptRows.filter(function(r) { return actor.role === 'teacher' || r[1] === actor.id; });
-      return ok_({ member: actor, students: actor.role === 'teacher' ? students : [], teachers: actor.role === 'teacher' ? teachers : [], attempts: allowed.map(function(r) { return JSON.parse(r[9]); }).reverse() });
+      var allowed = attemptRows.filter(function(r) { return isStaff_(actor) || r[1] === actor.id; });
+      return ok_({ member: actor, students: isStaff_(actor) ? students : [], teachers: isStaff_(actor) ? teachers : [], attempts: allowed.map(function(r) { return JSON.parse(r[9]); }).reverse() });
     }
     if (body.action === 'saveStudent' || body.action === 'saveTeacher') {
-      if (actor.role !== 'teacher') return fail_('FORBIDDEN');
+      if (!isStaff_(actor)) return fail_('FORBIDDEN');
       var d = body.data;
       if (!d || typeof d !== 'object' || typeof d.email !== 'string' || typeof d.name !== 'string' || typeof d.active !== 'boolean') return fail_('INVALID');
       var role = body.action === 'saveTeacher' ? 'teacher' : 'student';
       var list = role === 'teacher' ? teachers : students;
       var old = d.id ? list.find(function(m) { return m.id === d.id; }) : null;
       if (d.id && !old) return fail_('INVALID');
+      if (old && old.role === 'admin') return fail_('FORBIDDEN');
       var normalized = d.email.trim().toLowerCase();
       if (normalized.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized) || !d.name.trim() || d.name.length > 80 || /[\u0000-\u001f]/.test(d.name)) return fail_('INVALID');
       if (teachers.concat(students).some(function(m) { return m.email === normalized && (!old || m.id !== old.id); })) return fail_('INVALID');
-      if (role === 'teacher' && !d.active && !teachers.some(function(m) { return m.active && (!old || m.id !== old.id); })) return fail_('INVALID');
+      if (role === 'teacher' && !d.active && !teachers.some(function(m) { return m.role === 'teacher' && m.active && (!old || m.id !== old.id); })) return fail_('INVALID');
       if (role === 'student' && (['Junior', 'Intermediate', 'Senior'].indexOf(d.division) < 0 || typeof d.grade !== 'string' || !/^(K|[1-9]|1[0-2])$/.test(d.grade))) return fail_('INVALID');
       var member = { id: old ? old.id : Utilities.getUuid(), email: normalized, name: d.name.trim(), role: role, active: d.active };
       if (role === 'student') { member.division = d.division; member.grade = d.grade; }

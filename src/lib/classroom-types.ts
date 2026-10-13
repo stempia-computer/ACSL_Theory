@@ -4,7 +4,7 @@ export type Member = {
   email: string;
   name: string;
   active: boolean;
-  role: "teacher" | "student";
+  role: "admin" | "teacher" | "student";
   division?: Division;
   grade?: string;
 };
@@ -36,3 +36,7 @@ export type Classroom = {
   teachers: Member[];
   attempts: SavedAttempt[];
 };
+
+export function isStaff(member: Pick<Member, "role">) {
+  return member.role === "admin" || member.role === "teacher";
+}

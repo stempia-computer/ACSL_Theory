@@ -1,3 +1,4 @@
+import { isStaff } from "@/lib/classroom-types";
 import { connection } from "next/server";
 import { Suspense } from "react";
 import { redirect } from "next/navigation";
@@ -12,7 +13,7 @@ async function Content() {
   } catch {
     redirect("/login");
   }
-  if (classroom.member.role !== "teacher") redirect("/dashboard/student");
+  if (!isStaff(classroom.member)) redirect("/dashboard/student");
   return (
     <>
       <PageHeader

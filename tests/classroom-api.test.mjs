@@ -133,7 +133,7 @@ test("teachers can register students; writes require same-origin JSON", async ()
   }
   const r = await request(teacher);
   assert.equal(r.body.students.length, 2);
-  assert.equal(r.body.teachers.length, 2);
+  assert.equal(r.body.teachers.length, 3);
   assert.equal(r.headers.get("cache-control"), "no-store");
   assert.equal(
     (
@@ -280,4 +280,32 @@ test("browser flows", { skip: !process.env.ACSL_BROWSER_TEST }, async () => {
   const [code] = await once(child, "exit");
   assert.equal(code, 0, output);
   console.log(output.trim());
+});
+
+test("admin can open the dashboard and management pages without changing teacher permissions", async () => {
+  const email = "stempiacomputer@gmail.com";
+  const r = await request(email);
+  assert.equal(r.status, 200);
+  assert.equal(r.body.member.role, "admin");
+  assert.ok(r.body.students.length >= 2);
+  for (const path of [
+    "/dashboard",
+    "/students",
+    "/teachers",
+    "/question-bank",
+  ]) {
+    const response = await fetch(base + path, {
+      headers: { Cookie: await cookie(email) },
+      redirect: "manual",
+    });
+    const html = await response.text();
+    assert.equal(response.status, 200);
+    assert.ok(!html.includes("NEXT_REDIRECT"), path);
+    if (path === "/dashboard") assert.ok(html.includes("Admin Dashboard"));
+  }
+  assert.equal(
+    (await request(teacher, "saveTeacher", { ...r.body.member, active: false }))
+      .status,
+    403,
+  );
 });

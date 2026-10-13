@@ -175,13 +175,13 @@ test("two seed teachers, anonymous/unknown actors rejected, no legacy writes", (
   const r = receiver();
   assert.deepEqual(
     r.request(teacher, "load").data.teachers.map((t) => t.email),
-    [teacher, "seanlee611@gmail.com"],
+    [teacher, "seanlee611@gmail.com", "stempiacomputer@gmail.com"],
   );
   assert.equal(r.request(teacher, "load", {}, "wrong-token").ok, false);
   assert.equal(r.request("unknown@example.com", "load").code, "FORBIDDEN");
   assert.equal(r.legacy().ok, false);
   r.context.setup();
-  assert.equal(r.request(teacher, "load").data.teachers.length, 2);
+  assert.equal(r.request(teacher, "load").data.teachers.length, 3);
 });
 test("student registration validates fields, normalizes email and rejects duplicates", () => {
   const r = classroom();
@@ -357,4 +357,50 @@ test("formula escaping, stable student ID on email edits, and locking", () => {
   );
   r.block();
   assert.equal(r.request(teacher, "load").ok, false);
+});
+
+test("admin upgrade preserves existing records and grants protected staff access", () => {
+  const r = classroom();
+  const adminEmail = "stempiacomputer@gmail.com";
+  // Reproduce the previous two-teacher sheet, then run the upgrade twice.
+  const sheet = r.sheets.get("선생님 계정");
+  sheet.rows = sheet.rows.filter((row) => row[1] !== adminEmail);
+  r.request(student, "submit", prepared());
+  r.context.setup();
+  const admin = r.request(adminEmail, "load");
+  assert.equal(admin.ok, true);
+  assert.equal(admin.data.member.role, "admin");
+  assert.equal(admin.data.students.length, 1);
+  assert.equal(admin.data.attempts.length, 1);
+  const id = admin.data.member.id;
+  r.context.setup();
+  assert.equal(r.request(adminEmail, "load").data.member.id, id);
+  assert.equal(r.request(adminEmail, "load").data.teachers.length, 3);
+  assert.equal(
+    r.request(adminEmail, "saveTeacher", {
+      name: "Fourth",
+      email: "fourth@example.com",
+      active: true,
+    }).ok,
+    true,
+  );
+  assert.equal(
+    r.request(teacher, "saveTeacher", { ...admin.data.member, active: false })
+      .code,
+    "FORBIDDEN",
+  );
+  assert.equal(
+    r.request(adminEmail, "saveTeacher", {
+      ...admin.data.member,
+      email: "changed@example.com",
+    }).code,
+    "FORBIDDEN",
+  );
+  const forged = r.request(teacher, "saveTeacher", {
+    email: "ordinary@example.com",
+    name: "Ordinary",
+    active: true,
+    role: "admin",
+  });
+  assert.equal(forged.data.member.role, "teacher");
 });

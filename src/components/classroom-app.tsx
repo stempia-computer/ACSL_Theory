@@ -1,4 +1,5 @@
 "use client";
+import { isStaff } from "@/lib/classroom-types";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -65,7 +66,7 @@ export function ClassroomApp({
   const [blocked, setBlocked] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
   const [review, setReview] = useState<SavedAttempt | null>(null);
-  const teacher = data.member.role === "teacher";
+  const teacher = isStaff(data.member);
   async function refresh() {
     setRefreshing(true);
     setError("");
@@ -103,7 +104,9 @@ export function ClassroomApp({
             : view === "scores"
               ? "Scores · 점수와 오답"
               : teacher
-                ? "Teacher Dashboard"
+                ? data.member.role === "admin"
+                  ? "Admin Dashboard"
+                  : "Teacher Dashboard"
                 : "Student Dashboard";
   const mine = selected
     ? data.attempts.filter((a) => a.studentId === selected)
@@ -115,7 +118,9 @@ export function ClassroomApp({
         <div>
           <p className="text-sm text-slate-500">
             {teacher
-              ? "Teacher"
+              ? data.member.role === "admin"
+                ? "Admin"
+                : "Teacher"
               : `${data.member.division} · Grade ${data.member.grade}`}{" "}
             · {data.member.email}
           </p>
@@ -468,7 +473,14 @@ function MemberManager({
                 )
                 .map((m) => (
                   <tr key={m.id}>
-                    <td className="border-b p-3">{m.name}</td>
+                    <td className="border-b p-3">
+                      {m.name}
+                      {m.role === "admin" && (
+                        <span className="ml-2 rounded bg-indigo-50 px-2 py-1 text-xs text-indigo-700">
+                          Admin
+                        </span>
+                      )}
+                    </td>
                     <td className="border-b p-3">{m.email}</td>
                     {role === "student" && (
                       <>
@@ -481,7 +493,8 @@ function MemberManager({
                     </td>
                     <td className="border-b p-3">
                       <button
-                        className="font-medium text-indigo-700"
+                        className="font-medium text-indigo-700 disabled:text-slate-400"
+                        disabled={m.role === "admin"}
                         onClick={() => {
                           setEditing(m);
                           setFormKey((k) => k + 1);
@@ -489,7 +502,7 @@ function MemberManager({
                           window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
                       >
-                        수정
+                        {m.role === "admin" ? "관리자 계정" : "수정"}
                       </button>
                     </td>
                   </tr>
@@ -893,7 +906,7 @@ function Exercise({
   return (
     <form onSubmit={submit}>
       <p className="mb-5 text-slate-600">
-        {member.role === "teacher"
+        {isStaff(member)
           ? "선생님 미리보기입니다. 제출은 학생 계정에서 가능합니다."
           : `${member.name} · ${member.email}`}{" "}
         · {questions.length} questions
