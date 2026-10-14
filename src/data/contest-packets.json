@@ -1,0 +1,7250 @@
+[
+  {
+    "id": "2021-all-star-cl",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "all-star",
+    "division": "Classroom",
+    "title": "2020-2021 All-Star · Classroom",
+    "problemPdf": "/contest-pdfs/2021-all-star-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-all-star-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 18,
+        "category": "LISP",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 6,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2021-all-star-jr",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "all-star",
+    "division": "Junior",
+    "title": "2020-2021 All-Star · Junior",
+    "problemPdf": "/contest-pdfs/2021-all-star-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-all-star-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 18,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 19,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 20,
+        "category": "What Does This Program Do?",
+        "page": 6,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2021-all-star-sr",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "all-star",
+    "division": "Senior",
+    "title": "2020-2021 All-Star · Senior",
+    "problemPdf": "/contest-pdfs/2021-all-star-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-all-star-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 5,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 6,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 18,
+        "category": "LISP",
+        "page": 6,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 6,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 7,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-1-cl",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-1",
+    "division": "Classroom",
+    "title": "2020-2021 Contest 1 · Classroom",
+    "problemPdf": "/contest-pdfs/2021-contest-1-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-1-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 8,
+        "category": "Recursive Functions",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 9,
+        "category": "Recursive Functions",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 10,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-1-in",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-1",
+    "division": "Intermediate",
+    "title": "2020-2021 Contest 1 · Intermediate",
+    "problemPdf": "/contest-pdfs/2021-contest-1-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-1-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-1-jr",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-1",
+    "division": "Junior",
+    "title": "2020-2021 Contest 1 · Junior",
+    "problemPdf": "/contest-pdfs/2021-contest-1-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-1-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-1-sr",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-1",
+    "division": "Senior",
+    "title": "2020-2021 Contest 1 · Senior",
+    "problemPdf": "/contest-pdfs/2021-contest-1-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-1-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-2-cl",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-2",
+    "division": "Classroom",
+    "title": "2020-2021 Contest 2 · Classroom",
+    "problemPdf": "/contest-pdfs/2021-contest-2-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-2-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 7,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 8,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 9,
+        "category": "LISP",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 10,
+        "category": "LISP",
+        "page": 3,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-2-in",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-2",
+    "division": "Intermediate",
+    "title": "2020-2021 Contest 2 · Intermediate",
+    "problemPdf": "/contest-pdfs/2021-contest-2-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-2-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 1,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-2-jr",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-2",
+    "division": "Junior",
+    "title": "2020-2021 Contest 2 · Junior",
+    "problemPdf": "/contest-pdfs/2021-contest-2-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-2-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 1,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-2-sr",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-2",
+    "division": "Senior",
+    "title": "2020-2021 Contest 2 · Senior",
+    "problemPdf": "/contest-pdfs/2021-contest-2-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-2-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 1,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-3-cl",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-3",
+    "division": "Classroom",
+    "title": "2020-2021 Contest 3 · Classroom",
+    "problemPdf": "/contest-pdfs/2021-contest-3-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-3-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 7,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "FSAs and Regular Expressions",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 10,
+        "category": "FSAs and Regular Expressions",
+        "page": 3,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-3-in",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-3",
+    "division": "Intermediate",
+    "title": "2020-2021 Contest 3 · Intermediate",
+    "problemPdf": "/contest-pdfs/2021-contest-3-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-3-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-3-jr",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-3",
+    "division": "Junior",
+    "title": "2020-2021 Contest 3 · Junior",
+    "problemPdf": "/contest-pdfs/2021-contest-3-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-3-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-3-sr",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-3",
+    "division": "Senior",
+    "title": "2020-2021 Contest 3 · Senior",
+    "problemPdf": "/contest-pdfs/2021-contest-3-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-3-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-4-cl",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-4",
+    "division": "Classroom",
+    "title": "2020-2021 Contest 4 · Classroom",
+    "problemPdf": "/contest-pdfs/2021-contest-4-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-4-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Graph Theory",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Digital Electronics",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 3,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 9,
+        "category": "Assembly Language",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 10,
+        "category": "Assembly Language",
+        "page": 4,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-4-in",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-4",
+    "division": "Intermediate",
+    "title": "2020-2021 Contest 4 · Intermediate",
+    "problemPdf": "/contest-pdfs/2021-contest-4-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-4-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-4-jr",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-4",
+    "division": "Junior",
+    "title": "2020-2021 Contest 4 · Junior",
+    "problemPdf": "/contest-pdfs/2021-contest-4-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-4-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2021-contest-4-sr",
+    "seasonCode": "2021",
+    "season": "2020-2021",
+    "contest": "contest-4",
+    "division": "Senior",
+    "title": "2020-2021 Contest 4 · Senior",
+    "problemPdf": "/contest-pdfs/2021-contest-4-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2021-contest-4-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2122-all-star-cl",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "all-star",
+    "division": "Classroom",
+    "title": "2021-2022 All-Star · Classroom",
+    "problemPdf": "/contest-pdfs/2122-all-star-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-all-star-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 18,
+        "category": "LISP",
+        "page": 5,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 6,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2122-all-star-jr",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "all-star",
+    "division": "Junior",
+    "title": "2021-2022 All-Star · Junior",
+    "problemPdf": "/contest-pdfs/2122-all-star-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-all-star-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 18,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 19,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 20,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2122-all-star-sr",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "all-star",
+    "division": "Senior",
+    "title": "2021-2022 All-Star · Senior",
+    "problemPdf": "/contest-pdfs/2122-all-star-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-all-star-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 18,
+        "category": "LISP",
+        "page": 5,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 6,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-1-cl",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-1",
+    "division": "Classroom",
+    "title": "2021-2022 Contest 1 · Classroom",
+    "problemPdf": "/contest-pdfs/2122-contest-1-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-1-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 8,
+        "category": "Recursive Functions",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "Recursive Functions",
+        "page": 3,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 10,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-1-in",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-1",
+    "division": "Intermediate",
+    "title": "2021-2022 Contest 1 · Intermediate",
+    "problemPdf": "/contest-pdfs/2122-contest-1-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-1-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-1-jr",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-1",
+    "division": "Junior",
+    "title": "2021-2022 Contest 1 · Junior",
+    "problemPdf": "/contest-pdfs/2122-contest-1-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-1-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-1-sr",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-1",
+    "division": "Senior",
+    "title": "2021-2022 Contest 1 · Senior",
+    "problemPdf": "/contest-pdfs/2122-contest-1-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-1-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-2-cl",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-2",
+    "division": "Classroom",
+    "title": "2021-2022 Contest 2 · Classroom",
+    "problemPdf": "/contest-pdfs/2122-contest-2-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-2-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 8,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 9,
+        "category": "Bit-String Flicking",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 10,
+        "category": "LISP",
+        "page": 3,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-2-in",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-2",
+    "division": "Intermediate",
+    "title": "2021-2022 Contest 2 · Intermediate",
+    "problemPdf": "/contest-pdfs/2122-contest-2-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-2-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 1,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-2-jr",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-2",
+    "division": "Junior",
+    "title": "2021-2022 Contest 2 · Junior",
+    "problemPdf": "/contest-pdfs/2122-contest-2-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-2-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-2-sr",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-2",
+    "division": "Senior",
+    "title": "2021-2022 Contest 2 · Senior",
+    "problemPdf": "/contest-pdfs/2122-contest-2-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-2-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-3-cl",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-3",
+    "division": "Classroom",
+    "title": "2021-2022 Contest 3 · Classroom",
+    "problemPdf": "/contest-pdfs/2122-contest-3-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-3-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 6,
+        "category": "Boolean Algebra",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Boolean Algebra",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 8,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 9,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 10,
+        "category": "FSAs and Regular Expressions",
+        "page": 3,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-3-in",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-3",
+    "division": "Intermediate",
+    "title": "2021-2022 Contest 3 · Intermediate",
+    "problemPdf": "/contest-pdfs/2122-contest-3-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-3-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-3-jr",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-3",
+    "division": "Junior",
+    "title": "2021-2022 Contest 3 · Junior",
+    "problemPdf": "/contest-pdfs/2122-contest-3-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-3-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-3-sr",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-3",
+    "division": "Senior",
+    "title": "2021-2022 Contest 3 · Senior",
+    "problemPdf": "/contest-pdfs/2122-contest-3-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-3-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-4-cl",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-4",
+    "division": "Classroom",
+    "title": "2021-2022 Contest 4 · Classroom",
+    "problemPdf": "/contest-pdfs/2122-contest-4-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-4-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "Graph Theory",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Graph Theory",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 9,
+        "category": "Digital Electronics",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "Assembly Language",
+        "page": 4,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-4-in",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-4",
+    "division": "Intermediate",
+    "title": "2021-2022 Contest 4 · Intermediate",
+    "problemPdf": "/contest-pdfs/2122-contest-4-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-4-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 2,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-4-jr",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-4",
+    "division": "Junior",
+    "title": "2021-2022 Contest 4 · Junior",
+    "problemPdf": "/contest-pdfs/2122-contest-4-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-4-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2122-contest-4-sr",
+    "seasonCode": "2122",
+    "season": "2021-2022",
+    "contest": "contest-4",
+    "division": "Senior",
+    "title": "2021-2022 Contest 4 · Senior",
+    "problemPdf": "/contest-pdfs/2122-contest-4-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2122-contest-4-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2223-all-star-cl",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "all-star",
+    "division": "Classroom",
+    "title": "2022-2023 All-Star · Classroom",
+    "problemPdf": "/contest-pdfs/2223-all-star-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-all-star-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 18,
+        "category": "LISP",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 6,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 6,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2223-all-star-jr",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "all-star",
+    "division": "Junior",
+    "title": "2022-2023 All-Star · Junior",
+    "problemPdf": "/contest-pdfs/2223-all-star-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-all-star-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 18,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 19,
+        "category": "What Does This Program Do?",
+        "page": 6,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 20,
+        "category": "What Does This Program Do?",
+        "page": 6,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2223-all-star-sr",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "all-star",
+    "division": "Senior",
+    "title": "2022-2023 All-Star · Senior",
+    "problemPdf": "/contest-pdfs/2223-all-star-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-all-star-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 18,
+        "category": "LISP",
+        "page": 5,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 6,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 6,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-1-cl",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-1",
+    "division": "Classroom",
+    "title": "2022-2023 Contest 1 · Classroom",
+    "problemPdf": "/contest-pdfs/2223-contest-1-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-1-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Computer Number Systems",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Computer Number Systems",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Recursive Functions",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 9,
+        "category": "Recursive Functions",
+        "page": 3,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 10,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-1-in",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-1",
+    "division": "Intermediate",
+    "title": "2022-2023 Contest 1 · Intermediate",
+    "problemPdf": "/contest-pdfs/2223-contest-1-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-1-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-1-jr",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-1",
+    "division": "Junior",
+    "title": "2022-2023 Contest 1 · Junior",
+    "problemPdf": "/contest-pdfs/2223-contest-1-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-1-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-1-sr",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-1",
+    "division": "Senior",
+    "title": "2022-2023 Contest 1 · Senior",
+    "problemPdf": "/contest-pdfs/2223-contest-1-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-1-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-2-cl",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-2",
+    "division": "Classroom",
+    "title": "2022-2023 Contest 2 · Classroom",
+    "problemPdf": "/contest-pdfs/2223-contest-2-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-2-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 6,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 8,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 10,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-2-in",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-2",
+    "division": "Intermediate",
+    "title": "2022-2023 Contest 2 · Intermediate",
+    "problemPdf": "/contest-pdfs/2223-contest-2-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-2-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 1,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-2-jr",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-2",
+    "division": "Junior",
+    "title": "2022-2023 Contest 2 · Junior",
+    "problemPdf": "/contest-pdfs/2223-contest-2-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-2-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-2-sr",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-2",
+    "division": "Senior",
+    "title": "2022-2023 Contest 2 · Senior",
+    "problemPdf": "/contest-pdfs/2223-contest-2-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-2-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 1,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-3-cl",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-3",
+    "division": "Classroom",
+    "title": "2022-2023 Contest 3 · Classroom",
+    "problemPdf": "/contest-pdfs/2223-contest-3-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-3-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Boolean Algebra",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Boolean Algebra",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 8,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 10,
+        "category": "FSAs and Regular Expressions",
+        "page": 3,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-3-in",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-3",
+    "division": "Intermediate",
+    "title": "2022-2023 Contest 3 · Intermediate",
+    "problemPdf": "/contest-pdfs/2223-contest-3-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-3-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-3-jr",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-3",
+    "division": "Junior",
+    "title": "2022-2023 Contest 3 · Junior",
+    "problemPdf": "/contest-pdfs/2223-contest-3-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-3-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-3-sr",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-3",
+    "division": "Senior",
+    "title": "2022-2023 Contest 3 · Senior",
+    "problemPdf": "/contest-pdfs/2223-contest-3-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-3-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-4-cl",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-4",
+    "division": "Classroom",
+    "title": "2022-2023 Contest 4 · Classroom",
+    "problemPdf": "/contest-pdfs/2223-contest-4-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-4-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "Graph Theory",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Graph Theory",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 9,
+        "category": "Digital Electronics",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "Assembly Language",
+        "page": 4,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-4-in",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-4",
+    "division": "Intermediate",
+    "title": "2022-2023 Contest 4 · Intermediate",
+    "problemPdf": "/contest-pdfs/2223-contest-4-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-4-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-4-jr",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-4",
+    "division": "Junior",
+    "title": "2022-2023 Contest 4 · Junior",
+    "problemPdf": "/contest-pdfs/2223-contest-4-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-4-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2223-contest-4-sr",
+    "seasonCode": "2223",
+    "season": "2022-2023",
+    "contest": "contest-4",
+    "division": "Senior",
+    "title": "2022-2023 Contest 4 · Senior",
+    "problemPdf": "/contest-pdfs/2223-contest-4-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2223-contest-4-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2324-all-star-cl",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "all-star",
+    "division": "Classroom",
+    "title": "2023-2024 All-Star · Classroom",
+    "problemPdf": "/contest-pdfs/2324-all-star-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-all-star-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 18,
+        "category": "LISP",
+        "page": 5,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 6,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2324-all-star-jr",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "all-star",
+    "division": "Junior",
+    "title": "2023-2024 All-Star · Junior",
+    "problemPdf": "/contest-pdfs/2324-all-star-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-all-star-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 5,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 18,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 19,
+        "category": "What Does This Program Do?",
+        "page": 6,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 20,
+        "category": "What Does This Program Do?",
+        "page": 6,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2324-all-star-sr",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "all-star",
+    "division": "Senior",
+    "title": "2023-2024 All-Star · Senior",
+    "problemPdf": "/contest-pdfs/2324-all-star-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-all-star-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 5,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 18,
+        "category": "LISP",
+        "page": 5,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 6,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 6,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-1-cl",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-1",
+    "division": "Classroom",
+    "title": "2023-2024 Contest 1 · Classroom",
+    "problemPdf": "/contest-pdfs/2324-contest-1-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-1-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 8,
+        "category": "Recursive Functions",
+        "page": 3,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 9,
+        "category": "Recursive Functions",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 10,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-1-in",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-1",
+    "division": "Intermediate",
+    "title": "2023-2024 Contest 1 · Intermediate",
+    "problemPdf": "/contest-pdfs/2324-contest-1-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-1-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-1-jr",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-1",
+    "division": "Junior",
+    "title": "2023-2024 Contest 1 · Junior",
+    "problemPdf": "/contest-pdfs/2324-contest-1-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-1-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-1-sr",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-1",
+    "division": "Senior",
+    "title": "2023-2024 Contest 1 · Senior",
+    "problemPdf": "/contest-pdfs/2324-contest-1-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-1-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-2-cl",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-2",
+    "division": "Classroom",
+    "title": "2023-2024 Contest 2 · Classroom",
+    "problemPdf": "/contest-pdfs/2324-contest-2-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-2-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 6,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 7,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 8,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 9,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-2-in",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-2",
+    "division": "Intermediate",
+    "title": "2023-2024 Contest 2 · Intermediate",
+    "problemPdf": "/contest-pdfs/2324-contest-2-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-2-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 1,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-2-jr",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-2",
+    "division": "Junior",
+    "title": "2023-2024 Contest 2 · Junior",
+    "problemPdf": "/contest-pdfs/2324-contest-2-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-2-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-2-sr",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-2",
+    "division": "Senior",
+    "title": "2023-2024 Contest 2 · Senior",
+    "problemPdf": "/contest-pdfs/2324-contest-2-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-2-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-3-cl",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-3",
+    "division": "Classroom",
+    "title": "2023-2024 Contest 3 · Classroom",
+    "problemPdf": "/contest-pdfs/2324-contest-3-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-3-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "Boolean Algebra",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 7,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 8,
+        "category": "FSAs and Regular Expressions",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 9,
+        "category": "FSAs and Regular Expressions",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 10,
+        "category": "FSAs and Regular Expressions",
+        "page": 4,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-3-in",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-3",
+    "division": "Intermediate",
+    "title": "2023-2024 Contest 3 · Intermediate",
+    "problemPdf": "/contest-pdfs/2324-contest-3-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-3-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 2,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-3-jr",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-3",
+    "division": "Junior",
+    "title": "2023-2024 Contest 3 · Junior",
+    "problemPdf": "/contest-pdfs/2324-contest-3-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-3-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-3-sr",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-3",
+    "division": "Senior",
+    "title": "2023-2024 Contest 3 · Senior",
+    "problemPdf": "/contest-pdfs/2324-contest-3-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-3-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-4-cl",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-4",
+    "division": "Classroom",
+    "title": "2023-2024 Contest 4 · Classroom",
+    "problemPdf": "/contest-pdfs/2324-contest-4-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-4-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 6,
+        "category": "Graph Theory",
+        "page": 3,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 7,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 9,
+        "category": "Digital Electronics",
+        "page": 5,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 10,
+        "category": "Assembly Language",
+        "page": 5,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-4-in",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-4",
+    "division": "Intermediate",
+    "title": "2023-2024 Contest 4 · Intermediate",
+    "problemPdf": "/contest-pdfs/2324-contest-4-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-4-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-4-jr",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-4",
+    "division": "Junior",
+    "title": "2023-2024 Contest 4 · Junior",
+    "problemPdf": "/contest-pdfs/2324-contest-4-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-4-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 3,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2324-contest-4-sr",
+    "seasonCode": "2324",
+    "season": "2023-2024",
+    "contest": "contest-4",
+    "division": "Senior",
+    "title": "2023-2024 Contest 4 · Senior",
+    "problemPdf": "/contest-pdfs/2324-contest-4-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2324-contest-4-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2425-all-star-cl",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "all-star",
+    "division": "Classroom",
+    "title": "2024-2025 All-Star · Classroom",
+    "problemPdf": "/contest-pdfs/2425-all-star-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-all-star-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 10,
+        "category": "Computer Number Systems",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 12,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 14,
+        "category": "Graph Theory",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 16,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 17,
+        "category": "LISP",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 18,
+        "category": "FSAs and Regular Expressions",
+        "page": 5,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 5,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2425-all-star-jr",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "all-star",
+    "division": "Junior",
+    "title": "2024-2025 All-Star · Junior",
+    "problemPdf": "/contest-pdfs/2425-all-star-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-all-star-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 7,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 8,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 18,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 19,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 20,
+        "category": "What Does This Program Do?",
+        "page": 6,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2425-all-star-sr",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "all-star",
+    "division": "Senior",
+    "title": "2024-2025 All-Star · Senior",
+    "problemPdf": "/contest-pdfs/2425-all-star-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-all-star-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 10,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 12,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 14,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 16,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 17,
+        "category": "LISP",
+        "page": 5,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 18,
+        "category": "FSAs and Regular Expressions",
+        "page": 5,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 5,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 6,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-1-cl",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-1",
+    "division": "Classroom",
+    "title": "2024-2025 Contest 1 · Classroom",
+    "problemPdf": "/contest-pdfs/2425-contest-1-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-1-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Computer Number Systems",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 8,
+        "category": "Computer Number Systems",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 9,
+        "category": "Recursive Functions",
+        "page": 3,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 10,
+        "category": "Recursive Functions",
+        "page": 3,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-1-in",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-1",
+    "division": "Intermediate",
+    "title": "2024-2025 Contest 1 · Intermediate",
+    "problemPdf": "/contest-pdfs/2425-contest-1-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-1-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-1-jr",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-1",
+    "division": "Junior",
+    "title": "2024-2025 Contest 1 · Junior",
+    "problemPdf": "/contest-pdfs/2425-contest-1-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-1-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-1-sr",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-1",
+    "division": "Senior",
+    "title": "2024-2025 Contest 1 · Senior",
+    "problemPdf": "/contest-pdfs/2425-contest-1-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-1-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-2-cl",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-2",
+    "division": "Classroom",
+    "title": "2024-2025 Contest 2 · Classroom",
+    "problemPdf": "/contest-pdfs/2425-contest-2-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-2-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 7,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 8,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 9,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 10,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-2-in",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-2",
+    "division": "Intermediate",
+    "title": "2024-2025 Contest 2 · Intermediate",
+    "problemPdf": "/contest-pdfs/2425-contest-2-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-2-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-2-jr",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-2",
+    "division": "Junior",
+    "title": "2024-2025 Contest 2 · Junior",
+    "problemPdf": "/contest-pdfs/2425-contest-2-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-2-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-2-sr",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-2",
+    "division": "Senior",
+    "title": "2024-2025 Contest 2 · Senior",
+    "problemPdf": "/contest-pdfs/2425-contest-2-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-2-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-3-cl",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-3",
+    "division": "Classroom",
+    "title": "2024-2025 Contest 3 · Classroom",
+    "problemPdf": "/contest-pdfs/2425-contest-3-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-3-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "Boolean Algebra",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "Boolean Algebra",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 8,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 9,
+        "category": "FSAs and Regular Expressions",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 10,
+        "category": "FSAs and Regular Expressions",
+        "page": 3,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-3-in",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-3",
+    "division": "Intermediate",
+    "title": "2024-2025 Contest 3 · Intermediate",
+    "problemPdf": "/contest-pdfs/2425-contest-3-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-3-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-3-jr",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-3",
+    "division": "Junior",
+    "title": "2024-2025 Contest 3 · Junior",
+    "problemPdf": "/contest-pdfs/2425-contest-3-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-3-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-3-sr",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-3",
+    "division": "Senior",
+    "title": "2024-2025 Contest 3 · Senior",
+    "problemPdf": "/contest-pdfs/2425-contest-3-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-3-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-4-cl",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-4",
+    "division": "Classroom",
+    "title": "2024-2025 Contest 4 · Classroom",
+    "problemPdf": "/contest-pdfs/2425-contest-4-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-4-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "Graph Theory",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 6,
+        "category": "Graph Theory",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Digital Electronics",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 8,
+        "category": "Digital Electronics",
+        "page": 4,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 9,
+        "category": "Assembly Language",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "Assembly Language",
+        "page": 5,
+        "correctAnswer": "E"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-4-in",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-4",
+    "division": "Intermediate",
+    "title": "2024-2025 Contest 4 · Intermediate",
+    "problemPdf": "/contest-pdfs/2425-contest-4-in-problems.pdf",
+    "solutionPdf": null,
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": null
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": null
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": null
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": null
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": null
+      },
+      {
+        "number": 6,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": null
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-4-jr",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-4",
+    "division": "Junior",
+    "title": "2024-2025 Contest 4 · Junior",
+    "problemPdf": "/contest-pdfs/2425-contest-4-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-4-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 3,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2425-contest-4-sr",
+    "seasonCode": "2425",
+    "season": "2024-2025",
+    "contest": "contest-4",
+    "division": "Senior",
+    "title": "2024-2025 Contest 4 · Senior",
+    "problemPdf": "/contest-pdfs/2425-contest-4-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2425-contest-4-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Assembly Language",
+        "page": 4,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2526-all-star-cl",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "all-star",
+    "division": "Classroom",
+    "title": "2025-2026 All-Star · Classroom",
+    "problemPdf": "/contest-pdfs/2526-all-star-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-all-star-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 7,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 10,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 12,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 14,
+        "category": "Graph Theory",
+        "page": 3,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 16,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 17,
+        "category": "LISP",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 18,
+        "category": "FSAs and Regular Expressions",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 6,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2526-all-star-jr",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "all-star",
+    "division": "Junior",
+    "title": "2025-2026 All-Star · Junior",
+    "problemPdf": "/contest-pdfs/2526-all-star-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-all-star-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 7,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 8,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 10,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 12,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 14,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 16,
+        "category": "Graph Theory",
+        "page": 4,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 17,
+        "category": "What Does This Program Do?",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 18,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 19,
+        "category": "What Does This Program Do?",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 20,
+        "category": "What Does This Program Do?",
+        "page": 6,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2526-all-star-sr",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "all-star",
+    "division": "Senior",
+    "title": "2025-2026 All-Star · Senior",
+    "problemPdf": "/contest-pdfs/2526-all-star-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-all-star-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 7,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 10,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 11,
+        "category": "Computer Number Systems",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 12,
+        "category": "Data Structures",
+        "page": 3,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 13,
+        "category": "Data Structures",
+        "page": 4,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 14,
+        "category": "Graph Theory",
+        "page": 5,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 15,
+        "category": "Graph Theory",
+        "page": 5,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 16,
+        "category": "What Does This Program Do?",
+        "page": 6,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 17,
+        "category": "LISP",
+        "page": 6,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 18,
+        "category": "FSAs and Regular Expressions",
+        "page": 6,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 19,
+        "category": "FSAs and Regular Expressions",
+        "page": 7,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 20,
+        "category": "Assembly Language",
+        "page": 7,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-1-cl",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-1",
+    "division": "Classroom",
+    "title": "2025-2026 Contest 1 · Classroom",
+    "problemPdf": "/contest-pdfs/2526-contest-1-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-1-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 6,
+        "category": "Computer Number Systems",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 7,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 8,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 9,
+        "category": "What Does This Program Do?",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 10,
+        "category": "What Does This Program Do?",
+        "page": 3,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-1-in",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-1",
+    "division": "Intermediate",
+    "title": "2025-2026 Contest 1 · Intermediate",
+    "problemPdf": "/contest-pdfs/2526-contest-1-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-1-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 3,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-1-jr",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-1",
+    "division": "Junior",
+    "title": "2025-2026 Contest 1 · Junior",
+    "problemPdf": "/contest-pdfs/2526-contest-1-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-1-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-1-sr",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-1",
+    "division": "Senior",
+    "title": "2025-2026 Contest 1 · Senior",
+    "problemPdf": "/contest-pdfs/2526-contest-1-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-1-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Computer Number Systems",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Recursive Functions",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-2-cl",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-2",
+    "division": "Classroom",
+    "title": "2025-2026 Contest 2 · Classroom",
+    "problemPdf": "/contest-pdfs/2526-contest-2-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-2-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 7,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 8,
+        "category": "Bit-String Flicking",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 9,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 10,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-2-in",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-2",
+    "division": "Intermediate",
+    "title": "2025-2026 Contest 2 · Intermediate",
+    "problemPdf": "/contest-pdfs/2526-contest-2-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-2-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 6,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-2-jr",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-2",
+    "division": "Junior",
+    "title": "2025-2026 Contest 2 · Junior",
+    "problemPdf": "/contest-pdfs/2526-contest-2-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-2-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-2-sr",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-2",
+    "division": "Senior",
+    "title": "2025-2026 Contest 2 · Senior",
+    "problemPdf": "/contest-pdfs/2526-contest-2-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-2-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Prefix/Infix/Postfix Notation",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Bit-String Flicking",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 5,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "LISP",
+        "page": 2,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-3-cl",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-3",
+    "division": "Classroom",
+    "title": "2025-2026 Contest 3 · Classroom",
+    "problemPdf": "/contest-pdfs/2526-contest-3-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-3-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "Boolean Algebra",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 6,
+        "category": "Boolean Algebra",
+        "page": 2,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 7,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 8,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 9,
+        "category": "FSAs and Regular Expressions",
+        "page": 3,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 10,
+        "category": "FSAs and Regular Expressions",
+        "page": 3,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-3-in",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-3",
+    "division": "Intermediate",
+    "title": "2025-2026 Contest 3 · Intermediate",
+    "problemPdf": "/contest-pdfs/2526-contest-3-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-3-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-3-jr",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-3",
+    "division": "Junior",
+    "title": "2025-2026 Contest 3 · Junior",
+    "problemPdf": "/contest-pdfs/2526-contest-3-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-3-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 3,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-3-sr",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-3",
+    "division": "Senior",
+    "title": "2025-2026 Contest 3 · Senior",
+    "problemPdf": "/contest-pdfs/2526-contest-3-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-3-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 2,
+        "category": "Boolean Algebra",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 3,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 4,
+        "category": "Data Structures",
+        "page": 1,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "FSAs and Regular Expressions",
+        "page": 2,
+        "correctAnswer": "C"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-4-cl",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-4",
+    "division": "Classroom",
+    "title": "2025-2026 Contest 4 · Classroom",
+    "problemPdf": "/contest-pdfs/2526-contest-4-cl-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-4-cl-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-4-in",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-4",
+    "division": "Intermediate",
+    "title": "2025-2026 Contest 4 · Intermediate",
+    "problemPdf": "/contest-pdfs/2526-contest-4-in-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-4-in-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "B"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 6,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": "D"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-4-jr",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-4",
+    "division": "Junior",
+    "title": "2025-2026 Contest 4 · Junior",
+    "problemPdf": "/contest-pdfs/2526-contest-4-jr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-4-jr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 5,
+        "category": "What Does This Program Do?",
+        "page": 3,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 6,
+        "category": "What Does This Program Do?",
+        "page": 3,
+        "correctAnswer": "B"
+      }
+    ]
+  },
+  {
+    "id": "2526-contest-4-sr",
+    "seasonCode": "2526",
+    "season": "2025-2026",
+    "contest": "contest-4",
+    "division": "Senior",
+    "title": "2025-2026 Contest 4 · Senior",
+    "problemPdf": "/contest-pdfs/2526-contest-4-sr-problems.pdf",
+    "solutionPdf": "/contest-pdfs/2526-contest-4-sr-solutions.pdf",
+    "questions": [
+      {
+        "number": 1,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 2,
+        "category": "Graph Theory",
+        "page": 1,
+        "correctAnswer": "E"
+      },
+      {
+        "number": 3,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "D"
+      },
+      {
+        "number": 4,
+        "category": "Digital Electronics",
+        "page": 2,
+        "correctAnswer": "C"
+      },
+      {
+        "number": 5,
+        "category": "Assembly Language",
+        "page": 3,
+        "correctAnswer": "A"
+      },
+      {
+        "number": 6,
+        "category": "Assembly Language",
+        "page": 4,
+        "correctAnswer": "C"
+      }
+    ]
+  }
+]

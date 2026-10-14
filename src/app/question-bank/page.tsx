@@ -7,6 +7,8 @@ import { redirect } from "next/navigation";
 import { getClassroom } from "@/lib/classroom-server";
 import { PageHeader } from "@/components/ui";
 import { QuestionBank } from "@/components/question-bank";
+import { ContestLibrary } from "@/components/contest-library";
+import { contestPackets } from "@/lib/contest-packets";
 async function Content() {
   await connection();
   let classroom;
@@ -20,8 +22,9 @@ async function Content() {
     <>
       <PageHeader
         title="Question Bank"
-        description="Teacher workspace. Custom question edits are still stored in this browser; worksheet homework is shared."
+        description="Browse official contest packets, practice with automatic grading, and manage custom questions."
       />
+      <div className="mb-8"><ContestLibrary packets={contestPackets} /></div>
       <QuestionBank />
     </>
   );

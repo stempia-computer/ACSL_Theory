@@ -1010,5 +1010,77 @@
   [
     "프로필을 저장하지 못했습니다.",
     "Could not save profile."
+  ],
+  [
+    "공식 대회 문제 모음",
+    "Official contest archive"
+  ],
+  [
+    "ACSL 대회 문제",
+    "ACSL Contest Questions"
+  ],
+  [
+    "114개 문제 세트 · 980문제 · 2020-2021부터 2025-2026까지",
+    "114 problem sets · 980 questions · 2020-2021 through 2025-2026"
+  ],
+  [
+    "전체 시즌",
+    "All seasons"
+  ],
+  [
+    "전체 대회",
+    "All contests"
+  ],
+  [
+    "주제 또는 문제 세트 검색",
+    "Search topic or packet"
+  ],
+  [
+    "개 세트",
+    "sets found"
+  ],
+  [
+    "자동 채점",
+    "Auto grading"
+  ],
+  [
+    "정답지 없음",
+    "Answer key missing"
+  ],
+  [
+    "문제",
+    "questions"
+  ],
+  [
+    "문제은행으로 돌아가기",
+    "Back to Question Bank"
+  ],
+  [
+    "문제 PDF 열기",
+    "Open problem PDF"
+  ],
+  [
+    "해설 PDF 열기",
+    "Open solution PDF"
+  ],
+  [
+    "이 세트는 원본 자료에 해설 PDF가 없어서 문제는 볼 수 있지만 자동 채점할 수 없습니다.",
+    "The source collection does not include a solution PDF for this set, so it can be viewed but not automatically graded."
+  ],
+  [
+    "답안지",
+    "Answer sheet"
+  ],
+  [
+    "정답",
+    "Correct"
+  ],
+  [
+    "제출하고 채점하기",
+    "Submit and grade"
+  ],
+  [
+    "다시 풀기",
+    "Try again"
   ]
 ]
