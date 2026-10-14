@@ -14,6 +14,25 @@ with sync_playwright() as p:
  page.get_by_label('오답만 보기').check()
  assert page.get_by_role('region',name='Answer review').locator('article').count()==13
  page.goto(base+'/students')
+ # Paste a batch, retain a partial failure, then retry without duplicate writes.
+ failed=[False]
+ def intercept(route):
+  if route.request.method=='POST':
+   data=route.request.post_data_json
+   if data.get('action')=='saveStudent' and data.get('data',{}).get('email')=='batch.two@example.com' and not failed[0]:
+    failed[0]=True;route.fulfill(status=502,json={'error':'Temporary fixture failure'});return
+  route.continue_()
+ page.route('**/api/classroom',intercept)
+ page.get_by_role('textbox',name='Student roster').fill('| **Batch One** | 9 | batch.one@example.com |\n| **Batch Two** | 10 | batch.two@example.com |')
+ page.get_by_role('button',name='명단 확인',exact=True).click()
+ page.get_by_text('2명 · Junior',exact=True).wait_for()
+ page.get_by_role('button',name='명단 등록',exact=True).click()
+ page.get_by_text('새로 등록 1명 · 기존 계정 0명 · 확인 실패 1명',exact=False).wait_for()
+ page.get_by_role('button',name='명단 등록',exact=True).click()
+ page.get_by_text('새로 등록 1명 · 기존 계정 1명 · 확인 실패 0명',exact=True).wait_for()
+ page.get_by_role('button',name='명단 등록',exact=True).click()
+ page.get_by_text('새로 등록 0명 · 기존 계정 2명 · 확인 실패 0명',exact=True).wait_for()
+ page.unroute('**/api/classroom',intercept)
  page.get_by_label('Name · 이름').fill('Browser Student')
  page.get_by_label('Email · 이메일').fill('browser@example.com')
  page.get_by_label('Division',exact=True).select_option('Senior')
@@ -47,4 +66,4 @@ with sync_playwright() as p:
  op.get_by_role('button',name='로그아웃',exact=True).click();op.wait_for_url('**/login')
  op.goto(base+'/scores');op.wait_for_url('**/login')
  browser.close()
- print('PASS browser: roster registration/edit, teacher addition, student details/wrong answers, division assignments, submission/review, cross-account privacy, mobile, logout')
+ print('PASS browser: bulk registration/partial failure/retry/deduplication, roster registration/edit, teacher addition, student details/wrong answers, division assignments, submission/review, cross-account privacy, mobile, logout')

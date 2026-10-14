@@ -1,4 +1,5 @@
 "use client";
+import { StudentImport } from "@/components/student-import";
 import { isStaff } from "@/lib/classroom-types";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -160,6 +161,7 @@ export function ClassroomApp({
           {refreshing ? "Loading…" : "Refresh"}
         </button>
       </div>
+      {view === "students" && <StudentImport onSaved={refresh} />}
       {view === "students" || view === "teachers" ? (
         <MemberManager
           key={view}

@@ -17,6 +17,7 @@ Google login and Google Sheets account storage are required for classroom pages.
 
 - Administrator: stempiacomputer@gmail.com. Re-running the updated Apps Script setup adds this administrator to existing sheets without resetting other accounts. The protected administrator cannot be edited or disabled through teacher management.
 - Initial teachers: wonup2@gmail.com and seanlee611@gmail.com. Google must verify the login email.
+- Students also supports bulk paste: name, grade, email (tab-separated or Markdown table), with a shared Division selected before preview. Existing emails are skipped; failed rows can be retried without overwriting accounts.
 - Teachers register/edit students (name, email, division, grade), add/edit/disable teachers, and view all student attempts and wrong answers. Both initial teachers have equal management permissions. The last active teacher cannot be disabled.
 - Students see only their own division assignments, saved scores and answer reviews. Ownership is a stable server-side student ID, never the name/email posted by the browser.
 - Every data request checks the current account and active role in Sheets. Server routes grade answers independently; Apps Script rejects old anonymous writes, protects mutations with a lock, and deduplicates submission IDs.
@@ -47,7 +48,7 @@ Localhost works only on the computer running the server. A public HTTPS deployme
 ```sh
 npm run lint
 npm run build
-node --experimental-strip-types --test tests/worksheet-grading.test.mjs tests/google-sheets.test.mjs
+node --experimental-strip-types --test tests/worksheet-grading.test.mjs tests/google-sheets.test.mjs tests/student-import.test.mjs
 node --test tests/classroom-api.test.mjs
 ```
 
