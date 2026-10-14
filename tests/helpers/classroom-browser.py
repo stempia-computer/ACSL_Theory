@@ -84,12 +84,17 @@ with sync_playwright() as p:
  default_page.get_by_text('Open worksheet homework',exact=True).wait_for()
  default_page.get_by_role('button',name='한국어',exact=True).click()
  default_page.get_by_text('워크시트 숙제 열기',exact=True).wait_for()
- hydration_context=browser.new_context();hydration_context.add_init_script("localStorage.setItem('acsl-language','ko')")
+ hydration_context=context(browser,teacher)
  hydration_errors=[];hydration_page=hydration_context.new_page()
  hydration_page.on('console',lambda message: hydration_errors.append(message.text) if message.type=='error' else None)
  hydration_page.on('pageerror',lambda error: hydration_errors.append(str(error)))
  hydration_page.goto(base+'/');hydration_page.get_by_text('워크시트 숙제 열기',exact=True).wait_for()
- assert not any('Hydration failed' in error or "server rendered text didn't match" in error for error in hydration_errors),hydration_errors
+ for path in ['/question-bank','/dashboard','/students']:
+  hydration_page.goto(base+path)
+  expect(hydration_page.get_by_role('button',name='한국어',exact=True)).to_have_attribute('aria-pressed','true')
+  hydration_page.reload()
+  expect(hydration_page.get_by_role('button',name='한국어',exact=True)).to_have_attribute('aria-pressed','true')
+ assert not hydration_errors,hydration_errors
  archive_context=browser.new_context();cookie_name,cookie_value=teacher.split('=',1);archive_context.add_cookies([{'name':cookie_name,'value':cookie_value,'url':base}]);archive_page=archive_context.new_page()
  archive_page.goto(base+'/question-bank')
  archive_page.get_by_role('heading',name='ACSL Contest Questions',exact=True).wait_for()

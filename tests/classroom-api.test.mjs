@@ -49,7 +49,7 @@ before(async () => {
       "--import",
       "./tests/helpers/sheets-preload.mjs",
       "node_modules/next/dist/bin/next",
-      "start",
+      process.env.ACSL_DEV_TEST ? "dev" : "start",
       "--port",
       String(port),
     ],
@@ -71,7 +71,7 @@ before(async () => {
   );
   server.stdout.on("data", (b) => (logs += b));
   server.stderr.on("data", (b) => (logs += b));
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 300; i++) {
     try {
       if ((await fetch(base + "/login")).ok) return;
     } catch {}
