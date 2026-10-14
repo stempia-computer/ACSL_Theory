@@ -1,18 +1,36 @@
 import NextAuth from "next-auth";
+import Credentials from "next-auth/providers/credentials";
+import { sessionConfigured, otpConfigured, verifyOtp } from "@/lib/otp";
 import Google from "next-auth/providers/google";
 import { verifiedGoogleEmail } from "@/lib/auth-policy";
-export function loginConfigured() {
-  return !!(
-    process.env.AUTH_GOOGLE_ID &&
-    process.env.AUTH_GOOGLE_SECRET &&
-    process.env.AUTH_URL &&
-    process.env.AUTH_SECRET &&
-    process.env.AUTH_SECRET.length >= 32 &&
-    !process.env.AUTH_SECRET.startsWith("REPLACE")
+export function googleConfigured() {
+  return (
+    sessionConfigured() &&
+    !!(process.env.AUTH_GOOGLE_ID && process.env.AUTH_GOOGLE_SECRET)
   );
+}
+export function loginConfigured() {
+  return sessionConfigured();
 }
 export const { handlers, auth } = NextAuth({
   providers: [
+    Credentials({
+      id: "email-otp",
+      name: "Email OTP",
+      credentials: {
+        email: { type: "email" },
+        challenge: { type: "text" },
+        code: { type: "text" },
+      },
+      async authorize(credentials) {
+        if (!otpConfigured()) return null;
+        return verifyOtp(
+          credentials.email,
+          credentials.challenge,
+          credentials.code,
+        );
+      },
+    }),
     Google({
       checks: ["pkce", "state", "nonce"],
       authorization: {
@@ -23,12 +41,17 @@ export const { handlers, auth } = NextAuth({
   session: { strategy: "jwt", maxAge: 60 * 60 * 8 },
   pages: { signIn: "/login", error: "/login" },
   callbacks: {
-    signIn({ account, profile }) {
-      return loginConfigured() && !!verifiedGoogleEmail(account, profile);
+    signIn({ account, profile, user }) {
+      if (account?.provider === "email-otp")
+        return otpConfigured() && !!user.id && !!user.email;
+      return googleConfigured() && !!verifiedGoogleEmail(account, profile);
     },
-    jwt({ token, account, profile }) {
+    jwt({ token, account, profile, user }) {
       if (account) {
-        token.email = verifiedGoogleEmail(account, profile);
+        token.email =
+          account.provider === "email-otp"
+            ? user.email
+            : verifiedGoogleEmail(account, profile);
         token.verified = !!token.email;
       }
       return token;

@@ -1,6 +1,7 @@
-import sys,json
+import sys,json,time
 from playwright.sync_api import sync_playwright,expect
-base,teacher,student,other=sys.argv[1:]
+base,teacher,student,other=sys.argv[1:5]
+mailbox=sys.argv[5] if len(sys.argv)>5 else None
 def context(browser,cookie):
  c=browser.new_context();name,value=cookie.split('=',1);c.add_cookies([{'name':name,'value':value,'url':base}]);return c
 with sync_playwright() as p:
@@ -65,5 +66,18 @@ with sync_playwright() as p:
  assert op.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
  op.get_by_role('button',name='로그아웃',exact=True).click();op.wait_for_url('**/login')
  op.goto(base+'/scores');op.wait_for_url('**/login')
+ if mailbox:
+  otp_context=browser.new_context();otp_page=otp_context.new_page();otp_page.goto(base+'/login')
+  otp_page.get_by_role('textbox',name='Login email',exact=True).fill('batch.one@example.com')
+  otp_page.get_by_role('button',name='인증번호 받기',exact=True).click()
+  otp_page.get_by_role('textbox',name='Verification code',exact=True).wait_for()
+  messages=json.load(open(mailbox));mail=next(m for m in messages if m['to']=='batch.one@example.com')
+  import re
+  code=re.search(r'\d{6}',mail['body']).group()
+  otp_page.get_by_role('textbox',name='Verification code',exact=True).fill(code)
+  otp_page.get_by_role('button',name='로그인',exact=True).click()
+  otp_page.wait_for_url('**/dashboard/student')
+  otp_page.get_by_role('heading',name='Student Dashboard',exact=True).wait_for()
+  assert 'Milan' not in otp_page.locator('body').inner_text()
  browser.close()
- print('PASS browser: bulk registration/partial failure/retry/deduplication, roster registration/edit, teacher addition, student details/wrong answers, division assignments, submission/review, cross-account privacy, mobile, logout')
+ print('PASS browser: email OTP login, bulk registration/partial failure/retry/deduplication, roster registration/edit, teacher addition, student details/wrong answers, division assignments, submission/review, cross-account privacy, mobile, logout')

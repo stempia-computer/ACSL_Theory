@@ -1,7 +1,9 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { connection } from "next/server";
-import { loginConfigured } from "@/auth";
+import { googleConfigured } from "@/auth";
+import { otpConfigured } from "@/lib/otp";
+import { OtpLogin } from "@/components/otp-login";
 import { LoginButton } from "@/components/login-controls";
 async function Content({
   searchParams,
@@ -15,27 +17,35 @@ async function Content({
       <p className="text-sm font-semibold text-indigo-600">ACSL CLASSROOM</p>
       <h1 className="mt-3 text-3xl font-bold">로그인</h1>
       <p className="my-6 text-slate-600">
-        선생님이 등록한 이메일의 Google 계정으로 로그인하세요. 학생은 본인의
-        과제와 결과만 볼 수 있습니다.
+        등록된 이메일로 인증번호를 받아 로그인하세요. 학생은 본인의 숙제와
+        점수만 볼 수 있습니다.
       </p>
       {error && (
         <p role="alert" className="mb-4 text-red-700">
           로그인에 실패했습니다. 계정을 확인하고 다시 시도하세요.
         </p>
       )}
-      {loginConfigured() ? (
-        <LoginButton />
+      {otpConfigured() ? (
+        <OtpLogin />
       ) : (
         <p className="rounded-lg bg-amber-50 p-4">
-          Google 로그인 설정이 아직 필요합니다.{" "}
+          이메일 OTP 연결 설정이 아직 필요합니다.{" "}
           <Link className="text-indigo-700 underline" href="/login-setup">
             관리자 설정 안내
           </Link>
         </p>
       )}
+      {googleConfigured() && (
+        <div className="mt-6 border-t pt-5">
+          <p className="mb-3 text-sm text-slate-500">
+            기존 Google 로그인도 사용할 수 있습니다.
+          </p>
+          <LoginButton />
+        </div>
+      )}
       <p className="mt-5 text-sm text-slate-500">
-        학교 이메일도 Google 계정으로 사용할 수 있어야 합니다. 등록되지 않은
-        계정은 성적에 접근할 수 없습니다.
+        Google 계정이 아니어도 등록된 이메일로 번호를 받을 수 있습니다. 미등록
+        계정은 선생님에게 문의하세요.
       </p>
     </div>
   );

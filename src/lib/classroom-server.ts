@@ -14,7 +14,7 @@ export async function actorEmail() {
   if (!loginConfigured())
     throw new ClassroomError(
       503,
-      "Google 로그인을 먼저 설정하세요. /login-setup 안내를 확인하세요.",
+      "로그인 연결을 먼저 설정하세요. /login-setup 안내를 확인하세요.",
     );
   const session = await auth();
   if (!session?.user?.email)

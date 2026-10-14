@@ -1,5 +1,7 @@
 # 학생·선생님 계정으로 업그레이드
 
+이제 [이메일 OTP 로그인](otp-login.ko.md)을 지원합니다. OTP만 사용할 경우 Google OAuth 클라이언트·Test users 설정은 생략할 수 있습니다. 아래 Google 로그인 설정은 선택 사항입니다.
+
 기존 `.env.local`의 Google Sheets 주소와 토큰은 유지합니다. 새 토큰이나 OAuth 비밀 값은 채팅·GitHub에 올리지 마세요.
 
 ## 1. Apps Script 업데이트 (기존 시트 유지)

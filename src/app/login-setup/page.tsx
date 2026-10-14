@@ -3,6 +3,26 @@ export default function LoginSetup() {
   return (
     <div className="mx-auto max-w-3xl space-y-6">
       <h1 className="text-3xl font-bold">학생·선생님 로그인 설정</h1>
+      <section className="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
+        <h2 className="text-xl font-semibold">이메일 OTP로 로그인하기</h2>
+        <p className="mt-3">
+          최신 Apps Script 코드를 붙여넣고 setup을 실행해 이메일 발송 권한을
+          승인한 뒤 기존 배포를 새 버전으로 업데이트하세요. 기존 Sheets 연결값과
+          AUTH_URL, AUTH_SECRET을 사용합니다. OTP만 사용한다면 아래 Google OAuth
+          클라이언트 설정은 생략할 수 있습니다.
+        </p>
+        <p className="mt-3">
+          학생은 등록된 이메일 → 인증번호 받기 → 6자리 번호 → 내 숙제 순서로
+          로그인합니다. 번호는 10분간 유효합니다. 명단 등록만으로 메일을
+          보내지는 않습니다.
+        </p>
+        <Link
+          className="mt-3 inline-block text-indigo-700 underline"
+          href="/google-sheets-setup"
+        >
+          최신 연결 코드 복사
+        </Link>
+      </section>
       <p className="text-slate-600">
         기존 Google Sheets 연결을 유지합니다. Apps Script 업데이트와 Google
         로그인 설정을 한 번 완료하면 됩니다.

@@ -5,7 +5,11 @@ import { once } from "node:events";
 import { createServer } from "node:net";
 import { randomUUID } from "node:crypto";
 import { encode } from "next-auth/jwt";
-import { readFileSync } from "node:fs";
+import { readFileSync, mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+const tempDirectory = mkdtempSync(join(tmpdir(), "acsl-otp-test-"));
+const mailboxFile = join(tempDirectory, "mail.json");
 const secret = "classroom-integration-fixture-secret-only-0123456789";
 const cookieName = "authjs.session-token";
 let server,
@@ -53,6 +57,7 @@ before(async () => {
       cwd: process.cwd(),
       env: {
         ...process.env,
+        ACSL_TEST_MAILBOX_FILE: mailboxFile,
         AUTH_URL: base,
         AUTH_SECRET: secret,
         AUTH_GOOGLE_ID: "fixture-google-id",
@@ -79,6 +84,7 @@ after(async () => {
     server.kill("SIGTERM");
     await once(server, "exit");
   }
+  rmSync(tempDirectory, { recursive: true, force: true });
 });
 test("anonymous, invalid and unverified sessions have no classroom access", async () => {
   assert.equal((await request(null)).status, 401);
@@ -271,6 +277,7 @@ test("browser flows", { skip: !process.env.ACSL_BROWSER_TEST }, async () => {
       await cookie(teacher),
       await cookie(student),
       await cookie(other),
+      mailboxFile,
     ],
     { stdio: ["ignore", "pipe", "pipe"] },
   );
@@ -307,5 +314,87 @@ test("admin can open the dashboard and management pages without changing teacher
     (await request(teacher, "saveTeacher", { ...r.body.member, active: false }))
       .status,
     403,
+  );
+});
+
+test("OTP endpoint and real Auth.js callback grant only a verified own-account session", async () => {
+  const send = async (email, origin = base) =>
+    fetch(base + "/api/otp/request", {
+      method: "POST",
+      headers: { Origin: origin, "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+  assert.equal((await send(student, "https://evil.example")).status, 403);
+  const response = await send(student);
+  assert.equal(response.status, 200);
+  const payload = await response.json();
+  assert.deepEqual(Object.keys(payload), ["challenge"]);
+  const mail = JSON.parse(readFileSync(mailboxFile, "utf8")).find(
+    (m) => m.to === student,
+  );
+  assert.ok(mail);
+  const code = mail.body.match(/\d{6}/)[0];
+  const csrf = await fetch(base + "/api/auth/csrf");
+  const { csrfToken } = await csrf.json();
+  const cookieHeader = csrf.headers
+    .getSetCookie()
+    .map((s) => s.split(";")[0])
+    .join("; ");
+  async function callback(challenge, otp, csrfValue = csrfToken) {
+    return fetch(base + "/api/auth/callback/email-otp", {
+      method: "POST",
+      redirect: "manual",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Cookie: cookieHeader,
+        Origin: base,
+      },
+      body: new URLSearchParams({
+        email: student,
+        challenge,
+        code: otp,
+        csrfToken: csrfValue,
+        callbackUrl: base + "/dashboard",
+      }),
+    });
+  }
+  const noCsrf = await callback(payload.challenge, code, "invalid");
+  assert.ok(
+    !noCsrf.headers.getSetCookie().some((c) => c.startsWith(cookieName + "=")),
+  );
+  const wrong = await callback(
+    payload.challenge,
+    code === "000000" ? "000001" : "000000",
+  );
+  assert.ok(
+    !wrong.headers.getSetCookie().some((c) => c.startsWith(cookieName + "=")),
+  );
+  const valid = await callback(payload.challenge, code);
+  const sessionCookie = valid.headers
+    .getSetCookie()
+    .find((c) => c.startsWith(cookieName + "="));
+  assert.ok(
+    sessionCookie,
+    `OTP session missing; status=${valid.status} redirect=${valid.headers.get("location")}`,
+  );
+  const own = await fetch(base + "/api/classroom", {
+    headers: { Cookie: sessionCookie.split(";")[0] },
+  });
+  const ownData = await own.json();
+  assert.equal(own.status, 200);
+  assert.equal(ownData.member.email, student);
+  assert.equal(ownData.students.length, 0);
+  assert.ok(ownData.attempts.every((a) => a.email === student));
+  const replay = await callback(payload.challenge, code);
+  assert.ok(
+    !replay.headers.getSetCookie().some((c) => c.startsWith(cookieName + "=")),
+  );
+  const unknown = await send("unregistered@example.com");
+  assert.equal(unknown.status, 200);
+  assert.deepEqual(Object.keys(await unknown.json()), ["challenge"]);
+  assert.ok(
+    !JSON.parse(readFileSync(mailboxFile, "utf8")).some(
+      (m) => m.to === "unregistered@example.com",
+    ),
   );
 });

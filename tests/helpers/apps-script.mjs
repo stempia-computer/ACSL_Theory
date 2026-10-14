@@ -3,6 +3,10 @@ import { randomUUID } from "node:crypto";
 import vm from "node:vm";
 export function receiver() {
   const sheets = new Map();
+  const messages = [];
+  let clock = Date.now(),
+    mailFailure = false,
+    quota = 100;
   const props = new Map([
     ["ACSL_SHEETS_TOKEN", "test-token-".repeat(4)],
     ["SPREADSHEET_ID", "test-sheet"],
@@ -55,6 +59,22 @@ export function receiver() {
     },
   };
   const context = vm.createContext({
+    Date: class extends Date {
+      constructor(...args) {
+        super(...(args.length ? args : [clock]));
+      }
+      static now() {
+        return clock;
+      }
+    },
+    MailApp: {
+      getRemainingDailyQuota: () => quota,
+      sendEmail: (mail) => {
+        if (mailFailure) throw new Error("Mail failed");
+        messages.push(mail);
+        quota--;
+      },
+    },
     SpreadsheetApp: {
       getActiveSpreadsheet: () => book,
       openById: () => book,
@@ -97,6 +117,17 @@ export function receiver() {
   return {
     sheets,
     context,
+    props,
+    messages,
+    advance: (ms) => {
+      clock += ms;
+    },
+    failMail: () => {
+      mailFailure = true;
+    },
+    setQuota: (n) => {
+      quota = n;
+    },
     request: (
       actor,
       action,
