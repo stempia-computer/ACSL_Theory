@@ -5875,43 +5875,43 @@
     "division": "Intermediate",
     "title": "2024-2025 Contest 4 · Intermediate",
     "problemPdf": "/contest-pdfs/2425-contest-4-in-problems.pdf",
-    "solutionPdf": null,
+    "solutionPdf": "/contest-pdfs/2425-contest-4-in-solutions.pdf",
     "questions": [
       {
         "number": 1,
         "category": "Graph Theory",
         "page": 1,
-        "correctAnswer": null
+        "correctAnswer": "C"
       },
       {
         "number": 2,
         "category": "Graph Theory",
         "page": 1,
-        "correctAnswer": null
+        "correctAnswer": "D"
       },
       {
         "number": 3,
         "category": "Digital Electronics",
         "page": 2,
-        "correctAnswer": null
+        "correctAnswer": "B"
       },
       {
         "number": 4,
         "category": "Digital Electronics",
         "page": 2,
-        "correctAnswer": null
+        "correctAnswer": "E"
       },
       {
         "number": 5,
         "category": "Assembly Language",
         "page": 3,
-        "correctAnswer": null
+        "correctAnswer": "B"
       },
       {
         "number": 6,
         "category": "Assembly Language",
         "page": 3,
-        "correctAnswer": null
+        "correctAnswer": "E"
       }
     ]
   },

@@ -4,6 +4,7 @@ import { basename, join } from "node:path";
 
 const source = process.argv[2];
 if (!source) throw new Error("Usage: node scripts/import-contest-pdfs.mjs /tmp/acsl-contests");
+const extraSolutions = process.argv.slice(3);
 
 const problemRoots = ["z1", "z4", "z5", "z7", "z10"];
 const solutionRoots = ["z2", "z3", "z6", "z8", "z9"];
@@ -100,7 +101,7 @@ function answers(path) {
 }
 
 const problems = new Map(problemRoots.flatMap(files).map((path) => [identity(path).id, path]));
-const solutions = new Map(solutionRoots.flatMap(files).map((path) => [identity(path).id, path]));
+const solutions = new Map([...solutionRoots.flatMap(files), ...extraSolutions].map((path) => [identity(path).id, path]));
 const answerOverrides = new Map(Object.entries({
   "2021-all-star-jr:15": "C",
   "2021-all-star-sr:8": "B",

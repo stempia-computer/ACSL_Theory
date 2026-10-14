@@ -16,10 +16,11 @@ test("contest archive has unique complete packet and question identities", () =>
   }
 });
 
-test("all supplied answers are A-E and only the known missing solution is ungraded", () => {
+test("all supplied answers are A-E and every packet is graded", () => {
   const ungraded = packets.filter((packet) => packet.questions.some((question) => !question.correctAnswer));
-  assert.deepEqual(ungraded.map((packet) => packet.id), ["2425-contest-4-in"]);
-  assert.equal(ungraded[0].solutionPdf, null);
-  for (const packet of packets.filter((item) => item.solutionPdf))
+  assert.deepEqual(ungraded, []);
+  for (const packet of packets) {
+    assert.ok(packet.solutionPdf);
     for (const question of packet.questions) assert.match(question.correctAnswer, /^[A-E]$/);
+  }
 });

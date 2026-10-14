@@ -34,7 +34,7 @@ export function ContestLibrary({ packets }: { packets: ContestPacket[] }) {
         <div>
           <p className="text-xs font-bold uppercase tracking-wider text-indigo-600"><T>Official contest archive</T></p>
           <h2 className="mt-2 text-2xl font-bold"><T>ACSL Contest Questions</T></h2>
-          <p className="mt-2 text-sm text-slate-600"><T>114 problem sets · 980 questions · 2020-2021 through 2025-2026</T></p>
+          <p className="mt-2 text-sm text-slate-600"><T>114 problem sets · 980 auto-graded questions · 2020-2021 through 2025-2026</T></p>
         </div>
       </div>
       <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
