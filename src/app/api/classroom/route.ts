@@ -64,7 +64,7 @@ export async function POST(request: Request) {
         headers: { "Cache-Control": "no-store" },
       });
     }
-    if (!["saveStudent", "saveTeacher"].includes(body.action))
+    if (!["saveStudent", "saveTeacher", "updateProfile"].includes(body.action))
       throw new ClassroomError(400, "지원하지 않는 요청입니다.");
     // Apps Script checks the actor's current role under its write lock on every operation.
     return Response.json(await classroomCall(email, body.action, body.data), {

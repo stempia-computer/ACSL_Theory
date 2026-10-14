@@ -1,4 +1,6 @@
 "use client";
+import { T } from "@/components/language";
+
 import { useState, useEffect } from "react";
 import { signIn } from "next-auth/react";
 export function OtpLogin() {
@@ -67,9 +69,7 @@ export function OtpLogin() {
           void send();
         }}
       >
-        <label className="block font-medium">
-          이메일
-          <input
+        <label className="block font-medium"><T>이메일</T><input
             aria-label="Login email"
             type="email"
             autoComplete="email"
@@ -85,20 +85,18 @@ export function OtpLogin() {
           disabled={busy || cooldown > 0}
           className="my-4 w-full rounded-lg bg-indigo-600 px-4 py-3 font-semibold text-white disabled:opacity-50"
         >
-          {busy
+          <T>{busy
             ? "처리 중…"
             : cooldown
               ? `${cooldown}초 후 재발송`
               : challenge
                 ? "인증번호 다시 받기"
-                : "인증번호 받기"}
+                : "인증번호 받기"}</T>
         </button>
       </form>
       {challenge && (
         <form onSubmit={login}>
-          <label className="block font-medium">
-            6자리 인증번호
-            <input
+          <label className="block font-medium"><T>6자리 인증번호</T><input
               aria-label="Verification code"
               inputMode="numeric"
               autoComplete="one-time-code"
@@ -114,9 +112,7 @@ export function OtpLogin() {
           <button
             disabled={busy}
             className="mt-4 w-full rounded-lg bg-indigo-600 p-3 font-semibold text-white disabled:opacity-50"
-          >
-            로그인
-          </button>
+          ><T>로그인</T></button>
           <button
             type="button"
             disabled={busy}
@@ -126,14 +122,12 @@ export function OtpLogin() {
               setCode("");
               setMessage("");
             }}
-          >
-            이메일 변경
-          </button>
+          ><T>이메일 변경</T></button>
         </form>
       )}
       {message && (
         <p role="status" className="mt-4 text-sm text-slate-700">
-          {message}
+          <T>{message}</T>
         </p>
       )}
     </div>

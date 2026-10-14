@@ -1,3 +1,5 @@
+
+import { T } from "@/components/language";
 import { Suspense } from "react";
 import { ClassroomGate } from "@/components/classroom-gate";
 async function Content({ params }: { params: Promise<{ id: string }> }) {
@@ -6,7 +8,7 @@ async function Content({ params }: { params: Promise<{ id: string }> }) {
 }
 export default function Page(props: { params: Promise<{ id: string }> }) {
   return (
-    <Suspense fallback={<p>Loading…</p>}>
+    <Suspense fallback={<p><T>Loading…</T></p>}>
       <Content {...props} />
     </Suspense>
   );

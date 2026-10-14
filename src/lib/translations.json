@@ -1,0 +1,1014 @@
+[
+  [
+    "저장하지 못했습니다.",
+    "Could not save. Please try again."
+  ],
+  [
+    "새로고침 실패",
+    "Could not refresh."
+  ],
+  [
+    "학생 관리",
+    "Students"
+  ],
+  [
+    "선생님 관리",
+    "Teachers"
+  ],
+  [
+    "점수와 오답",
+    "Scores"
+  ],
+  [
+    "로그인 계정으로 저장된 기록 · 이전 이름 입력 방식의 기록은 자동 연결되지 않습니다.",
+    "Records are linked to your signed-in account. Earlier records entered by name are not linked automatically."
+  ],
+  [
+    "등록 학생",
+    "Registered students"
+  ],
+  [
+    "내 과제",
+    "My assignments"
+  ],
+  [
+    "제출 횟수",
+    "Submissions"
+  ],
+  [
+    "최근 제출 평균",
+    "Latest average"
+  ],
+  [
+    "최근 제출 오답",
+    "Latest incorrect answers"
+  ],
+  [
+    "· 학생 상세",
+    "· Student details"
+  ],
+  [
+    "전체 학생 보기",
+    "View all students"
+  ],
+  [
+    "내 디비전 과제",
+    "Assignments for my division"
+  ],
+  [
+    "문제들",
+    "Questions"
+  ],
+  [
+    "점 · 마감",
+    "points · Due"
+  ],
+  [
+    "저장했습니다.",
+    "Saved successfully."
+  ],
+  [
+    "저장 실패",
+    "Could not save."
+  ],
+  [
+    "계정 수정",
+    "Edit account"
+  ],
+  [
+    "선생님 추가",
+    "Add teacher"
+  ],
+  [
+    "학생 등록",
+    "Register student"
+  ],
+  [
+    "추가된 선생님은 모든 학생의 성적·답안을 보고 학생과 선생님을 관리할 수 있습니다.",
+    "Teachers can view all students’ scores and answers and manage student and teacher accounts."
+  ],
+  [
+    "실제로 로그인할 Google 계정 이메일을 입력하세요. 비활성 계정은 기록을 보존하면서 접근을 막습니다.",
+    "Enter the email the student will use to receive a login code. Inactive accounts keep their records but cannot sign in."
+  ],
+  [
+    "이름",
+    "Name"
+  ],
+  [
+    "이메일",
+    "Email"
+  ],
+  [
+    "디비전",
+    "Division"
+  ],
+  [
+    "학년",
+    "Grade"
+  ],
+  [
+    "활성 계정",
+    "Active account"
+  ],
+  [
+    "변경 저장",
+    "Save changes"
+  ],
+  [
+    "등록",
+    "Register"
+  ],
+  [
+    "취소",
+    "Cancel"
+  ],
+  [
+    "이름 또는 이메일 검색",
+    "Search by name or email"
+  ],
+  [
+    "모든 디비전",
+    "All divisions"
+  ],
+  [
+    "관리자",
+    "Admin"
+  ],
+  [
+    "활성",
+    "Active"
+  ],
+  [
+    "비활성",
+    "Inactive"
+  ],
+  [
+    "관리자 계정",
+    "Admin account"
+  ],
+  [
+    "수정",
+    "Edit"
+  ],
+  [
+    "아직 등록된 학생이 없습니다.",
+    "No students have been registered yet."
+  ],
+  [
+    "학생별 점수",
+    "Student scores"
+  ],
+  [
+    "과제별 마지막 제출 기준입니다. 이름을 누르면 학생 상세, 점수를 누르면 답안이 열립니다.",
+    "Based on the latest submission for each assignment. Select a name for student details or a score to review answers."
+  ],
+  [
+    "이름, 이메일, Division 검색",
+    "Search by name, email, or division"
+  ],
+  [
+    " · 비활성",
+    " · Inactive"
+  ],
+  [
+    "Students에서 학생을 먼저 등록하세요.",
+    "Register students on the Students page first."
+  ],
+  [
+    "제출 기록",
+    "Submission history"
+  ],
+  [
+    "내 점수와 오답 리뷰",
+    "My scores and answer review"
+  ],
+  [
+    "아직 제출된 답안이 없습니다.",
+    "No answers have been submitted yet."
+  ],
+  [
+    "답안 보기",
+    "Review answers"
+  ],
+  [
+    "문제별 결과 · 최근 제출 기준",
+    "Results by question · Latest submissions"
+  ],
+  [
+    "정답 ·",
+    "correct ·"
+  ],
+  [
+    "명 오답",
+    "incorrect"
+  ],
+  [
+    "제출 후 표시됩니다.",
+    "Results will appear after submission."
+  ],
+  [
+    "리뷰 닫기",
+    "Close review"
+  ],
+  [
+    "오답만 보기",
+    "Show incorrect answers only"
+  ],
+  [
+    "모두 정답입니다.",
+    "All answers are correct."
+  ],
+  [
+    "문제",
+    "Question"
+  ],
+  [
+    "정답",
+    "Correct"
+  ],
+  [
+    "오답",
+    "Incorrect"
+  ],
+  [
+    "미응답",
+    "Unanswered"
+  ],
+  [
+    "학생 답:",
+    "Student answer:"
+  ],
+  [
+    "(빈 답안)",
+    "(blank answer)"
+  ],
+  [
+    "정답:",
+    "Correct answer:"
+  ],
+  [
+    "원본 문제와 해설 보기",
+    "View original question and solution"
+  ],
+  [
+    "저장 확인에 실패했습니다.",
+    "Could not confirm that your answers were saved."
+  ],
+  [
+    "전송 실패. 같은 답안으로 다시 시도하세요.",
+    "Submission failed. Retry with the same answers."
+  ],
+  [
+    "제출과 서버 저장이 완료되었습니다. 다른 기기에서도 로그인하면 확인할 수 있습니다.",
+    "Submitted and saved. Sign in on another device to view your results."
+  ],
+  [
+    "틀린 문제 다시 풀기",
+    "Retry incorrect questions"
+  ],
+  [
+    "선생님 미리보기입니다. 제출은 학생 계정에서 가능합니다.",
+    "Teacher preview. Only student accounts can submit answers."
+  ],
+  [
+    "문항",
+    "questions"
+  ],
+  [
+    "답안은 제출 전까지 이 탭에만 있습니다. 저장 완료 메시지를 확인한 뒤 창을 닫으세요.",
+    "Until submitted, answers are kept only in this tab. Wait for the saved confirmation before closing it."
+  ],
+  [
+    "내 답안",
+    "Your answer"
+  ],
+  [
+    "답안은 이 탭에 유지됩니다. 재전송해도 중복 저장되지 않습니다.",
+    "Your answers remain in this tab. Retrying will not create duplicate submissions."
+  ],
+  [
+    "빈 답안은 0점입니다. 그대로 제출하려면 아래 버튼을 다시 누르세요.",
+    "Blank answers receive zero points. Press the button again to submit with blanks."
+  ],
+  [
+    "채점 및 저장 중…",
+    "Grading and saving…"
+  ],
+  [
+    "같은 답안 다시 전송",
+    "Retry submission"
+  ],
+  [
+    "빈 답안 포함 제출",
+    "Submit with blank answers"
+  ],
+  [
+    "제출하고 점수 보기",
+    "Submit and see score"
+  ],
+  [
+    "계정 연결 확인",
+    "Check account access"
+  ],
+  [
+    "데이터를 불러오지 못했습니다.",
+    "Could not load your data."
+  ],
+  [
+    "로그인 설정 안내",
+    "Login setup guide"
+  ],
+  [
+    "본인 디비전의 과제만 열 수 있습니다.",
+    "You can only open assignments for your division."
+  ],
+  [
+    "계정과 수업 기록을 불러오는 중…",
+    "Loading your account and classroom records…"
+  ],
+  [
+    "복사했습니다. Apps Script 편집기에 붙여넣으세요.",
+    "Copied. Paste into the Apps Script editor."
+  ],
+  [
+    "아래 코드 상자를 클릭하고 Ctrl+A, Ctrl+C로 복사하세요.",
+    "Click the code box below, then press Ctrl+A and Ctrl+C to copy."
+  ],
+  [
+    "코드를 불러오지 못했습니다. 아래 파일 다운로드를 사용하세요.",
+    "Could not load the code. Use the download link below."
+  ],
+  [
+    "연결 코드 복사",
+    "Copy connection code"
+  ],
+  [
+    "코드 파일 다운로드",
+    "Download code file"
+  ],
+  [
+    "코드 직접 보기",
+    "Show code"
+  ],
+  [
+    "Apps Script 코드",
+    "Apps Script code"
+  ],
+  [
+    "Google 계정으로 로그인",
+    "Sign in with Google"
+  ],
+  [
+    "로그아웃",
+    "Sign out"
+  ],
+  [
+    "등록된 이메일이면 인증번호가 발송됩니다. 스팸함도 확인하세요. 10분 안에 입력해 주세요. 재발송은 1분 후에 가능합니다.",
+    "If your email is registered, a code will be sent. Check your spam folder too. Enter it within 10 minutes. You can request another code after one minute."
+  ],
+  [
+    "요청에 실패했습니다.",
+    "Request failed. Please try again."
+  ],
+  [
+    "번호가 맞지 않거나 만료되었습니다. 최신 번호를 확인하세요. 5번 실패하면 새 번호를 받아야 합니다.",
+    "The code is incorrect or expired. Use the latest code. After five failed attempts, request a new one."
+  ],
+  [
+    "로그인에 실패했습니다.",
+    "Sign-in failed. Please try again."
+  ],
+  [
+    "처리 중…",
+    "Working…"
+  ],
+  [
+    "인증번호 다시 받기",
+    "Resend code"
+  ],
+  [
+    "인증번호 받기",
+    "Send login code"
+  ],
+  [
+    "6자리 인증번호",
+    "6-digit verification code"
+  ],
+  [
+    "로그인",
+    "Sign in"
+  ],
+  [
+    "이메일 변경",
+    "Change email"
+  ],
+  [
+    "샘플 문제는 공식 ACSL 문제를 가져온 것이 아닙니다. 변경 사항은 이 브라우저에만 저장됩니다. 원본 PDF는 링크로만 추가할 수 있습니다.",
+    "Sample questions are illustrative, not imported official ACSL questions. Changes are stored only in this browser. Source PDFs are optional links; uploads are not available yet."
+  ],
+  [
+    "문제 추가",
+    "Add question"
+  ],
+  [
+    "연도",
+    "Year"
+  ],
+  [
+    "대회",
+    "Contest"
+  ],
+  [
+    "분야",
+    "Category"
+  ],
+  [
+    "문제 유형: 4지선다 · 단답형과 프로그래밍은 추후 추가됩니다.",
+    "Question type: Multiple Choice · Short Answer and Programming will be added later."
+  ],
+  [
+    "문제 내용",
+    "Question text"
+  ],
+  [
+    "선택지",
+    "Choice"
+  ],
+  [
+    "정답 선택",
+    "Correct answer"
+  ],
+  [
+    "배점",
+    "Points"
+  ],
+  [
+    "문제 번호",
+    "Question number"
+  ],
+  [
+    "해설",
+    "Explanation"
+  ],
+  [
+    "원본 PDF 주소 (선택)",
+    "Source PDF URL (optional)"
+  ],
+  [
+    "문제 저장",
+    "Save question"
+  ],
+  [
+    "문제 검색",
+    "Search questions"
+  ],
+  [
+    "전체",
+    "All"
+  ],
+  [
+    "필터 초기화",
+    "Clear filters"
+  ],
+  [
+    "중",
+    "of"
+  ],
+  [
+    "· 문제",
+    "· Question"
+  ],
+  [
+    "상세 보기",
+    "View details"
+  ],
+  [
+    "조건에 맞는 문제가 없습니다. 필터를 초기화하거나 문제를 추가하세요.",
+    "No questions match these filters. Clear the filters or add a question."
+  ],
+  [
+    "문제 상세",
+    "Question details"
+  ],
+  [
+    "상세 닫기",
+    "Close details"
+  ],
+  [
+    "점 ·",
+    "points ·"
+  ],
+  [
+    "원본 PDF:",
+    "Source PDF:"
+  ],
+  [
+    "원본 PDF 열기",
+    "Open source PDF"
+  ],
+  [
+    "명단을 확인하세요.",
+    "Please check the roster."
+  ],
+  [
+    "현재 명단을 확인하지 못했습니다.",
+    "Could not load the current roster."
+  ],
+  [
+    "이미 등록됨 · 변경 안 함",
+    "Already registered · Unchanged"
+  ],
+  [
+    "등록 중…",
+    "Registering…"
+  ],
+  [
+    "등록 실패",
+    "Registration failed"
+  ],
+  [
+    "등록 확인에 실패했습니다.",
+    "Could not verify registration."
+  ],
+  [
+    "등록 완료",
+    "Registered"
+  ],
+  [
+    "확인 실패 · 재시도 가능",
+    "Verification failed · You can retry"
+  ],
+  [
+    ". 등록 버튼을 다시 누르면 현재 명단을 확인한 후 빠진 계정만 재시도합니다.",
+    ". Click Register roster again to retry only missing accounts."
+  ],
+  [
+    "등록하지 못했습니다.",
+    "Could not register students."
+  ],
+  [
+    "학생 일괄 등록",
+    "Bulk student registration"
+  ],
+  [
+    "이름 · 학년 · 이메일 순서의 표를 복사해 붙여넣으세요. 등록 후 Division을 개별 수정할 수 있습니다. 이미 있는 이메일은 덮어쓰지 않습니다.",
+    "Paste a table with name, grade, and email in that order. You can change each student’s division later. Existing email accounts will not be overwritten."
+  ],
+  [
+    "일괄 등록 Division",
+    "Division for this roster"
+  ],
+  [
+    "학생 명단",
+    "Student roster"
+  ],
+  [
+    "명단 확인",
+    "Preview roster"
+  ],
+  [
+    "명 ·",
+    "students ·"
+  ],
+  [
+    "등록 상태",
+    "Registration status"
+  ],
+  [
+    "등록 대기",
+    "Ready to register"
+  ],
+  [
+    "등록 중… 창을 닫지 마세요",
+    "Registering… Please keep this tab open"
+  ],
+  [
+    "명단 등록",
+    "Register roster"
+  ],
+  [
+    "본문으로 이동",
+    "Skip to content"
+  ],
+  [
+    "ACSL Theory · Stempia Computer Institute 워크시트 연습",
+    "ACSL Theory · Worksheet practice by Stempia Computer Institute"
+  ],
+  [
+    "배우고, 연습하고, 성장하세요.",
+    "Learn. Practice. Progress."
+  ],
+  [
+    "ACSL 연습, 과제, 학생별 학습 현황을 한곳에서 확인하세요.",
+    "A simple space for ACSL practice, assignments, and student progress."
+  ],
+  [
+    "워크시트 숙제 열기",
+    "Open worksheet homework"
+  ],
+  [
+    "학생 대시보드",
+    "Student Dashboard"
+  ],
+  [
+    "선생님 대시보드",
+    "Teacher Dashboard"
+  ],
+  [
+    "관리자 대시보드",
+    "Admin Dashboard"
+  ],
+  [
+    "대시보드",
+    "Dashboard"
+  ],
+  [
+    "과제",
+    "Assignments"
+  ],
+  [
+    "문제은행",
+    "Question Bank"
+  ],
+  [
+    "요약",
+    "Overview"
+  ],
+  [
+    "선생님",
+    "Teacher"
+  ],
+  [
+    "학생",
+    "Student"
+  ],
+  [
+    "내 숙제",
+    "My Assignments"
+  ],
+  [
+    "새로고침",
+    "Refresh"
+  ],
+  [
+    "불러오는 중…",
+    "Loading…"
+  ],
+  [
+    "저장 중…",
+    "Saving…"
+  ],
+  [
+    "평균",
+    "Average"
+  ],
+  [
+    "과제명",
+    "Assignment"
+  ],
+  [
+    "제출 시각",
+    "Submitted"
+  ],
+  [
+    "점수",
+    "Score"
+  ],
+  [
+    "상태",
+    "Status"
+  ],
+  [
+    "Google Sheets 연결",
+    "Connect Google Sheets"
+  ],
+  [
+    "한 번 설정하면 학생 제출 결과가 선생님들의 공유 점수표에 기록됩니다.",
+    "Set this up once to save student submissions to a shared teacher score sheet."
+  ],
+  [
+    "이미 시트를 연결했다면 새로 만들지 마세요.",
+    "If your sheet is already connected, keep using it."
+  ],
+  [
+    "학생·선생님 로그인 업그레이드 안내",
+    "Student and teacher login upgrade guide"
+  ],
+  [
+    "에 따라 아래 코드를 업데이트하세요.",
+    "Follow the guide to update the code below."
+  ],
+  [
+    "1. Google 점수표 만들기",
+    "1. Create a Google score sheet"
+  ],
+  [
+    "새 Google Sheets 열기",
+    "Open a new Google Sheet"
+  ],
+  [
+    "에서 점수표를 만들고 이름을 ACSL Classroom Scores로 바꾸세요. 오른쪽 위 공유 버튼에서 선생님들의 Google 이메일을 추가하고 뷰어 권한을 주세요. 일반 액세스는 제한됨으로 유지하세요.",
+    "Create a sheet named ACSL Classroom Scores. Use Share at the top right to add teachers as viewers. Keep general access Restricted."
+  ],
+  [
+    "2. 연결 코드 붙여넣기",
+    "2. Paste the connection code"
+  ],
+  [
+    "점수표 상단의 확장 프로그램 → Apps Script를 여세요. 아래 코드를 복사해서 기본 Code.gs의 내용을 바꾸고 저장하세요.",
+    "In your sheet, open Extensions → Apps Script. Copy the code below, replace the contents of Code.gs, and save."
+  ],
+  [
+    "3. 점수표 준비",
+    "3. Prepare the score sheet"
+  ],
+  [
+    "Apps Script 상단 함수 목록에서 setup을 선택하고 실행하세요. 본인 Google 계정으로 이 스크립트의 스프레드시트 접근을 승인하면 제출 기록·문제별 결과·학생 계정·선생님 계정·계정별 제출 탭이 생깁니다. 완료 알림 팝업 없이 실행이 끝납니다.",
+    "Select setup in the function menu and click Run. Authorize spreadsheet access with your Google account. Tabs for submissions, question results, students, teachers, and account submissions will be created. No completion popup is shown."
+  ],
+  [
+    "왼쪽 톱니바퀴 프로젝트 설정 → 스크립트 속성에서 ACSL_SHEETS_TOKEN 값을 복사해 두세요. 이 값은 다음 단계의 컴퓨터 설정에만 사용하며, 채팅·GitHub·학생에게 공유하지 마세요.",
+    "Open Project Settings → Script Properties and copy ACSL_SHEETS_TOKEN. Use it only for the computer configuration below. Do not share it in chat, on GitHub, or with students."
+  ],
+  [
+    "4. 연결 주소 만들기",
+    "4. Create the connection URL"
+  ],
+  [
+    "배포 → 새 배포 → 유형 선택의 톱니바퀴 → 웹 앱을 선택하세요. 실행 사용자: 나, 액세스 권한: 모든 사용자(Anyone)로 설정한 뒤 배포하세요. 끝이 /exec인 웹 앱 URL을 복사하세요. 웹 앱은 비밀 토큰을 확인한 요청만 기록하며 점수표 내용은 공개하지 않습니다.",
+    "Choose Deploy → New deployment → Select type → Web app. Set Execute as to Me and access to Anyone, then deploy. Copy the URL ending in /exec. The web app checks the secret token and does not publish the score sheet."
+  ],
+  [
+    "학교 Google 계정에서 모든 사용자 옵션이 제한되어 있으면 관리자 허용이 필요합니다.",
+    "If your school account restricts the Anyone option, contact your Google Workspace administrator."
+  ],
+  [
+    "5. Windows 프로젝트에 연결",
+    "5. Connect your Windows project"
+  ],
+  [
+    "프로젝트 폴더의 .env.local.example을 복사해서 파일 이름을 .env.local로 바꾸세요. 메모장으로 열어서 아래 두 값을 본인의 웹 앱 URL과 스크립트 속성 토큰으로 바꾼 뒤 저장하세요. 파일 끝에 .txt가 붙지 않도록 확인하세요.",
+    "Copy .env.local.example to .env.local in your project folder. Open it in Notepad, replace the two values with your web app URL and script token, and save. Make sure the filename does not end in .txt."
+  ],
+  [
+    "기존 .env.local 파일이 있다면 주소와 토큰을 유지하세요. 로그인 설정 안내에서 Google OAuth 설정도 완료한 뒤 서버를 재시작하세요.",
+    "If .env.local already exists, keep its URL and token. Follow the login setup guide, then restart the server. Google OAuth is optional for email-code login."
+  ],
+  [
+    "6. 실제 전송 확인",
+    "6. Verify a submission"
+  ],
+  [
+    "선생님으로 로그인해 학생을 등록하고, 등록된 학생 계정으로 숙제를 제출하세요. 저장 완료 메시지와 Google Sheets의 새 행을 확인하세요. 실패 시 같은 답안 다시 전송을 누르면 중복 없이 재시도합니다.",
+    "Sign in as a teacher and register a student. Submit homework from that student’s account. Check the saved confirmation and the new rows in Google Sheets. If it fails, use Retry submission without creating duplicates."
+  ],
+  [
+    "이 연결은 점수표 공유 기능입니다. 학생들의 집에서 웹사이트에 접속하려면 별도의 사이트 배포가 필요합니다. Google 점수표는 선생님에게만 공유하고 학생에게는 공유하지 마세요.",
+    "This connection shares scores with teachers. Deploy the website separately for students to access it from home. Share the Google Sheet only with teachers, not students."
+  ],
+  [
+    "등록된 이메일로 인증번호를 받아 로그인하세요. 학생은 본인의 숙제와 점수만 볼 수 있습니다.",
+    "Sign in with a code sent to your registered email. Students can only view their own assignments and scores."
+  ],
+  [
+    "로그인에 실패했습니다. 계정을 확인하고 다시 시도하세요.",
+    "Sign-in failed. Check your account and try again."
+  ],
+  [
+    "이메일 OTP 연결 설정이 아직 필요합니다.",
+    "Email-code login still needs to be configured."
+  ],
+  [
+    "관리자 설정 안내",
+    "Administrator setup guide"
+  ],
+  [
+    "기존 Google 로그인도 사용할 수 있습니다.",
+    "You can also sign in with Google."
+  ],
+  [
+    "Google 계정이 아니어도 등록된 이메일로 번호를 받을 수 있습니다. 미등록 계정은 선생님에게 문의하세요.",
+    "Any registered email can receive a code; a Google account is not required. Contact your teacher if your email is not registered."
+  ],
+  [
+    "로그인 준비 중…",
+    "Preparing sign-in…"
+  ],
+  [
+    "학생·선생님 로그인 설정",
+    "Student and teacher login setup"
+  ],
+  [
+    "이메일 OTP로 로그인하기",
+    "Sign in with an email code"
+  ],
+  [
+    "최신 Apps Script 코드를 붙여넣고 setup을 실행해 이메일 발송 권한을 승인한 뒤 기존 배포를 새 버전으로 업데이트하세요. 기존 Sheets 연결값과 AUTH_URL, AUTH_SECRET을 사용합니다. OTP만 사용한다면 아래 Google OAuth 클라이언트 설정은 생략할 수 있습니다.",
+    "Paste the latest Apps Script code and run setup to authorize email delivery. Update the existing deployment to a new version. Keep your Sheets connection settings, AUTH_URL, and AUTH_SECRET. Google OAuth client setup below is optional for email-code login."
+  ],
+  [
+    "학생은 등록된 이메일 → 인증번호 받기 → 6자리 번호 → 내 숙제 순서로 로그인합니다. 번호는 10분간 유효합니다. 명단 등록만으로 메일을 보내지는 않습니다.",
+    "Students enter their registered email, request a code, and enter the six-digit code to see their assignments. Codes expire after 10 minutes. Registering a roster does not send emails."
+  ],
+  [
+    "최신 연결 코드 복사",
+    "Copy the latest connection code"
+  ],
+  [
+    "기존 Google Sheets 연결을 유지합니다. Apps Script 업데이트와 Google 로그인 설정을 한 번 완료하면 됩니다.",
+    "Keep your existing Google Sheets connection. Update Apps Script once; configure Google sign-in only if you want to use it."
+  ],
+  [
+    "1. 기존 Apps Script 업데이트",
+    "1. Update your existing Apps Script"
+  ],
+  [
+    "연결 코드 복사 페이지",
+    "Connection code page"
+  ],
+  [
+    "에서 최신 코드를 복사해 기존 Code.gs를 바꾸고 저장하세요. setup을 실행하면 학생 계정·선생님 계정·계정별 제출 탭이 추가됩니다. 기존 점수와 토큰은 유지됩니다.",
+    "Copy the latest code into your existing Code.gs and save. Run setup to add student, teacher, and account submission tabs. Existing scores and the token are preserved."
+  ],
+  [
+    "Deploy → Manage deployments → 연필 → New version → Deploy. 기존 연결 URL을 유지하세요.",
+    "Deploy → Manage deployments → Edit (pencil) → New version → Deploy. Keep the existing connection URL."
+  ],
+  [
+    "2. Google 로그인 클라이언트 만들기",
+    "2. Create a Google sign-in client (optional)"
+  ],
+  [
+    "→ Google Auth Platform에서 앱 이름 ACSL Classroom, Audience External을 설정하세요. Testing 상태에서는 두 선생님과 테스트 학생을 Test users에 추가하세요.",
+    "In Google Auth Platform, set the app name to ACSL Classroom and Audience to External. While in Testing, add teachers and test students to Test users."
+  ],
+  [
+    "기본 로그인 권한(openid, email, profile)만 사용합니다. 결제 계정을 연결할 필요는 없습니다.",
+    "Use only the basic sign-in scopes: openid, email, and profile. A billing account is not required."
+  ],
+  [
+    "3. 컴퓨터 설정",
+    "3. Configure your computer"
+  ],
+  [
+    "기존 .env.local의 Sheets 주소·토큰 아래에 추가하세요.",
+    "Add these below the Sheets URL and token in your existing .env.local."
+  ],
+  [
+    "명령 프롬프트에서 다음을 실행해 AUTH_SECRET 값을 만드세요.",
+    "Run this in Command Prompt to generate AUTH_SECRET."
+  ],
+  [
+    "비밀 값은 채팅이나 GitHub에 올리지 마세요. 저장 후 Ctrl+C → npm run dev로 재시작하세요.",
+    "Do not share secrets in chat or on GitHub. Save, then restart using Ctrl+C followed by npm run dev."
+  ],
+  [
+    "4. 선생님 로그인과 학생 등록",
+    "4. Sign in as a teacher and register students"
+  ],
+  [
+    "초기 선생님: wonup2@gmail.com, seanlee611@gmail.com",
+    "Initial teachers: wonup2@gmail.com, seanlee611@gmail.com"
+  ],
+  [
+    "후 Students에서 이름·이메일·Division·학년을 등록하세요. Teachers에서 선생님을 추가할 수 있습니다. 학생은 등록된 Google 계정으로 본인의 과제와 결과만 봅니다.",
+    "Then open Students to register names, emails, divisions, and grades. Add teachers on the Teachers page. Students sign in with their registered email to view only their own assignments and results."
+  ],
+  [
+    "Google 점수표는 선생님에게만 공유하세요. 이전 이름 입력 방식의 기록은 보존하지만 계정에 자동 연결하지 않습니다.",
+    "Share the Google Sheet only with teachers. Earlier records entered by name are preserved but are not automatically linked to accounts."
+  ],
+  [
+    "학생들이 집에서 접속할 공개 사이트 배포는 별도입니다. 전체 안내는 저장소 docs/login-setup.ko.md에 있습니다.",
+    "Deploy a public website separately for access from home. More setup information is in docs/login-setup.ko.md in the repository."
+  ],
+  [
+    "접근 권한 확인 중…",
+    "Checking access…"
+  ],
+  [
+    "잘못된 요청 출처입니다.",
+    "Invalid request origin. Please reload the page and try again."
+  ],
+  [
+    "JSON 요청이 필요합니다.",
+    "A JSON request is required."
+  ],
+  [
+    "요청이 너무 큽니다.",
+    "The request is too large."
+  ],
+  [
+    "잘못된 요청입니다.",
+    "Invalid request."
+  ],
+  [
+    "학생 계정에서만 제출할 수 있습니다.",
+    "Only student accounts can submit answers."
+  ],
+  [
+    "과제와 답안을 확인하세요.",
+    "Please check the assignment and answers."
+  ],
+  [
+    "본인 디비전의 과제만 제출할 수 있습니다.",
+    "You can only submit assignments for your division."
+  ],
+  [
+    "지원하지 않는 요청입니다.",
+    "Unsupported request."
+  ],
+  [
+    "OTP 연결 설정과 최신 Apps Script 배포가 필요합니다.",
+    "Configure email-code login and deploy the latest Apps Script version."
+  ],
+  [
+    "이메일을 확인하세요.",
+    "Please check your email address."
+  ],
+  [
+    "인증번호 요청을 처리하지 못했습니다. 잠시 후 다시 시도하세요.",
+    "Could not request a verification code. Please try again shortly."
+  ],
+  [
+    "로그인 연결을 먼저 설정하세요. /login-setup 안내를 확인하세요.",
+    "Configure sign-in first. See /login-setup for instructions."
+  ],
+  [
+    "로그인이 필요합니다.",
+    "Please sign in."
+  ],
+  [
+    "Google Sheets 연결 설정이 필요합니다.",
+    "Google Sheets connection settings are required."
+  ],
+  [
+    "저장소에 연결하지 못했습니다. 답안을 유지한 채 다시 시도하세요.",
+    "Could not connect to storage. Keep your answers and try again."
+  ],
+  [
+    "등록된 계정이 아니거나 사용 권한이 없습니다. 선생님에게 문의하세요.",
+    "Your account is not registered or does not have access. Please contact your teacher."
+  ],
+  [
+    "입력값을 확인하세요. 이메일 중복, 잘못된 학년·디비전 또는 마지막 선생님 비활성화는 허용되지 않습니다.",
+    "Check your entries. Duplicate emails, invalid grades or divisions, and disabling the last teacher are not allowed."
+  ],
+  [
+    "이미 저장된 제출입니다. 점수 화면을 새로고침하세요.",
+    "This submission is already saved. Refresh the Scores page."
+  ],
+  [
+    "Apps Script 코드를 업데이트하고 새 버전으로 배포했는지 확인하세요. 잠시 후 다시 시도하세요.",
+    "Make sure Apps Script is updated and deployed as a new version. Try again shortly."
+  ],
+  [
+    "Apps Script 최신 버전 배포가 필요합니다.",
+    "Deploy the latest Apps Script version."
+  ],
+  [
+    "요청을 처리하지 못했습니다. 다시 시도하세요.",
+    "Could not process the request. Please try again."
+  ],
+  [
+    "Division을 선택하세요.",
+    "Please select a division."
+  ],
+  [
+    "학생 명단을 붙여넣으세요.",
+    "Please paste a student roster."
+  ],
+  [
+    "한 번에 100명까지 등록할 수 있습니다.",
+    "You can register up to 100 students at a time."
+  ],
+  [
+    "내 연락처 정보",
+    "My contact information"
+  ],
+  [
+    "이 정보는 본인과 선생님만 볼 수 있습니다.",
+    "Only you and your teachers can view this information."
+  ],
+  [
+    "주소",
+    "Address"
+  ],
+  [
+    "전화번호",
+    "Phone number"
+  ],
+  [
+    "연락처 저장",
+    "Save contact information"
+  ],
+  [
+    "프로필을 저장했습니다.",
+    "Profile saved."
+  ],
+  [
+    "프로필을 저장하지 못했습니다.",
+    "Could not save profile."
+  ]
+]

@@ -223,6 +223,32 @@ test("student registration validates fields, normalizes email and rejects duplic
     "INVALID",
   );
 });
+test("Classroom division is accepted and students can update only their own contact details", () => {
+  const r = receiver();
+  const created = r.request(teacher, "saveStudent", {
+    name: "Classroom Student",
+    email: "classroom@example.com",
+    division: "Classroom",
+    grade: "5",
+    active: true,
+  });
+  assert.equal(created.ok, true);
+  assert.equal(created.data.member.division, "Classroom");
+  const updated = r.request("classroom@example.com", "updateProfile", {
+    address: "123 Main Street, Irvine, CA",
+    phone: "+1 (949) 555-0123",
+  });
+  assert.equal(updated.ok, true);
+  assert.equal(updated.data.member.address, "123 Main Street, Irvine, CA");
+  assert.equal(updated.data.member.phone, "+1 (949) 555-0123");
+  const own = r.request("classroom@example.com", "load").data;
+  assert.equal(own.member.address, "123 Main Street, Irvine, CA");
+  assert.deepEqual(own.students, []);
+  assert.equal(r.request(student, "updateProfile", { address: "x", phone: "bad" }).code, "FORBIDDEN");
+  assert.equal(r.request(teacher, "updateProfile", { address: "x", phone: "1234567" }).code, "FORBIDDEN");
+  const teacherView = r.request(teacher, "load").data.students.find((m) => m.email === "classroom@example.com");
+  assert.equal(teacherView.address, "123 Main Street, Irvine, CA");
+});
 test("student reads only own answers; cannot manage accounts or submit as another student", () => {
   const r = classroom();
   const other = r.request(teacher, "saveStudent", {

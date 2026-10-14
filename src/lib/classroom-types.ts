@@ -1,4 +1,4 @@
-export type Division = "Junior" | "Intermediate" | "Senior";
+export type Division = "Classroom" | "Junior" | "Intermediate" | "Senior";
 export type Member = {
   id: string;
   email: string;
@@ -7,6 +7,8 @@ export type Member = {
   role: "admin" | "teacher" | "student";
   division?: Division;
   grade?: string;
+  address?: string;
+  phone?: string;
 };
 export type Result = {
   id: string;

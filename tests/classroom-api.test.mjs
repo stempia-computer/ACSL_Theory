@@ -154,6 +154,25 @@ test("teachers can register students; writes require same-origin JSON", async ()
     400,
   );
 });
+test("students can update their own contact information", async () => {
+  const update = await request(student, "updateProfile", {
+    address: "123 Main Street, Irvine, CA",
+    phone: "+1 (949) 555-0123",
+  });
+  assert.equal(update.status, 200, JSON.stringify(update.body));
+  assert.equal(update.body.member.address, "123 Main Street, Irvine, CA");
+  const own = await request(student);
+  assert.equal(own.body.member.phone, "+1 (949) 555-0123");
+  const teacherView = await request(teacher);
+  assert.equal(
+    teacherView.body.students.find((m) => m.email === student).address,
+    "123 Main Street, Irvine, CA",
+  );
+  assert.equal(
+    (await request(teacher, "updateProfile", { address: "x", phone: "1234567" })).status,
+    403,
+  );
+});
 test("student submission is server-graded and ownership cannot be spoofed", async () => {
   const data = JSON.parse(readFileSync("src/data/worksheet-homework.json"));
   const assignment = data.assignments[0];

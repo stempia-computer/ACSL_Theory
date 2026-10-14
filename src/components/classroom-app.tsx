@@ -1,4 +1,6 @@
 "use client";
+import { T, useLanguage } from "@/components/language";
+
 import { StudentImport } from "@/components/student-import";
 import { isStaff } from "@/lib/classroom-types";
 import { useState, useEffect, useRef } from "react";
@@ -89,7 +91,7 @@ export function ClassroomApp({
   if (blocked)
     return (
       <div className={panel}>
-        <p role="alert">{error}</p>
+        <p role="alert"><T>{error}</T></p>
         <LogoutButton />
       </div>
     );
@@ -118,14 +120,14 @@ export function ClassroomApp({
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div>
           <p className="text-sm text-slate-500">
-            {teacher
+            <T>{teacher
               ? data.member.role === "admin"
                 ? "Admin"
                 : "Teacher"
-              : `${data.member.division} · Grade ${data.member.grade}`}{" "}
+              : `${data.member.division} · Grade ${data.member.grade}`}</T>{" "}
             · {data.member.email}
           </p>
-          <h1 className="mt-2 text-3xl font-bold">{title}</h1>
+          <h1 className="mt-2 text-3xl font-bold"><T>{title}</T></h1>
         </div>
         <LogoutButton />
       </div>
@@ -142,25 +144,23 @@ export function ClassroomApp({
             ["Scores", "/scores"],
           ].map(([label, href]) => (
             <Link className={secondary} key={href} href={href}>
-              {label}
+              <T>{label}</T>
             </Link>
           ))}
         </nav>
       )}
       {error && (
         <p role="alert" className="mb-4 rounded-lg bg-red-50 p-4 text-red-700">
-          {error}
+          <T>{error}</T>
         </p>
       )}
       <div className="mb-5 flex items-center justify-between gap-3">
-        <p className="text-sm text-slate-500">
-          로그인 계정으로 저장된 기록 · 이전 이름 입력 방식의 기록은 자동
-          연결되지 않습니다.
-        </p>
+        <p className="text-sm text-slate-500"><T>로그인 계정으로 저장된 기록 · 이전 이름 입력 방식의 기록은 자동 연결되지 않습니다.</T></p>
         <button className={secondary} disabled={refreshing} onClick={refresh}>
-          {refreshing ? "Loading…" : "Refresh"}
+          <T>{refreshing ? "Loading…" : "Refresh"}</T>
         </button>
       </div>
+      {!teacher && <StudentProfile member={data.member} onSaved={refresh} />}
       {view === "students" && <StudentImport onSaved={refresh} />}
       {view === "students" || view === "teachers" ? (
         <MemberManager
@@ -192,7 +192,7 @@ export function ClassroomApp({
                     key={label}
                     className="rounded-xl border border-slate-200 bg-white p-5"
                   >
-                    <p className="text-sm text-slate-500">{label}</p>
+                    <p className="text-sm text-slate-500"><T>{label}</T></p>
                     <p className="mt-2 text-3xl font-bold">{value}</p>
                   </div>
                 ))}
@@ -213,15 +213,11 @@ export function ClassroomApp({
               {selected && (
                 <div className="mb-4 flex items-center gap-4">
                   <h2 className="text-xl font-bold">
-                    {data.students.find((s) => s.id === selected)?.name} · 학생
-                    상세
-                  </h2>
+                    {data.students.find((s) => s.id === selected)?.name}<T> · 학생 상세</T></h2>
                   <button
                     className={secondary}
                     onClick={() => setSelected(null)}
-                  >
-                    전체 학생 보기
-                  </button>
+                  ><T>전체 학생 보기</T></button>
                 </div>
               )}
               <AttemptList
@@ -242,7 +238,7 @@ export function ClassroomApp({
           {(view === "assignments" ||
             (!teacher && view !== "exercise" && view !== "scores")) && (
             <section className={panel}>
-              <h2 className="mb-4 text-xl font-bold">내 디비전 과제</h2>
+              <h2 className="mb-4 text-xl font-bold"><T>내 디비전 과제</T></h2>
               <div className="grid gap-4 md:grid-cols-2">
                 {assignments.map((a) => (
                   <Link
@@ -251,9 +247,7 @@ export function ClassroomApp({
                     className="rounded-lg border border-indigo-100 p-5 hover:bg-indigo-50"
                   >
                     <p className="font-semibold text-indigo-700">{a.title}</p>
-                    <p className="mt-2 text-sm text-slate-500">
-                      Questions {a.first}–{a.last} · {a.questionIds.length}{" "}
-                      points · Due {a.due}
+                    <p className="mt-2 text-sm text-slate-500"><T>Questions </T>{a.first}–{a.last} · {a.questionIds.length}{" "}<T>points · Due </T>{a.due}
                     </p>
                   </Link>
                 ))}
@@ -288,6 +282,7 @@ function MemberManager({
   members: Member[];
   onSaved: () => Promise<void>;
 }) {
+  const { t } = useLanguage();
   const [editing, setEditing] = useState<Member | null>(null);
   const [formKey, setFormKey] = useState(0);
   const [busy, setBusy] = useState(false);
@@ -306,6 +301,8 @@ function MemberManager({
         email: form.get("email"),
         division: form.get("division"),
         grade: form.get("grade"),
+        address: form.get("address"),
+        phone: form.get("phone"),
         active: form.get("active") === "on",
       });
       setEditing(null);
@@ -322,25 +319,23 @@ function MemberManager({
     <>
       <section className={panel}>
         <h2 className="mb-4 text-xl font-bold">
-          {editing
+          <T>{editing
             ? "계정 수정"
             : role === "teacher"
               ? "선생님 추가"
-              : "학생 등록"}
+              : "학생 등록"}</T>
         </h2>
         <p className="mb-4 text-sm text-slate-500">
-          {role === "teacher"
+          <T>{role === "teacher"
             ? "추가된 선생님은 모든 학생의 성적·답안을 보고 학생과 선생님을 관리할 수 있습니다."
-            : "실제로 로그인할 Google 계정 이메일을 입력하세요. 비활성 계정은 기록을 보존하면서 접근을 막습니다."}
+            : "실제로 로그인할 Google 계정 이메일을 입력하세요. 비활성 계정은 기록을 보존하면서 접근을 막습니다."}</T>
         </p>
         <form
           key={`${editing?.id || "new"}:${formKey}`}
           onSubmit={save}
           className="grid gap-4 sm:grid-cols-2"
         >
-          <label>
-            Name · 이름
-            <input
+          <label><T>Name · 이름</T><input
               className={input}
               name="name"
               required
@@ -348,9 +343,7 @@ function MemberManager({
               defaultValue={editing?.name}
             />
           </label>
-          <label>
-            Email · 이메일
-            <input
+          <label><T>Email · 이메일</T><input
               className={input}
               name="email"
               type="email"
@@ -361,25 +354,21 @@ function MemberManager({
           </label>
           {role === "student" && (
             <>
-              <label>
-                Division
-                <select
+              <label><T>Division</T><select
                   className={input}
                   name="division"
                   aria-label="Division"
                   defaultValue={editing?.division || "Junior"}
                 >
-                  {["Junior", "Intermediate", "Senior"].map((d) => (
+                  {["Classroom", "Junior", "Intermediate", "Senior"].map((d) => (
                     <option key={d}>{d}</option>
                   ))}
                 </select>
               </label>
-              <label>
-                Grade · 학년
-                <select
+              <label><T>Grade · 학년</T><select
                   className={input}
                   name="grade"
-                  aria-label="Grade · 학년"
+                  aria-label={t("Grade")}
                   defaultValue={editing?.grade || "6"}
                 >
                   {[
@@ -390,6 +379,21 @@ function MemberManager({
                   ))}
                 </select>
               </label>
+              <label><T>Address</T><input
+                  className={input}
+                  name="address"
+                  maxLength={200}
+                  defaultValue={editing?.address || ""}
+                />
+              </label>
+              <label><T>Phone number</T><input
+                  className={input}
+                  name="phone"
+                  type="tel"
+                  maxLength={25}
+                  defaultValue={editing?.phone || ""}
+                />
+              </label>
             </>
           )}
           <label className="flex items-center gap-2">
@@ -397,12 +401,10 @@ function MemberManager({
               type="checkbox"
               name="active"
               defaultChecked={editing?.active ?? true}
-            />
-            활성 계정
-          </label>
+            /><T>활성 계정</T></label>
           <div className="flex gap-3">
             <button className={button} disabled={busy}>
-              {busy ? "Saving…" : editing ? "변경 저장" : "등록"}
+              <T>{busy ? "Saving…" : editing ? "변경 저장" : "등록"}</T>
             </button>
             {editing && (
               <button
@@ -412,15 +414,13 @@ function MemberManager({
                   setEditing(null);
                   setFormKey((k) => k + 1);
                 }}
-              >
-                취소
-              </button>
+              ><T>취소</T></button>
             )}
           </div>
         </form>
         {message && (
           <p role="status" className="mt-4 text-indigo-700">
-            {message}
+            <T>{message}</T>
           </p>
         )}
       </section>
@@ -429,7 +429,7 @@ function MemberManager({
           <input
             className={input + " sm:max-w-xs"}
             aria-label="Search members"
-            placeholder="이름 또는 이메일 검색"
+            placeholder={t("이름 또는 이메일 검색")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -440,8 +440,8 @@ function MemberManager({
               value={division}
               onChange={(e) => setDivision(e.target.value)}
             >
-              <option value="">All divisions</option>
-              {["Junior", "Intermediate", "Senior"].map((d) => (
+              <option value=""><T>All divisions</T></option>
+              {["Classroom", "Junior", "Intermediate", "Senior"].map((d) => (
                 <option key={d}>{d}</option>
               ))}
             </select>
@@ -454,12 +454,12 @@ function MemberManager({
                 {[
                   "Name",
                   "Email",
-                  ...(role === "student" ? ["Division", "Grade"] : []),
+                  ...(role === "student" ? ["Division", "Grade", "Phone number", "Address"] : []),
                   "Status",
                   "",
                 ].map((h, i) => (
                   <th className="border-b p-3" key={i}>
-                    {h}
+                    <T>{h}</T>
                   </th>
                 ))}
               </tr>
@@ -478,9 +478,7 @@ function MemberManager({
                     <td className="border-b p-3">
                       {m.name}
                       {m.role === "admin" && (
-                        <span className="ml-2 rounded bg-indigo-50 px-2 py-1 text-xs text-indigo-700">
-                          Admin
-                        </span>
+                        <span className="ml-2 rounded bg-indigo-50 px-2 py-1 text-xs text-indigo-700"><T>Admin</T></span>
                       )}
                     </td>
                     <td className="border-b p-3">{m.email}</td>
@@ -488,10 +486,12 @@ function MemberManager({
                       <>
                         <td className="border-b p-3">{m.division}</td>
                         <td className="border-b p-3">{m.grade}</td>
+                        <td className="border-b p-3">{m.phone || "—"}</td>
+                        <td className="min-w-48 border-b p-3">{m.address || "—"}</td>
                       </>
                     )}
                     <td className="border-b p-3">
-                      {m.active ? "활성" : "비활성"}
+                      <T>{m.active ? "활성" : "비활성"}</T>
                     </td>
                     <td className="border-b p-3">
                       <button
@@ -504,7 +504,7 @@ function MemberManager({
                           window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
                       >
-                        {m.role === "admin" ? "관리자 계정" : "수정"}
+                        <T>{m.role === "admin" ? "관리자 계정" : "수정"}</T>
                       </button>
                     </td>
                   </tr>
@@ -512,11 +512,51 @@ function MemberManager({
             </tbody>
           </table>
           {members.length === 0 && (
-            <p className="py-6 text-slate-500">아직 등록된 학생이 없습니다.</p>
+            <p className="py-6 text-slate-500"><T>아직 등록된 학생이 없습니다.</T></p>
           )}
         </div>
       </section>
     </>
+  );
+}
+function StudentProfile({
+  member,
+  onSaved,
+}: {
+  member: Member;
+  onSaved: () => Promise<void>;
+}) {
+  const [busy, setBusy] = useState(false);
+  const [message, setMessage] = useState("");
+  async function save(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setBusy(true);
+    setMessage("");
+    const form = new FormData(event.currentTarget);
+    try {
+      await mutate("updateProfile", {
+        address: form.get("address"),
+        phone: form.get("phone"),
+      });
+      await onSaved();
+      setMessage("Profile saved.");
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Could not save profile.");
+    } finally {
+      setBusy(false);
+    }
+  }
+  return (
+    <section className={panel}>
+      <h2 className="text-xl font-bold"><T>My contact information</T></h2>
+      <p className="mt-2 text-sm text-slate-500"><T>Only you and your teachers can view this information.</T></p>
+      <form onSubmit={save} className="mt-4 grid gap-4 sm:grid-cols-2">
+        <label><T>Address</T><input className={input} name="address" maxLength={200} defaultValue={member.address || ""} /></label>
+        <label><T>Phone number</T><input className={input} name="phone" type="tel" inputMode="tel" maxLength={25} defaultValue={member.phone || ""} /></label>
+        <div className="sm:col-span-2"><button className={button} disabled={busy}><T>{busy ? "Saving…" : "Save contact information"}</T></button></div>
+      </form>
+      {message && <p role="status" className="mt-4 text-sm text-indigo-700"><T>{message}</T></p>}
+    </section>
   );
 }
 function StudentScores({
@@ -534,19 +574,17 @@ function StudentScores({
   onSelect: (id: string) => void;
   onReview: (a: SavedAttempt) => void;
 }) {
+  const { t } = useLanguage();
   const [filter, setFilter] = useState("");
   const latest = latestAttempts(attempts);
   return (
     <section className={panel}>
-      <h2 className="text-xl font-bold">학생별 점수</h2>
-      <p className="my-2 text-sm text-slate-500">
-        과제별 마지막 제출 기준입니다. 이름을 누르면 학생 상세, 점수를 누르면
-        답안이 열립니다.
-      </p>
+      <h2 className="text-xl font-bold"><T>학생별 점수</T></h2>
+      <p className="my-2 text-sm text-slate-500"><T>과제별 마지막 제출 기준입니다. 이름을 누르면 학생 상세, 점수를 누르면 답안이 열립니다.</T></p>
       <input
         aria-label="Search scores"
         className={input + " mb-4 sm:max-w-sm"}
-        placeholder="이름, 이메일, Division 검색"
+        placeholder={t("이름, 이메일, Division 검색")}
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
       />
@@ -562,7 +600,7 @@ function StudentScores({
                 "Average",
               ].map((h) => (
                 <th key={h} className="border-b p-3">
-                  {h}
+                  <T>{h}</T>
                 </th>
               ))}
             </tr>
@@ -588,8 +626,7 @@ function StudentScores({
                       >
                         {s.name}
                       </button>
-                      <p className="text-xs text-slate-500">
-                        Grade {s.grade}
+                      <p className="text-xs text-slate-500"><T>Grade </T>{s.grade}
                         {!s.active && " · 비활성"}
                       </p>
                     </td>
@@ -628,9 +665,7 @@ function StudentScores({
         </table>
       </div>
       {students.length === 0 && (
-        <p className="mt-4 text-slate-500">
-          Students에서 학생을 먼저 등록하세요.
-        </p>
+        <p className="mt-4 text-slate-500"><T>Students에서 학생을 먼저 등록하세요.</T></p>
       )}
     </section>
   );
@@ -647,10 +682,10 @@ function AttemptList({
   return (
     <section className={panel}>
       <h2 className="mb-4 text-xl font-bold">
-        {teacher ? "제출 기록" : "내 점수와 오답 리뷰"}
+        <T>{teacher ? "제출 기록" : "내 점수와 오답 리뷰"}</T>
       </h2>
       {attempts.length === 0 ? (
-        <p className="text-slate-500">아직 제출된 답안이 없습니다.</p>
+        <p className="text-slate-500"><T>아직 제출된 답안이 없습니다.</T></p>
       ) : (
         <div className="max-h-96 overflow-auto">
           <table className="w-full text-left text-sm">
@@ -664,7 +699,7 @@ function AttemptList({
                   "",
                 ].map((h, i) => (
                   <th key={i} className="border-b p-3">
-                    {h}
+                    <T>{h}</T>
                   </th>
                 ))}
               </tr>
@@ -684,9 +719,7 @@ function AttemptList({
                     <button
                       className="text-indigo-700 underline"
                       onClick={() => onReview(a)}
-                    >
-                      답안 보기
-                    </button>
+                    ><T>답안 보기</T></button>
                   </td>
                 </tr>
               ))}
@@ -716,22 +749,18 @@ function QuestionResults({ attempts }: { attempts: SavedAttempt[] }) {
     }
   return (
     <details className={panel}>
-      <summary className="cursor-pointer text-lg font-semibold">
-        문제별 결과 · 최근 제출 기준
-      </summary>
+      <summary className="cursor-pointer text-lg font-semibold"><T>문제별 결과 · 최근 제출 기준</T></summary>
       <div className="mt-4 grid gap-2 sm:grid-cols-3">
         {[...counts.entries()].map(([id, c]) => (
           <p key={id} className="rounded-lg bg-slate-50 p-3 text-sm">
-            {c.title} Q{c.number}:{" "}
+            {c.title}<T> Q</T>{c.number}:{" "}
             <strong>
               {c.correct}/{c.total}
-            </strong>{" "}
-            정답 · {c.total - c.correct}명 오답
-          </p>
+            </strong>{" "}<T>정답 · </T>{c.total - c.correct}<T>명 오답</T></p>
         ))}
       </div>
       {!counts.size && (
-        <p className="mt-4 text-slate-500">제출 후 표시됩니다.</p>
+        <p className="mt-4 text-slate-500"><T>제출 후 표시됩니다.</T></p>
       )}
     </details>
   );
@@ -754,9 +783,7 @@ function Review({
         <h2 className="text-xl font-bold">
           {attempt.student} · {attempt.assignment}
         </h2>
-        <button className={secondary} onClick={onClose}>
-          리뷰 닫기
-        </button>
+        <button className={secondary} onClick={onClose}><T>리뷰 닫기</T></button>
       </div>
       <p className="my-3 text-lg font-semibold">
         {attempt.score} / {attempt.total} · {attempt.percentage}%
@@ -766,10 +793,8 @@ function Review({
           type="checkbox"
           checked={wrongOnly}
           onChange={(e) => setWrongOnly(e.target.checked)}
-        />
-        오답만 보기
-      </label>
-      {wrongOnly && attempt.score === attempt.total && <p>모두 정답입니다.</p>}
+        /><T>오답만 보기</T></label>
+      {wrongOnly && attempt.score === attempt.total && <p><T>모두 정답입니다.</T></p>}
       <div className="space-y-4">
         {attempt.results
           .filter((r) => !wrongOnly || !r.correct)
@@ -778,21 +803,16 @@ function Review({
               key={r.id}
               className={`rounded-lg border p-4 ${r.correct ? "border-emerald-200" : "border-amber-200"}`}
             >
-              <h3 className="font-semibold">
-                Question {r.number} ·{" "}
-                {r.correct ? "정답" : r.answer.trim() ? "오답" : "미응답"}
+              <h3 className="font-semibold"><T>Question </T>{r.number} ·{" "}
+                <T>{r.correct ? "정답" : r.answer.trim() ? "오답" : "미응답"}</T>
               </h3>
-              <p className="mt-2 break-words">
-                학생 답:{" "}
+              <p className="mt-2 break-words"><T>학생 답:</T>{" "}
                 <span className="font-mono">{r.answer || "(빈 답안)"}</span>
               </p>
-              <p className="break-words">
-                정답: <span className="font-mono">{r.correctAnswer}</span>
+              <p className="break-words"><T>정답: </T><span className="font-mono">{r.correctAnswer}</span>
               </p>
               <details className="mt-3">
-                <summary className="cursor-pointer text-indigo-700">
-                  원본 문제와 해설 보기
-                </summary>
+                <summary className="cursor-pointer text-indigo-700"><T>원본 문제와 해설 보기</T></summary>
                 {["question", "solution"].map((type) => (
                   <Image
                     key={type}
@@ -875,10 +895,7 @@ function Exercise({
         <p
           role="status"
           className="mb-4 rounded-lg bg-emerald-50 p-4 text-emerald-800"
-        >
-          제출과 서버 저장이 완료되었습니다. 다른 기기에서도 로그인하면 확인할
-          수 있습니다.
-        </p>
+        ><T>제출과 서버 저장이 완료되었습니다. 다른 기기에서도 로그인하면 확인할 수 있습니다.</T></p>
         <Review
           attempt={result}
           onClose={() => {
@@ -900,26 +917,20 @@ function Exercise({
             );
             setConfirmBlank(false);
           }}
-        >
-          틀린 문제 다시 풀기
-        </button>
+        ><T>틀린 문제 다시 풀기</T></button>
       </>
     );
   return (
     <form onSubmit={submit}>
       <p className="mb-5 text-slate-600">
-        {isStaff(member)
+        <T>{isStaff(member)
           ? "선생님 미리보기입니다. 제출은 학생 계정에서 가능합니다."
-          : `${member.name} · ${member.email}`}{" "}
-        · {questions.length} questions
-      </p>
-      <p className="mb-5 text-sm text-slate-500">
-        답안은 제출 전까지 이 탭에만 있습니다. 저장 완료 메시지를 확인한 뒤 창을
-        닫으세요.
-      </p>
+          : `${member.name} · ${member.email}`}</T>{" "}
+        · {questions.length}<T> questions</T></p>
+      <p className="mb-5 text-sm text-slate-500"><T>답안은 제출 전까지 이 탭에만 있습니다. 저장 완료 메시지를 확인한 뒤 창을 닫으세요.</T></p>
       {questions.map((q) => (
         <section className={panel} key={q.id}>
-          <h2 className="mb-4 text-lg font-semibold">Question {q.number}</h2>
+          <h2 className="mb-4 text-lg font-semibold"><T>Question </T>{q.number}</h2>
           <Image
             src={q.questionImage.src}
             width={q.questionImage.width}
@@ -928,9 +939,7 @@ function Exercise({
             unoptimized
             className="h-auto w-full"
           />
-          <label className="mt-4 block font-medium">
-            Your answer
-            <input
+          <label className="mt-4 block font-medium"><T>Your answer</T><input
               aria-label={`Answer to question ${q.number}`}
               className={input}
               value={answers[q.id] || ""}
@@ -942,7 +951,7 @@ function Exercise({
               }}
             />
           </label>
-          <p className="mt-2 text-sm text-slate-500">{q.hint}</p>
+          <p className="mt-2 text-sm text-slate-500"><T>{q.hint}</T></p>
         </section>
       ))}
       {error && (
@@ -950,22 +959,19 @@ function Exercise({
           role="alert"
           className="mb-4 rounded-lg bg-amber-50 p-4 text-amber-800"
         >
-          {error} 답안은 이 탭에 유지됩니다. 재전송해도 중복 저장되지 않습니다.
-        </p>
+          <T>{error}</T><T> 답안은 이 탭에 유지됩니다. 재전송해도 중복 저장되지 않습니다.</T></p>
       )}
       {confirmBlank && !pending && (
-        <p className="mb-4 text-amber-800">
-          빈 답안은 0점입니다. 그대로 제출하려면 아래 버튼을 다시 누르세요.
-        </p>
+        <p className="mb-4 text-amber-800"><T>빈 답안은 0점입니다. 그대로 제출하려면 아래 버튼을 다시 누르세요.</T></p>
       )}
       <button className={button} disabled={busy || member.role !== "student"}>
-        {busy
+        <T>{busy
           ? "채점 및 저장 중…"
           : pending
             ? "같은 답안 다시 전송"
             : confirmBlank
               ? "빈 답안 포함 제출"
-              : "Submit and see score"}
+              : "Submit and see score"}</T>
       </button>
     </form>
   );

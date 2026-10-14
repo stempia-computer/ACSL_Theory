@@ -1,3 +1,5 @@
+
+import { T } from "@/components/language";
 import { isStaff } from "@/lib/classroom-types";
 import { connection } from "next/server";
 import { Suspense } from "react";
@@ -26,7 +28,7 @@ async function Content() {
 }
 export default function Page() {
   return (
-    <Suspense fallback={<p>Checking access…</p>}>
+    <Suspense fallback={<p><T>Checking access…</T></p>}>
       <Content />
     </Suspense>
   );

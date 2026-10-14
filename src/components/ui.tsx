@@ -1,3 +1,5 @@
+
+import { T } from "@/components/language";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -14,9 +16,9 @@ export function PageHeader({
         ACSL Theory
       </p>
       <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-        {title}
+        <T>{title}</T>
       </h1>
-      <p className="mt-2 text-slate-600">{description}</p>
+      <p className="mt-2 text-slate-600"><T>{description}</T></p>
     </div>
   );
 }
@@ -30,7 +32,7 @@ export function Card({
 }) {
   return (
     <section className="rounded-xl border border-slate-200 bg-white p-6">
-      <h2 className="mb-5 text-lg font-semibold text-slate-900">{title}</h2>
+      <h2 className="mb-5 text-lg font-semibold text-slate-900"><T>{title}</T></h2>
       {children}
     </section>
   );
@@ -48,7 +50,7 @@ export function Stats({
           key={item.label}
           className="rounded-xl border border-slate-200 bg-white p-5"
         >
-          <p className="text-sm text-slate-500">{item.label}</p>
+          <p className="text-sm text-slate-500"><T>{item.label}</T></p>
           <p className="mt-2 text-3xl font-bold text-slate-900">{item.value}</p>
         </div>
       ))}
@@ -82,7 +84,7 @@ export function DataTable({
                 scope="col"
                 className="whitespace-nowrap px-6 py-4 font-medium"
               >
-                {header}
+                <T>{header}</T>
               </th>
             ))}
           </tr>
@@ -116,7 +118,7 @@ export function DashboardTabs({ student = false }: { student?: boolean }) {
           aria-current={active ? "page" : undefined}
           className={`rounded-lg px-4 py-2 text-sm font-medium ${active ? "bg-indigo-600 text-white" : "bg-white text-slate-600 hover:bg-slate-100"}`}
         >
-          {label}
+          <T>{label}</T>
         </Link>
       ))}
     </nav>

@@ -10,7 +10,7 @@ export function parseStudents(
   text: string,
   division: Division,
 ): ImportStudent[] {
-  if (!["Junior", "Intermediate", "Senior"].includes(division))
+  if (!["Classroom", "Junior", "Intermediate", "Senior"].includes(division))
     throw new Error("Division을 선택하세요.");
   const rows: ImportStudent[] = [];
   const emails = new Set<string>();

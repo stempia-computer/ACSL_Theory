@@ -108,12 +108,20 @@ function doPost(e) {
       if (normalized.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized) || !d.name.trim() || d.name.length > 80 || /[\u0000-\u001f]/.test(d.name)) return fail_('INVALID');
       if (teachers.concat(students).some(function(m) { return m.email === normalized && (!old || m.id !== old.id); })) return fail_('INVALID');
       if (role === 'teacher' && !d.active && !teachers.some(function(m) { return m.role === 'teacher' && m.active && (!old || m.id !== old.id); })) return fail_('INVALID');
-      if (role === 'student' && (['Junior', 'Intermediate', 'Senior'].indexOf(d.division) < 0 || typeof d.grade !== 'string' || !/^(K|[1-9]|1[0-2])$/.test(d.grade))) return fail_('INVALID');
+      if (role === 'student' && (['Classroom', 'Junior', 'Intermediate', 'Senior'].indexOf(d.division) < 0 || typeof d.grade !== 'string' || !/^(K|[1-9]|1[0-2])$/.test(d.grade) || !validContact_(d.address === undefined && old ? old.address : d.address, d.phone === undefined && old ? old.phone : d.phone))) return fail_('INVALID');
       var member = { id: old ? old.id : Utilities.getUuid(), email: normalized, name: d.name.trim(), role: role, active: d.active };
-      if (role === 'student') { member.division = d.division; member.grade = d.grade; }
+      if (role === 'student') { member.division = d.division; member.grade = d.grade; member.address = clean_(d.address === undefined && old ? old.address : d.address); member.phone = clean_(d.phone === undefined && old ? old.phone : d.phone); }
       writeMember_(ss, member);
       SpreadsheetApp.flush();
       return ok_({ member: member });
+    }
+    if (body.action === 'updateProfile') {
+      if (actor.role !== 'student') return fail_('FORBIDDEN');
+      if (!body.data || !validContact_(body.data.address, body.data.phone)) return fail_('INVALID');
+      actor.address = clean_(body.data.address); actor.phone = clean_(body.data.phone);
+      writeMember_(ss, actor);
+      SpreadsheetApp.flush();
+      return ok_({ member: actor });
     }
     if (body.action !== 'submit' || actor.role !== 'student') return fail_('FORBIDDEN');
     var s = body.data;
@@ -136,6 +144,11 @@ function doPost(e) {
     return ok_({ attempt: s });
   } catch (_) { return fail_('UNAVAILABLE'); }
   finally { if (lock && lock.hasLock()) lock.releaseLock(); }
+}
+function clean_(value) { return typeof value === 'string' ? value.trim() : ''; }
+function validContact_(address, phone) {
+  address = clean_(address); phone = clean_(phone);
+  return address.length <= 200 && !/[\u0000-\u001f]/.test(address) && phone.length <= 25 && !/[\u0000-\u001f]/.test(phone) && (!phone || /^[0-9+() .-]{7,25}$/.test(phone));
 }
 // Keep the original human-readable tabs, with repairable, idempotent projections.
 function projectAttempt_(ss, s) {
@@ -177,7 +190,7 @@ function handleOtp_(props, actor, email, action, data) {
     state.challenge = data.challenge; state.digest = data.digest; state.memberId = actor.id;
     props.setProperty(key, JSON.stringify(state));
     budget.sent++; props.setProperty('OTP_BUDGET', JSON.stringify(budget));
-    try { MailApp.sendEmail({ to: email, subject: 'ACSL Classroom 로그인 인증번호', body: '인증번호: ' + data.code + '\n\n10분 안에 ACSL Classroom 로그인 화면에 입력하세요. 한 번만 사용할 수 있습니다.\n요청하지 않았다면 이 메일을 무시하세요.', name: 'Stempia Computer Institute' }); }
+    try { MailApp.sendEmail({ to: email, subject: 'ACSL Classroom login code / 로그인 인증번호', body: 'Your login code: ' + data.code + '\nEnter it on the ACSL Classroom sign-in page within 10 minutes. It can be used once.\nIgnore this email if you did not request it.\n\n로그인 인증번호: ' + data.code + '\n10분 안에 로그인 화면에 입력하세요. 요청하지 않았다면 이 메일을 무시하세요.', name: 'Stempia Computer Institute' }); }
     catch (_) { state.digest = ''; props.setProperty(key, JSON.stringify(state)); }
     return ok_({ accepted: true });
   }

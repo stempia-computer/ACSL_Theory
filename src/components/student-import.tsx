@@ -1,4 +1,6 @@
 "use client";
+import { T } from "@/components/language";
+
 import { useState } from "react";
 import { parseStudents, type ImportStudent } from "@/lib/student-import";
 import type { Classroom, Division } from "@/lib/classroom-types";
@@ -85,14 +87,9 @@ export function StudentImport({ onSaved }: { onSaved: () => Promise<void> }) {
   }
   return (
     <section className="mb-6 rounded-xl border border-indigo-200 bg-indigo-50 p-5 sm:p-6">
-      <h2 className="text-xl font-bold">학생 일괄 등록</h2>
-      <p className="mt-2 text-sm text-slate-600">
-        이름 · 학년 · 이메일 순서의 표를 복사해 붙여넣으세요. 등록 후 Division을
-        개별 수정할 수 있습니다. 이미 있는 이메일은 덮어쓰지 않습니다.
-      </p>
-      <label className="mt-4 block max-w-xs">
-        일괄 등록 Division
-        <select
+      <h2 className="text-xl font-bold"><T>학생 일괄 등록</T></h2>
+      <p className="mt-2 text-sm text-slate-600"><T>이름 · 학년 · 이메일 순서의 표를 복사해 붙여넣으세요. 등록 후 Division을 개별 수정할 수 있습니다. 이미 있는 이메일은 덮어쓰지 않습니다.</T></p>
+      <label className="mt-4 block max-w-xs"><T>일괄 등록 Division</T><select
           aria-label="Import division"
           className={field}
           value={division}
@@ -103,14 +100,12 @@ export function StudentImport({ onSaved }: { onSaved: () => Promise<void> }) {
             setMessage("");
           }}
         >
-          {["Junior", "Intermediate", "Senior"].map((d) => (
+          {["Classroom", "Junior", "Intermediate", "Senior"].map((d) => (
             <option key={d}>{d}</option>
           ))}
         </select>
       </label>
-      <label className="mt-4 block">
-        학생 명단
-        <textarea
+      <label className="mt-4 block"><T>학생 명단</T><textarea
           aria-label="Student roster"
           rows={8}
           className={field + " font-mono text-sm"}
@@ -128,10 +123,8 @@ export function StudentImport({ onSaved }: { onSaved: () => Promise<void> }) {
         className="mt-3 rounded-lg border bg-white px-4 py-2 font-semibold disabled:opacity-50"
         disabled={busy}
         onClick={preview}
-      >
-        명단 확인
-      </button>
-      {rows.length > 0 && (
+      ><T>명단 확인</T></button>
+      <T>{rows.length > 0 && (
         <>
           <p className="my-4 font-semibold">
             {rows.length}명 · {division}
@@ -170,10 +163,10 @@ export function StudentImport({ onSaved }: { onSaved: () => Promise<void> }) {
             {busy ? "등록 중… 창을 닫지 마세요" : "명단 등록"}
           </button>
         </>
-      )}
+      )}</T>
       {message && (
         <p role="status" className="mt-4 text-sm font-medium">
-          {message}
+          <T>{message}</T>
         </p>
       )}
     </section>

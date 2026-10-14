@@ -1,4 +1,6 @@
 "use client";
+import { T } from "@/components/language";
+
 
 import { useState } from "react";
 export function CopySheetScript() {
@@ -27,22 +29,18 @@ export function CopySheetScript() {
       <button
         onClick={copy}
         className="mt-3 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white"
-      >
-        연결 코드 복사
-      </button>
+      ><T>연결 코드 복사</T></button>
       <a
         href="/setup/acsl-google-sheets.gs"
         download
         className="ml-4 text-sm text-indigo-700 underline"
-      >
-        코드 파일 다운로드
-      </a>
+      ><T>코드 파일 다운로드</T></a>
       <p role="status" className="mt-3 text-sm text-indigo-700">
-        {message}
+        <T>{message}</T>
       </p>
       {code && (
         <details className="mt-3">
-          <summary className="cursor-pointer text-sm">코드 직접 보기</summary>
+          <summary className="cursor-pointer text-sm"><T>코드 직접 보기</T></summary>
           <textarea
             aria-label="Apps Script 코드"
             readOnly

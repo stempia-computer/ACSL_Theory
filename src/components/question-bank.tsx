@@ -1,4 +1,6 @@
 "use client";
+import { T, useLanguage } from "@/components/language";
+
 
 import { useEffect, useReducer, useState, type FormEvent } from "react";
 import {
@@ -33,6 +35,7 @@ const emptyQuestion = (): Question => ({
 });
 
 export function QuestionBank() {
+  const { t } = useLanguage();
   const [questions, replaceQuestions] = useReducer(
     (_: Question[], next: Question[]) => next,
     sampleQuestions,
@@ -123,11 +126,7 @@ export function QuestionBank() {
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <p className="max-w-2xl text-sm text-slate-500">
-          Sample questions are illustrative, not imported official ACSL
-          questions. Changes are stored only in this browser. Source PDFs are
-          optional links; uploads are not available yet.
-        </p>
+        <p className="max-w-2xl text-sm text-slate-500"><T>Sample questions are illustrative, not imported official ACSL questions. Changes are stored only in this browser. Source PDFs are optional links; uploads are not available yet.</T></p>
         <button
           type="button"
           disabled={!ready}
@@ -136,12 +135,10 @@ export function QuestionBank() {
             setDraft(emptyQuestion());
             setError("");
           }}
-        >
-          Add question
-        </button>
+        ><T>Add question</T></button>
       </div>
       <p role="status" className="text-sm text-indigo-700">
-        {notice}
+        <T>{notice}</T>
       </p>
       {draft ? (
         <section
@@ -149,13 +146,11 @@ export function QuestionBank() {
           aria-labelledby="editor-heading"
         >
           <h2 id="editor-heading" className="mb-5 text-xl font-semibold">
-            {draft.id ? "Edit question" : "Add question"}
+            <T>{draft.id ? "Edit question" : "Add question"}</T>
           </h2>
           <form onSubmit={save} className="space-y-5">
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              <label className="text-sm font-medium">
-                Year
-                <input
+              <label className="text-sm font-medium"><T>Year</T><input
                   required
                   placeholder="2021-2022"
                   className={inputClass}
@@ -164,9 +159,7 @@ export function QuestionBank() {
                   onChange={(e) => setDraft({ ...draft, year: e.target.value })}
                 />
               </label>
-              <label className="text-sm font-medium">
-                Contest
-                <select
+              <label className="text-sm font-medium"><T>Contest</T><select
                   className={inputClass}
                   aria-label="Contest"
                   value={draft.contest}
@@ -175,13 +168,11 @@ export function QuestionBank() {
                   }
                 >
                   {[1, 2, 3, 4].map((n) => (
-                    <option key={n}>Contest {n}</option>
+                    <option key={n}><T>Contest </T>{n}</option>
                   ))}
                 </select>
               </label>
-              <label className="text-sm font-medium">
-                Division
-                <select
+              <label className="text-sm font-medium"><T>Division</T><select
                   className={inputClass}
                   aria-label="Division"
                   value={draft.division}
@@ -194,9 +185,7 @@ export function QuestionBank() {
                   ))}
                 </select>
               </label>
-              <label className="text-sm font-medium">
-                Category
-                <select
+              <label className="text-sm font-medium"><T>Category</T><select
                   className={inputClass}
                   aria-label="Category"
                   value={draft.category}
@@ -210,13 +199,8 @@ export function QuestionBank() {
                 </select>
               </label>
             </div>
-            <p className="text-sm text-slate-500">
-              Question type: Multiple Choice · Short Answer and Programming will
-              be added later.
-            </p>
-            <label className="block text-sm font-medium">
-              Question text
-              <textarea
+            <p className="text-sm text-slate-500"><T>Question type: Multiple Choice · Short Answer and Programming will be added later.</T></p>
+            <label className="block text-sm font-medium"><T>Question text</T><textarea
                 required
                 rows={4}
                 className={inputClass}
@@ -227,8 +211,7 @@ export function QuestionBank() {
             </label>
             <div className="grid gap-4 sm:grid-cols-2">
               {choiceKeys.map((k) => (
-                <label key={k} className="text-sm font-medium">
-                  Choice {k}
+                <label key={k} className="text-sm font-medium"><T>Choice </T>{k}
                   <input
                     required
                     className={inputClass}
@@ -245,9 +228,7 @@ export function QuestionBank() {
               ))}
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
-              <label className="text-sm font-medium">
-                Correct answer
-                <select
+              <label className="text-sm font-medium"><T>Correct answer</T><select
                   className={inputClass}
                   aria-label="Correct answer"
                   value={draft.correctAnswer}
@@ -264,9 +245,7 @@ export function QuestionBank() {
                   ))}
                 </select>
               </label>
-              <label className="text-sm font-medium">
-                Points
-                <input
+              <label className="text-sm font-medium"><T>Points</T><input
                   type="number"
                   min={1}
                   step={1}
@@ -279,9 +258,7 @@ export function QuestionBank() {
                   }
                 />
               </label>
-              <label className="text-sm font-medium">
-                Question number
-                <input
+              <label className="text-sm font-medium"><T>Question number</T><input
                   type="number"
                   min={1}
                   step={1}
@@ -298,9 +275,7 @@ export function QuestionBank() {
                 />
               </label>
             </div>
-            <label className="block text-sm font-medium">
-              Explanation
-              <textarea
+            <label className="block text-sm font-medium"><T>Explanation</T><textarea
                 required
                 rows={3}
                 className={inputClass}
@@ -311,9 +286,7 @@ export function QuestionBank() {
                 }
               />
             </label>
-            <label className="block text-sm font-medium">
-              Source PDF URL (optional)
-              <input
+            <label className="block text-sm font-medium"><T>Source PDF URL (optional)</T><input
                 type="url"
                 placeholder="https://example.com/contest.pdf"
                 className={inputClass}
@@ -326,13 +299,11 @@ export function QuestionBank() {
             </label>
             {error && (
               <p role="alert" className="text-sm text-red-700">
-                {error}
+                <T>{error}</T>
               </p>
             )}
             <div className="flex gap-3">
-              <button type="submit" className={buttonClass}>
-                Save question
-              </button>
+              <button type="submit" className={buttonClass}><T>Save question</T></button>
               <button
                 type="button"
                 className="rounded-lg border border-slate-300 px-4 py-2 text-sm"
@@ -340,9 +311,7 @@ export function QuestionBank() {
                   setDraft(null);
                   setError("");
                 }}
-              >
-                Cancel
-              </button>
+              ><T>Cancel</T></button>
             </div>
           </form>
         </section>
@@ -352,12 +321,10 @@ export function QuestionBank() {
             aria-label="Question filters"
             className="rounded-xl border border-slate-200 bg-white p-5"
           >
-            <label className="block text-sm font-medium">
-              Search questions
-              <input
+            <label className="block text-sm font-medium"><T>Search questions</T><input
                 type="search"
                 className={inputClass}
-                placeholder="Search text, category, or question number"
+                placeholder={t("Search text, category, or question number")}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -375,8 +342,7 @@ export function QuestionBank() {
                         setFilters({ ...filters, [key]: e.target.value })
                       }
                     >
-                      <option value="">
-                        All {key === "category" ? "categories" : `${key}s`}
+                      <option value=""><T>All </T><T>{key === "category" ? "categories" : `${key}s`}</T>
                       </option>
                       {Array.from(new Set(questions.map((q) => q[key])))
                         .sort()
@@ -400,13 +366,10 @@ export function QuestionBank() {
                   category: "",
                 });
               }}
-            >
-              Clear filters
-            </button>
+            ><T>Clear filters</T></button>
           </section>
           <p className="text-sm text-slate-500">
-            {visible.length} of {questions.length} questions
-          </p>
+            {visible.length}<T> of </T>{questions.length}<T> questions</T></p>
           <div className="grid gap-5 md:grid-cols-2">
             {visible.map((q) => (
               <article
@@ -414,7 +377,7 @@ export function QuestionBank() {
                 className="rounded-xl border border-slate-200 bg-white p-6"
               >
                 <p className="text-xs text-slate-500">
-                  {q.year} · {q.contest} · {q.division} · Question{" "}
+                  {q.year} · {q.contest} · {q.division}<T> · Question</T>{" "}
                   {q.questionNumber}
                 </p>
                 <p className="mt-3 text-sm font-semibold text-indigo-700">
@@ -428,9 +391,7 @@ export function QuestionBank() {
                     type="button"
                     className="text-sm font-medium text-indigo-700 hover:underline"
                     onClick={() => setSelectedId(q.id)}
-                  >
-                    View details
-                  </button>
+                  ><T>View details</T></button>
                   <button
                     type="button"
                     className="text-sm font-medium text-slate-600 hover:underline"
@@ -439,18 +400,13 @@ export function QuestionBank() {
                       setDraft({ ...q, choices: { ...q.choices } });
                       setError("");
                     }}
-                  >
-                    Edit
-                  </button>
+                  ><T>Edit</T></button>
                 </div>
               </article>
             ))}
           </div>
           {!visible.length && (
-            <p className="rounded-xl border border-dashed border-slate-300 p-10 text-center text-slate-500">
-              No questions match these filters. Clear the filters or add a
-              question.
-            </p>
+            <p className="rounded-xl border border-dashed border-slate-300 p-10 text-center text-slate-500"><T>No questions match these filters. Clear the filters or add a question.</T></p>
           )}
           {selected && (
             <section
@@ -458,21 +414,17 @@ export function QuestionBank() {
               className="rounded-xl border border-indigo-200 bg-white p-6"
             >
               <div className="flex justify-between gap-4">
-                <h2 id="detail-heading" className="text-xl font-semibold">
-                  Question details
-                </h2>
+                <h2 id="detail-heading" className="text-xl font-semibold"><T>Question details</T></h2>
                 <button
                   type="button"
                   className="text-sm text-slate-600 hover:underline"
                   onClick={() => setSelectedId(null)}
-                >
-                  Close details
-                </button>
+                ><T>Close details</T></button>
               </div>
               <p className="mt-3 text-sm text-slate-500">
                 {selected.year} · {selected.contest} · {selected.division} ·{" "}
-                {selected.category} · Question {selected.questionNumber} ·{" "}
-                {selected.points} points · {selected.type}
+                {selected.category}<T> · Question </T>{selected.questionNumber} ·{" "}
+                {selected.points}<T> points · </T>{selected.type}
               </p>
               <p className="mt-5 whitespace-pre-wrap font-medium">
                 {selected.text}
@@ -486,28 +438,23 @@ export function QuestionBank() {
                     <span className="font-semibold">{k}.</span>{" "}
                     {selected.choices[k]}
                     {k === selected.correctAnswer && (
-                      <span className="ml-2 text-sm font-semibold text-indigo-700">
-                        Correct answer
-                      </span>
+                      <span className="ml-2 text-sm font-semibold text-indigo-700"><T>Correct answer</T></span>
                     )}
                   </li>
                 ))}
               </ul>
-              <h3 className="mt-5 font-semibold">Explanation</h3>
+              <h3 className="mt-5 font-semibold"><T>Explanation</T></h3>
               <p className="mt-2 whitespace-pre-wrap text-sm text-slate-600">
                 {selected.explanation}
               </p>
-              <p className="mt-5 text-sm">
-                Source PDF:{" "}
+              <p className="mt-5 text-sm"><T>Source PDF:</T>{" "}
                 {selected.sourcePdf ? (
                   <a
                     href={selected.sourcePdf}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-indigo-700 underline"
-                  >
-                    Open source PDF
-                  </a>
+                  ><T>Open source PDF</T></a>
                 ) : (
                   "Not linked"
                 )}
