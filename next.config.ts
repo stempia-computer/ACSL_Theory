@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Workers do not support the timer behavior used by Cache Components.
+  // Classroom data is fetched per request; no persistent Next.js cache is needed.
   turbopack: {
     rules: {
       "*.css": {
