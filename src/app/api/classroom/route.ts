@@ -7,6 +7,8 @@ import {
 import { prepareSheetSubmission } from "@/lib/sheet-submission";
 import { worksheetAssignments, worksheetQuestions } from "@/lib/worksheet-data";
 import type { Classroom } from "@/lib/classroom-types";
+import { isStaff } from '@/lib/classroom-types';
+import { createHomework, assignedQuestions } from '@/lib/assignment-catalog';
 export async function GET() {
   try {
     return Response.json(await classroomCall(await actorEmail(), "load"), {
@@ -37,21 +39,36 @@ export async function POST(request: Request) {
     }
     if (!body || typeof body !== "object")
       throw new ClassroomError(400, "잘못된 요청입니다.");
+    if (body.action === 'createAssignment') {
+      const classroom: Classroom = await classroomCall(email, 'load');
+      if (!isStaff(classroom.member)) throw new ClassroomError(403, 'Teachers only.');
+      let assignment;
+      try { assignment = createHomework(body.data, classroom.students, email); }
+      catch (error) { throw new ClassroomError(400, (error as Error).message); }
+      return Response.json(await classroomCall(email, 'createAssignment', assignment));
+    }
     if (body.action === "submit") {
-      const { member }: Classroom = await classroomCall(email, "load");
+      const { member, assignments = [] }: Classroom = await classroomCall(email, "load");
       if (member.role !== "student")
         throw new ClassroomError(403, "학생 계정에서만 제출할 수 있습니다.");
       let submission;
       try {
+        const assigned = assignments.find((a) => a.id === body.data?.assignmentId);
+        if (assigned && !assigned.studentIds.includes(member.id)) throw new Error('Not assigned');
+        const questions = assigned ? assignedQuestions(assigned) : worksheetQuestions;
         submission = prepareSheetSubmission(
           {
             ...body.data,
             student: member.name,
             submittedAt: new Date().toISOString(),
           },
-          worksheetAssignments,
-          worksheetQuestions,
+          assigned ? [assigned] : worksheetAssignments,
+          questions,
         );
+        if (assigned) submission.results = submission.results.map((r) => {
+          const q = assignedQuestions(assigned).find((q) => q.id === r.id)!;
+          return { ...r, problemPdf: q.problemPdf, solutionPdf: q.solutionPdf };
+        });
       } catch {
         throw new ClassroomError(400, "과제와 답안을 확인하세요.");
       }

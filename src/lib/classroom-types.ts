@@ -11,6 +11,8 @@ export type Member = {
   phone?: string;
 };
 export type Result = {
+  problemPdf?: string;
+  solutionPdf?: string;
   id: string;
   number: number;
   answer: string;
@@ -33,6 +35,8 @@ export type SavedAttempt = {
   results: Result[];
 };
 export type Classroom = {
+  assignments?: import('./assignment-catalog').AssignedHomework[];
+  assignmentManagement?: boolean;
   member: Member;
   students: Member[];
   teachers: Member[];

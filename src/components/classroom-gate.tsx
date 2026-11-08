@@ -8,6 +8,8 @@ import { redirect } from "next/navigation";
 import { getClassroom, ClassroomError } from "@/lib/classroom-server";
 import { ClassroomApp } from "@/components/classroom-app";
 import { LogoutButton } from "@/components/login-controls";
+import { assignedQuestions, assignmentCatalog } from '@/lib/assignment-catalog';
+import { AssignmentBuilder } from '@/components/assignment-builder';
 import {
   worksheetAssignments,
   assignmentQuestions,
@@ -50,7 +52,7 @@ async function Content({
     redirect("/dashboard/student");
   if (view === "dashboard" && data.member.role === "student")
     redirect("/dashboard/student");
-  const assignments = worksheetAssignments.filter(
+  const assignments = [...(data.assignments || []), ...worksheetAssignments].filter(
     (a) =>
       isStaff(data.member) ||
       a.division === data.member.division?.toLowerCase(),
@@ -59,14 +61,18 @@ async function Content({
   if (view === "exercise" && !assignment)
     return <p><T>본인 디비전의 과제만 열 수 있습니다.</T></p>;
   const questions = assignment
-    ? assignmentQuestions(assignment).map((q) => ({
+    ? ('sourceId' in assignment && typeof assignment.sourceId === 'string' ? assignedQuestions({ sourceId: assignment.sourceId, questionIds: assignment.questionIds }) : assignmentQuestions(assignment)).map((q) => ({
         id: q.id,
         number: q.number,
         questionImage: q.questionImage,
         hint: q.hint,
+        choices: 'choices' in q ? q.choices : undefined,
+        problemPdf: 'problemPdf' in q ? q.problemPdf : undefined,
       }))
     : [];
   return (
+    <>
+    {view === 'assignments' && isStaff(data.member) && <AssignmentBuilder students={data.students} catalog={assignmentCatalog} enabled={data.assignmentManagement === true} />}
     <ClassroomApp
       initial={data}
       view={view}
@@ -74,6 +80,7 @@ async function Content({
       assignment={assignment}
       questions={questions}
     />
+    </>
   );
 }
 export function ClassroomGate(props: { view: View; assignmentId?: string }) {

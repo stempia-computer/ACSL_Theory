@@ -8,6 +8,7 @@ import { encode } from "next-auth/jwt";
 import { readFileSync, mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import packets from '../src/data/contest-packets.json' with { type: 'json' };
 const tempDirectory = mkdtempSync(join(tmpdir(), "acsl-otp-test-"));
 const mailboxFile = join(tempDirectory, "mail.json");
 const secret = "classroom-integration-fixture-secret-only-0123456789";
@@ -416,4 +417,46 @@ test("OTP endpoint and real Auth.js callback grant only a verified own-account s
       (m) => m.to === "unregistered@example.com",
     ),
   );
+});
+
+test('assigned problem sets: halves, access control, grading, retries and persisted review', async () => {
+  const packet = packets.find((p) => p.id === '2425-contest-1-jr');
+  const roster = (await request(teacher)).body.students;
+  const target = roster.find((s) => s.email === student);
+  const create = { id: 'assigned-' + randomUUID(), sourceId: packet.id, title: 'Contest homework', due: '2026-12-01', part: 'first', studentIds: [target.id] };
+  assert.equal((await request(student, 'createAssignment', create)).status, 403);
+  assert.equal((await request(teacher, 'createAssignment', { ...create, sourceId: 'unknown' })).status, 400);
+  assert.equal((await request(teacher, 'createAssignment', { ...create, sourceId: 'worksheet-senior-cns' })).status, 400);
+  const saved = await request(teacher, 'createAssignment', create);
+  assert.equal(saved.status, 200, JSON.stringify(saved.body));
+  const assignment = saved.body.assignment;
+  assert.equal(assignment.questionIds.length, Math.ceil(packet.questions.length / 2));
+  assert.equal((await request(teacher, 'createAssignment', create)).status, 200);
+  assert.equal((await request(teacher)).body.assignments.filter((a) => a.id === create.id).length, 1);
+  assert.ok((await request(student)).body.assignments.some((a) => a.id === create.id));
+  assert.ok(!(await request(other)).body.assignments.some((a) => a.id === create.id));
+  const html = await (await fetch(base + '/assignments/' + create.id, { headers: { Cookie: await cookie(student) } })).text();
+  assert.ok(html.includes('Assignment problem PDF'));
+  assert.ok(html.includes('type="radio"'));
+  // Existing submitted attempts legitimately contain their own review answers.
+  // Unsubmitted packet solutions must not be part of the exercise payload.
+  const freshHtml = await (await fetch(base + '/assignments/' + create.id, { headers: { Cookie: await cookie(student) } })).text();
+  assert.ok(!freshHtml.includes('"solutionPdf":' + JSON.stringify(packet.solutionPdf)));
+  const payload = { id: randomUUID(), assignmentId: create.id, answers: Object.fromEntries(packet.questions.slice(0, assignment.questionIds.length).map((q) => [packet.id + ':q' + q.number, q.correctAnswer])) };
+  assert.equal((await request(other, 'submit', payload)).status, 400);
+  const attempt = await request(student, 'submit', payload);
+  assert.equal(attempt.status, 200, JSON.stringify(attempt.body));
+  assert.equal(attempt.body.attempt.score, assignment.questionIds.length);
+  assert.equal(attempt.body.attempt.results[0].solutionPdf, packet.solutionPdf);
+  const retry = await request(student, 'submit', { ...payload, answers: {} });
+  assert.equal(retry.body.attempt.score, attempt.body.attempt.score);
+  assert.ok((await request(teacher)).body.attempts.some((a) => a.id === payload.id));
+  assert.ok(!(await request(other)).body.attempts.some((a) => a.id === payload.id));
+  const halves = [];
+  for (const part of ['first', 'second']) {
+    const r = await request(teacher, 'createAssignment', { ...create, id: 'assigned-' + randomUUID(), sourceId: 'worksheet-junior-cns', part });
+    assert.equal(r.status, 200); halves.push(r.body.assignment.questionIds);
+  }
+  assert.equal(halves[0].length, 14); assert.equal(halves[1].length, 14);
+  assert.equal(new Set(halves.flat()).size, 28);
 });

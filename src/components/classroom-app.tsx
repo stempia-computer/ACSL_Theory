@@ -21,7 +21,9 @@ export type PracticeQuestion = {
   id: string;
   number: number;
   hint: string;
-  questionImage: { src: string; width: number; height: number };
+  questionImage?: { src: string; width: number; height: number };
+  choices?: string[];
+  problemPdf?: string;
 };
 async function mutate(action: string, data: unknown) {
   const response = await fetch("/api/classroom", {
@@ -813,7 +815,7 @@ function Review({
               </p>
               <details className="mt-3">
                 <summary className="cursor-pointer text-indigo-700"><T>원본 문제와 해설 보기</T></summary>
-                {["question", "solution"].map((type) => (
+                {r.problemPdf ? <div className="flex gap-4 py-3"><a className="text-indigo-700 underline" href={r.problemPdf} target="_blank" rel="noreferrer"><T>Open problem PDF</T></a>{r.solutionPdf && <a className="text-indigo-700 underline" href={r.solutionPdf} target="_blank" rel="noreferrer"><T>Open solution PDF</T></a>}</div> : ["question", "solution"].map((type) => (
                   <Image
                     key={type}
                     src={`/worksheets/${attempt.division.toLowerCase()}/${type}-${String(r.number).padStart(2, "0")}.png`}
@@ -928,18 +930,19 @@ function Exercise({
           : `${member.name} · ${member.email}`}</T>{" "}
         · {questions.length}<T> questions</T></p>
       <p className="mb-5 text-sm text-slate-500"><T>답안은 제출 전까지 이 탭에만 있습니다. 저장 완료 메시지를 확인한 뒤 창을 닫으세요.</T></p>
+      {questions[0]?.problemPdf && <><a href={questions[0].problemPdf} target="_blank" rel="noreferrer" className="text-indigo-700 underline"><T>Open problem PDF</T></a><iframe title="Assignment problem PDF" src={questions[0].problemPdf} className="my-4 h-[65vh] w-full rounded-lg border bg-white" /></>}
       {questions.map((q) => (
         <section className={panel} key={q.id}>
           <h2 className="mb-4 text-lg font-semibold"><T>Question </T>{q.number}</h2>
-          <Image
+          {q.questionImage && <Image
             src={q.questionImage.src}
             width={q.questionImage.width}
             height={q.questionImage.height}
             alt={`Original worksheet question ${q.number}`}
             unoptimized
             className="h-auto w-full"
-          />
-          <label className="mt-4 block font-medium"><T>Your answer</T><input
+          />}
+          {q.choices ? <fieldset disabled={busy || !!pending} className="mt-4 flex gap-4"><legend><T>Your answer</T></legend>{q.choices.map((choice) => <label key={choice} className="rounded-lg border p-3"><input type="radio" name={q.id} value={choice} checked={answers[q.id] === choice} onChange={() => { setAnswers({ ...answers, [q.id]: choice }); setConfirmBlank(false); }} /> {choice}</label>)}</fieldset> : <label className="mt-4 block font-medium"><T>Your answer</T><input
               aria-label={`Answer to question ${q.number}`}
               className={input}
               value={answers[q.id] || ""}
@@ -950,7 +953,7 @@ function Exercise({
                 setConfirmBlank(false);
               }}
             />
-          </label>
+          </label>}
           <p className="mt-2 text-sm text-slate-500"><T>{q.hint}</T></p>
         </section>
       ))}

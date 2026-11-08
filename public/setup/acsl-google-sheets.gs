@@ -90,10 +90,26 @@ function doPost(e) {
     if (!actor) return fail_('FORBIDDEN');
     var attemptSheet = ensureSheet_(ss, ACCOUNT_ATTEMPTS, ACCOUNT_HEADERS);
     var attemptRows = rows_(attemptSheet, ACCOUNT_HEADERS.length);
+    var homeworkSheet = ensureSheet_(ss, '배정 과제', ['ID', '과제 데이터']);
+    var homework = rows_(homeworkSheet, 2).map(function(r) { return JSON.parse(r[1]); });
+    if (body.action === 'createAssignment') {
+      if (!isStaff_(actor)) return fail_('FORBIDDEN');
+      var a = body.data;
+      if (!a || !/^assigned-[0-9a-f-]{36}$/i.test(a.id) || typeof a.title !== 'string' || !a.title.trim() || a.title.length > 160 || typeof a.sourceId !== 'string' || !a.sourceId || !/^\d{4}-\d{2}-\d{2}$/.test(a.due) || !isFinite(Date.parse(a.due)) || !Array.isArray(a.questionIds) || !a.questionIds.length || a.questionIds.length > 40 || a.questionIds.some(function(id) { return typeof id !== 'string'; }) || new Set(a.questionIds).size !== a.questionIds.length || !Array.isArray(a.studentIds) || !a.studentIds.length || new Set(a.studentIds).size !== a.studentIds.length || a.studentIds.some(function(id) { return !students.some(function(m) { return m.id === id && m.active && m.division.toLowerCase() === a.division; }); })) return fail_('INVALID');
+      var existingHomework = homework.find(function(h) { return h.id === a.id; });
+      if (existingHomework) return JSON.stringify(existingHomework) === JSON.stringify(a) ? ok_({ assignment: existingHomework }) : fail_('CONFLICT');
+      homeworkSheet.getRange(homeworkSheet.getLastRow() + 1, 1, 1, 2).setNumberFormat('@').setValues([[a.id, JSON.stringify(a)]]);
+      SpreadsheetApp.flush();
+      return ok_({ assignment: a });
+    }
     if (body.action === 'load') {
       // Filter before returning data: students never receive another student's record.
       var allowed = attemptRows.filter(function(r) { return isStaff_(actor) || r[1] === actor.id; });
-      return ok_({ member: actor, students: isStaff_(actor) ? students : [], teachers: isStaff_(actor) ? teachers : [], attempts: allowed.map(function(r) { return JSON.parse(r[9]); }).reverse() });
+      var assigned = homework.filter(function(a) { return isStaff_(actor) || (a.studentIds.indexOf(actor.id) !== -1 && a.division === actor.division.toLowerCase()); }).map(function(a) {
+        if (isStaff_(actor)) return a;
+        var own = Object.assign({}, a); own.studentIds = [actor.id]; delete own.createdBy; return own;
+      });
+      return ok_({ member: actor, students: isStaff_(actor) ? students : [], teachers: isStaff_(actor) ? teachers : [], attempts: allowed.map(function(r) { return JSON.parse(r[9]); }).reverse(), assignments: assigned, assignmentManagement: true });
     }
     if (body.action === 'saveStudent' || body.action === 'saveTeacher') {
       if (!isStaff_(actor)) return fail_('FORBIDDEN');
@@ -125,7 +141,9 @@ function doPost(e) {
     }
     if (body.action !== 'submit' || actor.role !== 'student') return fail_('FORBIDDEN');
     var s = body.data;
-    if (!s || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(s.id) || s.division !== actor.division.toLowerCase() || typeof s.assignmentId !== 'string' || !/^(junior|intermediate|senior)-cns-[12]$/.test(s.assignmentId) || s.assignmentId.split('-')[0] !== actor.division.toLowerCase() || !Array.isArray(s.results) || s.results.length < 1 || s.results.length > 40 || s.total !== s.results.length || s.score !== s.results.filter(function(q) { return q.correct === true; }).length) return fail_('INVALID');
+    var assignedHomework = s && homework.find(function(a) { return a.id === s.assignmentId; });
+    var validAssignment = assignedHomework ? assignedHomework.studentIds.indexOf(actor.id) !== -1 && assignedHomework.division === actor.division.toLowerCase() && Array.isArray(s.results) && s.results.map(function(r) { return r.id; }).join('|') === assignedHomework.questionIds.join('|') : s && /^(junior|intermediate|senior)-cns-[12]$/.test(s.assignmentId) && s.assignmentId.split('-')[0] === actor.division.toLowerCase();
+    if (!s || !validAssignment || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(s.id) || s.division !== actor.division.toLowerCase() || !Array.isArray(s.results) || s.results.length < 1 || s.results.length > 40 || s.total !== s.results.length || s.score !== s.results.filter(function(q) { return q.correct === true; }).length) return fail_('INVALID');
     if (s.results.some(function(q) { return typeof q.id !== 'string' || !Number.isInteger(q.number) || typeof q.answer !== 'string' || q.answer.length > 200 || typeof q.correctAnswer !== 'string' || typeof q.correct !== 'boolean'; }) || new Set(s.results.map(function(q) { return q.number; })).size !== s.results.length) return fail_('INVALID');
     var previous = attemptRows.find(function(r) { return r[0] === s.id; });
     if (previous && previous[1] !== actor.id) return fail_('CONFLICT');
