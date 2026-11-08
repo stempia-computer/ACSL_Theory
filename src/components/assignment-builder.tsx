@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from './language';
 import type { Member } from '@/lib/classroom-types';
-type Source = { id: string; title: string; division: string; kind: string; questionIds: string[] };
-export function AssignmentBuilder({ students, catalog, enabled }: { students: Member[]; catalog: Source[]; enabled: boolean }) {
+type Source = { id: string; title: string; division: string; kind: string; questionIds: string[]; reviewCount?: number; sourceNote?: string };
+export function AssignmentBuilder({ students, catalog, enabled, reviewEnabled }: { students: Member[]; catalog: Source[]; enabled: boolean; reviewEnabled: boolean }) {
   const { language } = useLanguage();
   const tr = (en: string, ko: string) => language === 'ko' ? ko : en;
   const router = useRouter();
@@ -33,6 +33,7 @@ export function AssignmentBuilder({ students, catalog, enabled }: { students: Me
   }
   return <section className="mb-8 rounded-xl border bg-white p-6">
     <h2 className="mb-4 text-2xl font-bold">{tr('Create assignment', '과제 만들기')}</h2>
+    {enabled && !reviewEnabled && <p role="alert" className="mb-4 text-amber-800">{tr('Update Apps Script to enable the new worksheets and teacher grading.', '새 워크시트와 선생님 채점을 사용하려면 Apps Script를 업데이트하세요.')} <a className="underline" href="/google-sheets-setup">{tr('Setup guide', '설정 안내')}</a></p>}
     {!enabled ? <p role="alert">{tr('Update the Apps Script from Google Sheets setup and deploy a new version to enable assignment management.', '과제 배정을 사용하려면 Google Sheets 연결 안내의 Apps Script를 업데이트하고 새 버전으로 배포하세요.')} <a href="/google-sheets-setup" className="text-indigo-700 underline">{tr('Setup guide', '설정 안내')}</a></p> : <form onSubmit={submit} className="space-y-4">
       <fieldset disabled={busy || !!pending} className="space-y-4 disabled:opacity-60">
         <label className="block">Division<select className={input} value={division} onChange={(e) => { setDivision(e.target.value); setSource(''); setIds([]); }}>
@@ -40,8 +41,10 @@ export function AssignmentBuilder({ students, catalog, enabled }: { students: Me
         </select></label>
         <label className="block">{tr('Problem set title', '문제집 제목')}<select aria-label="Problem set title" required className={input} value={sourceId} onChange={(e) => { setSource(e.target.value); setTitle(catalog.find((s) => s.id === e.target.value)?.title || ''); setPart('all'); }}>
           <option value="">{tr('Choose a problem set', '문제집 선택')}</option>
-          {catalog.filter((s) => s.division === division).map((s) => <option key={s.id} value={s.id}>{s.kind} · {s.title} ({s.questionIds.length})</option>)}
+          {catalog.filter((s) => s.division === division).map((s) => <option disabled={s.reviewCount !== undefined && !reviewEnabled} key={s.id} value={s.id}>{s.kind} · {s.title} ({s.questionIds.length})</option>)}
         </select></label>
+        {!!source?.reviewCount && <p className="text-amber-800">{tr(`${source.reviewCount} questions in this set need teacher review. Other questions are automatically graded.`, `이 문제집의 ${source.reviewCount}문제는 선생님 검토가 필요합니다. 나머지는 자동 채점됩니다.`)}</p>}
+        {source?.sourceNote && <p className="text-amber-800">{source.sourceNote}</p>}
         <label className="block">{tr('Question range', '문제 범위')}<select aria-label="Question range" className={input} value={part} onChange={(e) => setPart(e.target.value)}>
           <option value="all">{tr('All questions', '전체')}</option><option value="first">{tr('First half', '앞 절반')}</option><option value="second">{tr('Second half', '뒤 절반')}</option>
         </select></label><p>{count} {tr('questions · 1 point each', '문제 · 각 1점')}</p>

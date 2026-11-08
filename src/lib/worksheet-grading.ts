@@ -16,8 +16,38 @@ function list(value: string): string[] {
     .filter(Boolean);
 }
 
-export function gradeAnswer(rule: AnswerRule, input: string): boolean {
+export function gradeAnswer(rule: AnswerRule, input: string): boolean | null {
   if (!input.trim()) return false;
+  if (rule.mode === 'manual') return null;
+  if (rule.mode === 'lisp') {
+    const tokens = (s: string) => clean(s).replace(/^[‘’']/, '').match(/[()]|[^()\s]+/g)?.join(' ');
+    return tokens(input) === tokens(rule.answer);
+  }
+  if (rule.mode === 'letters') {
+    const letters = (s: string) => clean(s).replace(/[,\s]+/g, '');
+    return letters(input) === letters(rule.answer);
+  }
+  if (rule.mode === 'tuples' || rule.mode === 'bitpattern') {
+    const expand = (s: string): string | null => {
+      s = clean(s).replace(/\bAND\b/g, ',');
+      let patterns: string[];
+      if (rule.mode === 'tuples') {
+        const groups = s.match(/\([01*,\s]+\)/g);
+        if (!groups || s.replace(/\([01*,\s]+\)/g, '').replace(/[,;\s]/g, '')) return null;
+        patterns = groups.map((g) => g.replace(/[(),\s]/g, ''));
+      } else patterns = s.split(/[,;\s]+/).filter(Boolean);
+      const values = new Set<string>();
+      for (const pattern of patterns) {
+        if (!/^[01*]{1,12}$/.test(pattern)) return null;
+        let expanded = [''];
+        for (const bit of pattern) expanded = expanded.flatMap((prefix) => bit === '*' ? [prefix+'0',prefix+'1'] : [prefix+bit]);
+        expanded.forEach((v) => values.add(v));
+      }
+      return [...values].sort().join(',');
+    };
+    const actual = expand(input);
+    return actual !== null && actual === expand(rule.answer);
+  }
   if (rule.mode === "fraction") {
     const rational = (value: string): [bigint, bigint] | null => {
       const normalized = clean(value).replace(/\s+/g, "");

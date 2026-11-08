@@ -92,10 +92,30 @@ function doPost(e) {
     var attemptRows = rows_(attemptSheet, ACCOUNT_HEADERS.length);
     var homeworkSheet = ensureSheet_(ss, '배정 과제', ['ID', '과제 데이터']);
     var homework = rows_(homeworkSheet, 2).map(function(r) { return JSON.parse(r[1]); });
+    if (body.action === 'reviewAnswer') {
+      if (!isStaff_(actor)) return fail_('FORBIDDEN');
+      var review = body.data;
+      if (!review || typeof review.correct !== 'boolean' || typeof review.attemptId !== 'string' || typeof review.questionId !== 'string') return fail_('INVALID');
+      var reviewIndex = attemptRows.findIndex(function(r) { return r[0] === review.attemptId; });
+      if (reviewIndex < 0) return fail_('INVALID');
+      var reviewed = JSON.parse(attemptRows[reviewIndex][9]);
+      var answer = reviewed.results.find(function(r) { return r.id === review.questionId; });
+      if (!answer || !answer.manualReview) return fail_('INVALID');
+      answer.correct = review.correct; answer.reviewedBy = actor.email; answer.reviewedAt = new Date().toISOString();
+      reviewed.score = reviewed.results.filter(function(r) { return r.correct === true; }).length;
+      reviewed.pendingCount = reviewed.results.filter(function(r) { return r.correct === null; }).length;
+      reviewed.percentage = Math.round(reviewed.score / reviewed.total * 100);
+      var updatedRow = attemptRows[reviewIndex].slice();
+      updatedRow[6] = reviewed.score; updatedRow[9] = JSON.stringify(reviewed);
+      attemptSheet.getRange(reviewIndex + 2, 1, 1, updatedRow.length).setNumberFormat('@').setValues([updatedRow]);
+      SpreadsheetApp.flush();
+      projectAttempt_(ss, reviewed);
+      return ok_({ attempt: reviewed });
+    }
     if (body.action === 'createAssignment') {
       if (!isStaff_(actor)) return fail_('FORBIDDEN');
       var a = body.data;
-      if (!a || !/^assigned-[0-9a-f-]{36}$/i.test(a.id) || typeof a.title !== 'string' || !a.title.trim() || a.title.length > 160 || typeof a.sourceId !== 'string' || !a.sourceId || !/^\d{4}-\d{2}-\d{2}$/.test(a.due) || !isFinite(Date.parse(a.due)) || !Array.isArray(a.questionIds) || !a.questionIds.length || a.questionIds.length > 40 || a.questionIds.some(function(id) { return typeof id !== 'string'; }) || new Set(a.questionIds).size !== a.questionIds.length || !Array.isArray(a.studentIds) || !a.studentIds.length || new Set(a.studentIds).size !== a.studentIds.length || a.studentIds.some(function(id) { return !students.some(function(m) { return m.id === id && m.active && m.division.toLowerCase() === a.division; }); })) return fail_('INVALID');
+      if (!a || !/^assigned-[0-9a-f-]{36}$/i.test(a.id) || typeof a.title !== 'string' || !a.title.trim() || a.title.length > 160 || typeof a.sourceId !== 'string' || !a.sourceId || !/^\d{4}-\d{2}-\d{2}$/.test(a.due) || !isFinite(Date.parse(a.due)) || !Array.isArray(a.questionIds) || !a.questionIds.length || a.questionIds.length > 100 || a.questionIds.some(function(id) { return typeof id !== 'string'; }) || new Set(a.questionIds).size !== a.questionIds.length || !Array.isArray(a.studentIds) || !a.studentIds.length || new Set(a.studentIds).size !== a.studentIds.length || a.studentIds.some(function(id) { return !students.some(function(m) { return m.id === id && m.active && m.division.toLowerCase() === a.division; }); })) return fail_('INVALID');
       var existingHomework = homework.find(function(h) { return h.id === a.id; });
       if (existingHomework) return JSON.stringify(existingHomework) === JSON.stringify(a) ? ok_({ assignment: existingHomework }) : fail_('CONFLICT');
       homeworkSheet.getRange(homeworkSheet.getLastRow() + 1, 1, 1, 2).setNumberFormat('@').setValues([[a.id, JSON.stringify(a)]]);
@@ -109,7 +129,7 @@ function doPost(e) {
         if (isStaff_(actor)) return a;
         var own = Object.assign({}, a); own.studentIds = [actor.id]; delete own.createdBy; return own;
       });
-      return ok_({ member: actor, students: isStaff_(actor) ? students : [], teachers: isStaff_(actor) ? teachers : [], attempts: allowed.map(function(r) { return JSON.parse(r[9]); }).reverse(), assignments: assigned, assignmentManagement: true });
+      return ok_({ member: actor, students: isStaff_(actor) ? students : [], teachers: isStaff_(actor) ? teachers : [], attempts: allowed.map(function(r) { return JSON.parse(r[9]); }).reverse(), assignments: assigned, assignmentManagement: true, worksheetReview: true });
     }
     if (body.action === 'saveStudent' || body.action === 'saveTeacher') {
       if (!isStaff_(actor)) return fail_('FORBIDDEN');
@@ -143,8 +163,8 @@ function doPost(e) {
     var s = body.data;
     var assignedHomework = s && homework.find(function(a) { return a.id === s.assignmentId; });
     var validAssignment = assignedHomework ? assignedHomework.studentIds.indexOf(actor.id) !== -1 && assignedHomework.division === actor.division.toLowerCase() && Array.isArray(s.results) && s.results.map(function(r) { return r.id; }).join('|') === assignedHomework.questionIds.join('|') : s && /^(junior|intermediate|senior)-cns-[12]$/.test(s.assignmentId) && s.assignmentId.split('-')[0] === actor.division.toLowerCase();
-    if (!s || !validAssignment || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(s.id) || s.division !== actor.division.toLowerCase() || !Array.isArray(s.results) || s.results.length < 1 || s.results.length > 40 || s.total !== s.results.length || s.score !== s.results.filter(function(q) { return q.correct === true; }).length) return fail_('INVALID');
-    if (s.results.some(function(q) { return typeof q.id !== 'string' || !Number.isInteger(q.number) || typeof q.answer !== 'string' || q.answer.length > 200 || typeof q.correctAnswer !== 'string' || typeof q.correct !== 'boolean'; }) || new Set(s.results.map(function(q) { return q.number; })).size !== s.results.length) return fail_('INVALID');
+    if (!s || !validAssignment || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(s.id) || s.division !== actor.division.toLowerCase() || !Array.isArray(s.results) || s.results.length < 1 || s.results.length > 100 || s.total !== s.results.length || s.score !== s.results.filter(function(q) { return q.correct === true; }).length) return fail_('INVALID');
+    if (s.results.some(function(q) { return typeof q.id !== 'string' || !Number.isInteger(q.number) || typeof q.answer !== 'string' || q.answer.length > 200 || typeof q.correctAnswer !== 'string' || (typeof q.correct !== 'boolean' && !(q.correct === null && q.manualReview === true)); }) || new Set(s.results.map(function(q) { return q.number; })).size !== s.results.length) return fail_('INVALID');
     var previous = attemptRows.find(function(r) { return r[0] === s.id; });
     if (previous && previous[1] !== actor.id) return fail_('CONFLICT');
     if (previous) {
@@ -153,6 +173,7 @@ function doPost(e) {
     } else {
       s.studentId = actor.id; s.email = actor.email; s.student = actor.name;
       s.receivedAt = new Date().toISOString(); s.submittedAt = s.receivedAt;
+      s.pendingCount = s.results.filter(function(q) { return q.correct === null; }).length;
       s.percentage = Math.round(s.score / s.total * 100);
       var record = [s.id, actor.id, safeText_(actor.email), safeText_(actor.name), s.division, safeText_(s.assignment), s.score, s.total, s.receivedAt, JSON.stringify(s)];
       attemptSheet.getRange(attemptSheet.getLastRow() + 1, 1, 1, record.length).setNumberFormat('@').setValues([record]);
@@ -172,16 +193,16 @@ function validContact_(address, phone) {
 function projectAttempt_(ss, s) {
   var attempts = ensureSheet_(ss, ATTEMPTS, ATTEMPT_HEADERS);
   var details = ensureSheet_(ss, DETAILS, DETAIL_HEADERS);
-  var ids = rows_(attempts, ATTEMPT_HEADERS.length).map(function(r) { return r[0]; });
-  if (ids.indexOf(s.id) !== -1) return;
-  var existing = rows_(details, DETAIL_HEADERS.length).filter(function(r) { return r[0] === s.id; }).map(function(r) { return Number(r[4]); });
-  var rows = s.results.filter(function(q) { return existing.indexOf(q.number) === -1; }).map(function(q) {
-    return [s.id, safeText_(s.student), safeText_(s.division), safeText_(s.assignment), q.number, safeText_(q.answer), safeText_(q.correctAnswer), q.correct ? '정답' : q.answer.trim() ? '오답' : '미응답'];
+  var attemptRows = rows_(attempts, ATTEMPT_HEADERS.length);
+  var detailRows = rows_(details, DETAIL_HEADERS.length);
+  s.results.forEach(function(q) {
+    var index = detailRows.findIndex(function(r) { return r[0] === s.id && Number(r[4]) === q.number; });
+    var row = [s.id, safeText_(s.student), safeText_(s.division), safeText_(s.assignment), q.number, safeText_(q.answer), safeText_(q.correctAnswer), q.correct === null ? '검토 대기 / Pending review' : q.correct ? '정답' : q.answer.trim() ? '오답' : '미응답'];
+    details.getRange(index < 0 ? details.getLastRow() + 1 : index + 2, 1, 1, row.length).setNumberFormat('@').setValues([row]);
   });
-  if (rows.length) details.getRange(details.getLastRow() + 1, 1, rows.length, DETAIL_HEADERS.length).setNumberFormat('@').setValues(rows);
-  SpreadsheetApp.flush();
-  var row = [s.id, s.receivedAt, s.submittedAt, safeText_(s.student), s.division, safeText_(s.assignment), s.score, s.total, s.percentage, s.results.filter(function(q) { return !q.correct; }).map(function(q) { return q.number; }).join(', ')];
-  attempts.getRange(attempts.getLastRow() + 1, 1, 1, row.length).setNumberFormat('@').setValues([row]);
+  var index = attemptRows.findIndex(function(r) { return r[0] === s.id; });
+  var row = [s.id, s.receivedAt, s.submittedAt, safeText_(s.student), s.division, safeText_(s.assignment), s.score, s.total, s.pendingCount ? 'Pending review (' + s.pendingCount + ')' : s.percentage, s.results.filter(function(q) { return q.correct === false; }).map(function(q) { return q.number; }).join(', ')];
+  attempts.getRange(index < 0 ? attempts.getLastRow() + 1 : index + 2, 1, 1, row.length).setNumberFormat('@').setValues([row]);
   SpreadsheetApp.flush();
 }
 

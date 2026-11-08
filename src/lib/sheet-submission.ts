@@ -70,6 +70,7 @@ export function prepareSheetSubmission(
       answer,
       correctAnswer: q.answer,
       correct: gradeAnswer(q, answer),
+      manualReview: q.mode === 'manual',
     };
   });
   const score = results.filter((q) => q.correct).length;
@@ -82,6 +83,7 @@ export function prepareSheetSubmission(
     submittedAt: new Date(a.submittedAt).toISOString(),
     receivedAt: new Date().toISOString(),
     score,
+    pendingCount: results.filter((q) => q.correct === null).length,
     total: results.length,
     percentage: Math.round((score / results.length) * 100),
     results,

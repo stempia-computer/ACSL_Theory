@@ -45,6 +45,8 @@ export async function POST(request: Request) {
       let assignment;
       try { assignment = createHomework(body.data, classroom.students, email); }
       catch (error) { throw new ClassroomError(400, (error as Error).message); }
+      if (/^worksheet-(intermediate|senior)-\d+$/.test(assignment.sourceId) && !classroom.worksheetReview)
+        throw new ClassroomError(503, 'Update Apps Script to enable these worksheets.');
       return Response.json(await classroomCall(email, 'createAssignment', assignment));
     }
     if (body.action === "submit") {
@@ -81,7 +83,7 @@ export async function POST(request: Request) {
         headers: { "Cache-Control": "no-store" },
       });
     }
-    if (!["saveStudent", "saveTeacher", "updateProfile"].includes(body.action))
+    if (!["saveStudent", "saveTeacher", "updateProfile", "reviewAnswer"].includes(body.action))
       throw new ClassroomError(400, "지원하지 않는 요청입니다.");
     // Apps Script checks the actor's current role under its write lock on every operation.
     return Response.json(await classroomCall(email, body.action, body.data), {

@@ -67,12 +67,13 @@ async function Content({
         questionImage: q.questionImage,
         hint: q.hint,
         choices: 'choices' in q ? q.choices : undefined,
+        multiple: 'multiple' in q ? q.multiple : false,
         problemPdf: 'problemPdf' in q ? q.problemPdf : undefined,
       }))
     : [];
   return (
     <>
-    {view === 'assignments' && isStaff(data.member) && <AssignmentBuilder students={data.students} catalog={assignmentCatalog} enabled={data.assignmentManagement === true} />}
+    {view === 'assignments' && isStaff(data.member) && <AssignmentBuilder students={data.students} catalog={assignmentCatalog} enabled={data.assignmentManagement === true} reviewEnabled={data.worksheetReview === true} />}
     <ClassroomApp
       initial={data}
       view={view}

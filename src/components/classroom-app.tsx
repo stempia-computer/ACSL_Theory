@@ -23,6 +23,7 @@ export type PracticeQuestion = {
   hint: string;
   questionImage?: { src: string; width: number; height: number };
   choices?: string[];
+  multiple?: boolean;
   problemPdf?: string;
 };
 async function mutate(action: string, data: unknown) {
@@ -47,6 +48,7 @@ function latestAttempts(attempts: SavedAttempt[]) {
   return [...latest.values()];
 }
 function average(attempts: SavedAttempt[]) {
+  if (attempts.some((a) => a.pendingCount)) return 'Pending review';
   const total = attempts.reduce((n, a) => n + a.total, 0);
   return total
     ? `${Math.round((attempts.reduce((n, a) => n + a.score, 0) / total) * 100)}%`
@@ -187,7 +189,7 @@ export function ClassroomApp({
                   ["최근 제출 평균", average(latest)],
                   [
                     "최근 제출 오답",
-                    latest.reduce((n, a) => n + a.total - a.score, 0),
+                    latest.reduce((n, a) => n + a.results.filter((r) => r.correct === false).length, 0),
                   ],
                 ].map(([label, value]) => (
                   <div
@@ -234,6 +236,8 @@ export function ClassroomApp({
             <Review
               key={review.id}
               attempt={review}
+              canReview={teacher}
+              onUpdate={(updated) => { setReview(updated); setData((d) => ({ ...d, attempts: d.attempts.map((a) => a.id === updated.id ? updated : a) })); }}
               onClose={() => setReview(null)}
             />
           )}
@@ -649,7 +653,7 @@ function StudentScores({
                               className="text-indigo-700 underline"
                               onClick={() => onReview(a)}
                             >
-                              {a.score}/{a.total}
+                              <AttemptScore attempt={a} />
                             </button>
                           ) : (
                             "—"
@@ -715,7 +719,7 @@ function AttemptList({
                     {new Date(a.receivedAt).toLocaleString()}
                   </td>
                   <td className="border-b p-3 font-semibold">
-                    {a.score}/{a.total} ({a.percentage}%)
+                    <AttemptScore attempt={a} />
                   </td>
                   <td className="border-b p-3">
                     <button
@@ -739,6 +743,7 @@ function QuestionResults({ attempts }: { attempts: SavedAttempt[] }) {
   >();
   for (const a of attempts)
     for (const r of a.results) {
+      if (r.correct === null) continue;
       const c = counts.get(r.id) || {
         title: a.division,
         number: r.number,
@@ -767,13 +772,31 @@ function QuestionResults({ attempts }: { attempts: SavedAttempt[] }) {
     </details>
   );
 }
+function AttemptScore({ attempt }: { attempt: SavedAttempt }) {
+  const { language } = useLanguage();
+  return <>{attempt.score}/{attempt.total} {attempt.pendingCount ? `· ${attempt.pendingCount} ${language === 'ko' ? '문제 검토 대기 (임시 점수)' : 'pending review (provisional)'}` : `(${attempt.percentage}%)`}</>;
+}
 function Review({
   attempt,
   onClose,
+  canReview = false,
+  onUpdate,
 }: {
   attempt: SavedAttempt;
   onClose: () => void;
+  canReview?: boolean;
+  onUpdate?: (a: SavedAttempt) => void;
 }) {
+  const { language } = useLanguage();
+  const tr = (en: string, ko: string) => language === 'ko' ? ko : en;
+  const [saving, setSaving] = useState(false);
+  const [notice, setNotice] = useState('');
+  async function mark(questionId: string, correct: boolean) {
+    setSaving(true); setNotice('');
+    try { const result = await mutate('reviewAnswer', { attemptId: attempt.id, questionId, correct }); onUpdate?.(result.attempt); }
+    catch (e) { setNotice((e as Error).message); }
+    finally { setSaving(false); }
+  }
   const [wrongOnly, setWrongOnly] = useState(false);
   const reviewRef = useRef<HTMLElement>(null);
   useEffect(() => {
@@ -788,8 +811,9 @@ function Review({
         <button className={secondary} onClick={onClose}><T>리뷰 닫기</T></button>
       </div>
       <p className="my-3 text-lg font-semibold">
-        {attempt.score} / {attempt.total} · {attempt.percentage}%
+        <AttemptScore attempt={attempt} />
       </p>
+      <p role="status">{notice}</p>
       <label className="mb-5 flex items-center gap-2">
         <input
           type="checkbox"
@@ -806,13 +830,15 @@ function Review({
               className={`rounded-lg border p-4 ${r.correct ? "border-emerald-200" : "border-amber-200"}`}
             >
               <h3 className="font-semibold"><T>Question </T>{r.number} ·{" "}
-                <T>{r.correct ? "정답" : r.answer.trim() ? "오답" : "미응답"}</T>
+                {r.correct === null ? tr('Pending teacher review', '선생님 검토 대기') : <T>{r.correct ? "정답" : r.answer.trim() ? "오답" : "미응답"}</T>}
               </h3>
               <p className="mt-2 break-words"><T>학생 답:</T>{" "}
                 <span className="font-mono">{r.answer || "(빈 답안)"}</span>
               </p>
-              <p className="break-words"><T>정답: </T><span className="font-mono">{r.correctAnswer}</span>
+              <p className="break-words"><T>정답: </T><span className="font-mono">{r.correctAnswer || tr('See the source solution / teacher review', '원본 해설 또는 선생님 검토 확인')}</span>
               </p>
+              {canReview && r.manualReview && <div className="my-3 flex gap-3"><button disabled={saving} className={button} onClick={() => mark(r.id, true)}>{tr('Mark correct', '정답으로 채점')}</button><button disabled={saving} className={secondary} onClick={() => mark(r.id, false)}>{tr('Mark incorrect', '오답으로 채점')}</button></div>}
+              {r.reviewedBy && <p className="text-sm text-slate-500">{tr('Reviewed by', '검토한 선생님')}: {r.reviewedBy}</p>}
               <details className="mt-3">
                 <summary className="cursor-pointer text-indigo-700"><T>원본 문제와 해설 보기</T></summary>
                 {r.problemPdf ? <div className="flex gap-4 py-3"><a className="text-indigo-700 underline" href={r.problemPdf} target="_blank" rel="noreferrer"><T>Open problem PDF</T></a>{r.solutionPdf && <a className="text-indigo-700 underline" href={r.solutionPdf} target="_blank" rel="noreferrer"><T>Open solution PDF</T></a>}</div> : ["question", "solution"].map((type) => (
@@ -934,6 +960,7 @@ function Exercise({
       {questions.map((q) => (
         <section className={panel} key={q.id}>
           <h2 className="mb-4 text-lg font-semibold"><T>Question </T>{q.number}</h2>
+          {q.problemPdf && <a href={q.problemPdf} target="_blank" rel="noreferrer" className="text-indigo-700 underline"><T>Open problem PDF</T></a>}
           {q.questionImage && <Image
             src={q.questionImage.src}
             width={q.questionImage.width}
@@ -942,7 +969,11 @@ function Exercise({
             unoptimized
             className="h-auto w-full"
           />}
-          {q.choices ? <fieldset disabled={busy || !!pending} className="mt-4 flex gap-4"><legend><T>Your answer</T></legend>{q.choices.map((choice) => <label key={choice} className="rounded-lg border p-3"><input type="radio" name={q.id} value={choice} checked={answers[q.id] === choice} onChange={() => { setAnswers({ ...answers, [q.id]: choice }); setConfirmBlank(false); }} /> {choice}</label>)}</fieldset> : <label className="mt-4 block font-medium"><T>Your answer</T><input
+          {q.choices ? <fieldset disabled={busy || !!pending} className="mt-4 flex flex-wrap gap-4"><legend><T>Your answer</T>{q.multiple && ' · Select all that apply / 모두 선택'}</legend>{q.choices.map((choice) => <label key={choice} className="rounded-lg border p-3"><input type={q.multiple ? 'checkbox' : 'radio'} name={q.id} value={choice} checked={q.multiple ? (answers[q.id] || '').split(',').includes(choice) : answers[q.id] === choice} onChange={(e) => {
+            const old = (answers[q.id] || '').split(',').filter(Boolean);
+            const value = !q.multiple ? choice : !e.target.checked ? old.filter((c) => c !== choice).join(',') : choice === 'NONE' ? 'NONE' : [...old.filter((c) => c !== 'NONE'), choice].sort().join(',');
+            setAnswers({ ...answers, [q.id]: value }); setConfirmBlank(false);
+          }} /> {choice}</label>)}</fieldset> : <label className="mt-4 block font-medium"><T>Your answer</T><input
               aria-label={`Answer to question ${q.number}`}
               className={input}
               value={answers[q.id] || ""}

@@ -1,0 +1,2762 @@
+{
+  "4_PrefixInfixPostfix_IN": {
+    "2": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "5": {
+      "answer": "1",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "8": {
+      "answer": "13",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "9": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "12": {
+      "answer": "96",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "14": {
+      "answer": "1",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "16": {
+      "answer": "15",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "17": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "18": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "20": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "22": {
+      "answer": "13",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "24": {
+      "answer": "24",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "26": {
+      "answer": "-4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "28": {
+      "answer": "20",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "30": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "32": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    }
+  },
+  "5_BitStringFlicking_IN": {
+    "1": {
+      "answer": "00100",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "2": {
+      "answer": "0*01*",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "3": {
+      "answer": "00111",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "7": {
+      "answer": "01011",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "8": {
+      "answer": "01**1",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "9": {
+      "answer": "0001111100",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "10": {
+      "answer": "00011",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "11": {
+      "answer": "01111",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "12": {
+      "answer": "*011*",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "13": {
+      "answer": "11101",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "14": {
+      "answer": "1***0",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "15": {
+      "answer": "11011",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "16": {
+      "answer": "*101*",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "17": {
+      "answer": "11000",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "18": {
+      "answer": "1*10*",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "19": {
+      "answer": "10000",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "20": {
+      "answer": "011**",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "21": {
+      "answer": "10011",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "22": {
+      "answer": "10110",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "23": {
+      "answer": "01001",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "24": {
+      "answer": "00100",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "25": {
+      "answer": "00101",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "26": {
+      "answer": "11111",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "27": {
+      "answer": "10111",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "28": {
+      "answer": "11010",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "29": {
+      "answer": "10010",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "30": {
+      "answer": "10000",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "4": {
+      "answer": "EC5",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "5": {
+      "answer": "11011",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "6": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    }
+  },
+  "6_Lisp_IN": {
+    "1": {
+      "answer": "40",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "2": {
+      "answer": "(d f)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "3": {
+      "answer": "-10",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "4": {
+      "answer": "1296",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "5": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "6": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "7": {
+      "answer": "24",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "8": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "9": {
+      "answer": "27",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "10": {
+      "answer": "12",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "11": {
+      "answer": "a",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "12": {
+      "answer": "21",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "13": {
+      "answer": "(5 6)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "14": {
+      "answer": "20",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "15": {
+      "answer": "(3 (4))",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "16": {
+      "answer": "37",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "17": {
+      "answer": "(d)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "18": {
+      "answer": "45",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "19": {
+      "answer": "(a (b c))",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "7_BooleanAlgebra_IN": {
+    "7": {
+      "answer": "1",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "11": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "12": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "15": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "22": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "31": {
+      "answer": "1",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "33": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "35": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "37": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "39": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "41": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "3": {
+      "answer": "(1,1,0) (1,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "8": {
+      "answer": "(0,1) (1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "19": {
+      "answer": "(1,1,0) (1,0,0) (0,1,1) (0,0,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "21": {
+      "answer": "(1,1,0) (0,1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "24": {
+      "answer": "(1,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "27": {
+      "answer": "(1,0,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "29": {
+      "answer": "(1,0,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "36": {
+      "answer": "(1,0,1) (0,1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "40": {
+      "answer": "(1,1,1) (0,1,1) (0,1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "8_DataStructures_IN": {
+    "1": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "2": {
+      "answer": "T",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "3": {
+      "answer": "D",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "4": {
+      "answer": "30",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "5": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "6": {
+      "answer": "SNWH",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "7": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "8": {
+      "answer": "IL",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "9": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "10": {
+      "answer": "R",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "11": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "12": {
+      "answer": "A",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "13": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "14": {
+      "answer": "A",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "16": {
+      "answer": "E",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "17": {
+      "answer": "25",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "18": {
+      "answer": "R",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "19": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "20": {
+      "answer": "F",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "21": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "22": {
+      "answer": "N",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "23": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "24": {
+      "answer": "S",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "25": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "26": {
+      "answer": "I",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "27": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "28": {
+      "answer": "P",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "29": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "30": {
+      "answer": "U",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "31": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "32": {
+      "answer": "N",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "15": {
+      "answer": "E,D,L",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "9_RegularExpressions_IN": {
+    "1": {
+      "answer": "none",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "8": {
+      "answer": "D",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "10": {
+      "answer": "A",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "2": {
+      "answer": "B,C,D,F",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "4": {
+      "answer": "B,C,D",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "5": {
+      "answer": "A,B,C",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "6": {
+      "answer": "C,E,F",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "7": {
+      "answer": "A,E,F",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "9": {
+      "answer": "A,C,D,F",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "10_GraphTheory_IN": {
+    "1": {
+      "answer": "13",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "2": {
+      "answer": "B",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "3": {
+      "answer": "C",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "5": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "6": {
+      "answer": "19",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "8": {
+      "answer": "1",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "9": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "11": {
+      "answer": "11",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "12": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "13": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "14": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "16": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "17": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "18": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "19": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "20": {
+      "answer": "9",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "22": {
+      "answer": "32",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "24": {
+      "answer": "20",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "25": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "26": {
+      "answer": "64",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "28": {
+      "answer": "23",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "30": {
+      "answer": "D",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "11_DigitalElectronics_IN": {
+    "3": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "9": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "16": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "20": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "23": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "25": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "31": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "33": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "37": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "42": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "1": {
+      "answer": "(1,1,1) (0,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "4": {
+      "answer": "(1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "7": {
+      "answer": "(1,0,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "12": {
+      "answer": "(1,0,1) (0,0,1) (0,1,1) (0,1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "18": {
+      "answer": "(1,1,1) (0,1,1) (0,0,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "22": {
+      "answer": "(0,0,0) (0,0,1) (1,1,1) (0,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "24": {
+      "answer": "(1,1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "27": {
+      "answer": "(1,1,0) (0,1,0) (0,0,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "28": {
+      "answer": "(0,0,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "30": {
+      "answer": "(1,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "38": {
+      "answer": "(1,1,0) (1,0,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "41": {
+      "answer": "(1,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "12_AssemblyLanguage_IN": {
+    "1": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "2": {
+      "answer": "385",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "3": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "4": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "5": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    }
+  },
+  "1_ComputerNumberSystem_SR": {
+    "2": {
+      "answer": "12",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "9": {
+      "answer": "-144",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "20": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "21": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "29": {
+      "answer": "17",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "31": {
+      "answer": "63",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "36": {
+      "answer": "332",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "39": {
+      "answer": "340",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "1": {
+      "answer": "5637",
+      "mode": "number",
+      "base": 8,
+      "aliases": []
+    },
+    "3": {
+      "answer": "1111000001010101",
+      "mode": "number",
+      "base": 2,
+      "aliases": []
+    },
+    "4": {
+      "answer": "2D9",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "5": {
+      "answer": "10F",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "6": {
+      "answer": "FE01",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "7": {
+      "answer": "B,E",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "8": {
+      "answer": "36",
+      "mode": "number",
+      "base": 8,
+      "aliases": []
+    },
+    "10": {
+      "answer": "3FB",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "11": {
+      "answer": "D",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "12": {
+      "answer": "110",
+      "mode": "number",
+      "base": 2,
+      "aliases": []
+    },
+    "13": {
+      "answer": "A,4B",
+      "mode": "ordered",
+      "base": null,
+      "aliases": []
+    },
+    "14": {
+      "answer": "100",
+      "mode": "number",
+      "base": 2,
+      "aliases": []
+    },
+    "15": {
+      "answer": "11001",
+      "mode": "number",
+      "base": 2,
+      "aliases": []
+    },
+    "16": {
+      "answer": "111110A",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "17": {
+      "answer": "1",
+      "mode": "number",
+      "base": 2,
+      "aliases": []
+    },
+    "18": {
+      "answer": "B20",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "19": {
+      "answer": "235",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "22": {
+      "answer": "875A",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "23": {
+      "answer": "38D",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "24": {
+      "answer": "A,B",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "25": {
+      "answer": "A",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "26": {
+      "answer": "15ACE",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "27": {
+      "answer": "6EE6",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "28": {
+      "answer": "DEED",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "32": {
+      "answer": "8,-1",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "33": {
+      "answer": "203",
+      "mode": "number",
+      "base": 8,
+      "aliases": []
+    },
+    "34": {
+      "answer": "73B",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "35": {
+      "answer": "B6",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "37": {
+      "answer": "E",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "38": {
+      "answer": "6056",
+      "mode": "number",
+      "base": 8,
+      "aliases": []
+    },
+    "40": {
+      "answer": "400",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    }
+  },
+  "2_RecursiveFunctions_SR": {
+    "1": {
+      "answer": "15",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "2": {
+      "answer": "-10",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "3": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "4": {
+      "answer": "121",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "5": {
+      "answer": "18",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "6": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "7": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "8": {
+      "answer": "248",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "9": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "10": {
+      "answer": "96",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "11": {
+      "answer": "81",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "12": {
+      "answer": "-3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "13": {
+      "answer": "4279",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "14": {
+      "answer": "1535",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "15": {
+      "answer": "22",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "16": {
+      "answer": "13",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "18": {
+      "answer": "29",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "19": {
+      "answer": "-27",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "20": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "21": {
+      "answer": "-1",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "22": {
+      "answer": "-7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "23": {
+      "answer": "-2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "24": {
+      "answer": "33",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "25": {
+      "answer": "-28",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "26": {
+      "answer": "13",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "27": {
+      "answer": "32",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "28": {
+      "answer": "12",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "29": {
+      "answer": "64",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "30": {
+      "answer": "14",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    }
+  },
+  "3_WDTPD_Branch_SR": {
+    "1": {
+      "answer": "44",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "3": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "4": {
+      "answer": "4",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "5": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "6": {
+      "answer": "9",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "7": {
+      "answer": "-18",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "8": {
+      "answer": "3",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "9": {
+      "answer": "-26",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "10": {
+      "answer": "24",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "11": {
+      "answer": "-17",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "12": {
+      "answer": "11",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "2": {
+      "answer": "19",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "13": {
+      "answer": "16",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "14": {
+      "answer": "M",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "15": {
+      "answer": "AAAEEEEAEEL",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "4_PrefixInfixPostfix_SR": {
+    "2": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "3": {
+      "answer": "10",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "5": {
+      "answer": "10",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "8": {
+      "answer": "13",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "9": {
+      "answer": "12",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "11": {
+      "answer": "-11",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "14": {
+      "answer": "-12",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "16": {
+      "answer": "16",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "18": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "20": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "22": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "23": {
+      "answer": "22",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "25": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "27": {
+      "answer": "-24",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "30": {
+      "answer": "120",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "32": {
+      "answer": "22",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "4": {
+      "answer": "-4,6",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "5_BitStringFlicking_SR": {
+    "1": {
+      "answer": "11110",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "2": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "3": {
+      "answer": "00111",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "4": {
+      "answer": "0*1**",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "5": {
+      "answer": "11100",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "6": {
+      "answer": "01000",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "7": {
+      "answer": "11101",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "8": {
+      "answer": "1*00*",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "9": {
+      "answer": "0001111",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "10": {
+      "answer": "*0**1",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "12": {
+      "answer": "0111*",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "13": {
+      "answer": "10101",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "14": {
+      "answer": "01*0*",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "16": {
+      "answer": "1101*",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "17": {
+      "answer": "01111",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "18": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "19": {
+      "answer": "01111",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "20": {
+      "answer": "0*101",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "21": {
+      "answer": "11100",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "22": {
+      "answer": "1**01",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "23": {
+      "answer": "1*111",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "24": {
+      "answer": "00001",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "25": {
+      "answer": "00110",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "26": {
+      "answer": "0**0*",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "27": {
+      "answer": "01111",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "29": {
+      "answer": "1****",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "30": {
+      "answer": "11000",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "31": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "33": {
+      "answer": "01111",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "34": {
+      "answer": "00**1",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "35": {
+      "answer": "***00",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "11": {
+      "answer": "D93",
+      "mode": "number",
+      "base": 16,
+      "aliases": []
+    },
+    "15": {
+      "answer": "3547",
+      "mode": "number",
+      "base": 8,
+      "aliases": []
+    },
+    "28": {
+      "answer": "*1111",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    },
+    "32": {
+      "answer": "1110*,1000*",
+      "mode": "bitpattern",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "6_Lisp_SR": {
+    "1": {
+      "answer": "(2 (3))",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "2": {
+      "answer": "(K Q)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "3": {
+      "answer": "16",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "4": {
+      "answer": "(D E F)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "5": {
+      "answer": "\u2018((3 2))",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "6": {
+      "answer": "(5 (2 3))",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "7": {
+      "answer": "(1)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "8": {
+      "answer": "(2 1)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "9": {
+      "answer": "((2 3))",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "11": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "12": {
+      "answer": "(4 5)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "13": {
+      "answer": "12",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "14": {
+      "answer": "(2 1)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "15": {
+      "answer": "176",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "16": {
+      "answer": "(D E)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "17": {
+      "answer": "124",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "18": {
+      "answer": "\u2018(d c)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "19": {
+      "answer": "39",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "10": {
+      "answer": "22",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    },
+    "20": {
+      "answer": "(2)",
+      "mode": "lisp",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "7_BooleanAlgebra_SR": {
+    "12": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "17": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "18": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "24": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "28": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "30": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "34": {
+      "answer": "1",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "35": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "38": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "39": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "41": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "5": {
+      "answer": "C,E",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "3": {
+      "answer": "(0,0,0) (0,1,0) (1,1,0) (1,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "6": {
+      "answer": "(0,0,0) (0,0,1) (1,1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "8": {
+      "answer": "(0,0) (0,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "25": {
+      "answer": "(1,0,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "27": {
+      "answer": "(0,0,1) (1,0,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "33": {
+      "answer": "(0,1,0) (0,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "36": {
+      "answer": "(1,1,1) (0,0,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "21": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    }
+  },
+  "8_FSA_SR": {
+    "2": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "4": {
+      "answer": "D",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "5": {
+      "answer": "III",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "1": {
+      "answer": "B,D,E",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "6": {
+      "answer": "A,B,E",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "7": {
+      "answer": "A,C,E,F",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "8": {
+      "answer": "B,C,E,F",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "9": {
+      "answer": "A,C,D,F",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    }
+  },
+  "9_DataStructure_SR": {
+    "1": {
+      "answer": "16",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "2": {
+      "answer": "L",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "3": {
+      "answer": "25",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "4": {
+      "answer": "I",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "5": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "6": {
+      "answer": "I",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "7": {
+      "answer": "47",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "9": {
+      "answer": "45",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "10": {
+      "answer": "Y",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "11": {
+      "answer": "88",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "12": {
+      "answer": "G",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "13": {
+      "answer": "16",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "15": {
+      "answer": "28",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "16": {
+      "answer": "S",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "17": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "18": {
+      "answer": "N",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "19": {
+      "answer": "75",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "20": {
+      "answer": "C",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "21": {
+      "answer": "55",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "22": {
+      "answer": "S",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "23": {
+      "answer": "34",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "24": {
+      "answer": "A",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "25": {
+      "answer": "29",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "26": {
+      "answer": "A",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "27": {
+      "answer": "77",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "28": {
+      "answer": "O",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "29": {
+      "answer": "1",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "30": {
+      "answer": "BELLE",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "31": {
+      "answer": "38",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "32": {
+      "answer": "O",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "8": {
+      "answer": "A C G I I I L O N L S O I H C",
+      "mode": "letters",
+      "base": null,
+      "aliases": []
+    },
+    "14": {
+      "answer": "1",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    }
+  },
+  "10_GraphTheory_SR": {
+    "1": {
+      "answer": "9",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "3": {
+      "answer": "11",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "4": {
+      "answer": "45",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "5": {
+      "answer": "36",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "6": {
+      "answer": "15",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "7": {
+      "answer": "9",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "8": {
+      "answer": "36",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "9": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "10": {
+      "answer": "C",
+      "mode": "text",
+      "base": null,
+      "aliases": []
+    },
+    "11": {
+      "answer": "10",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "12": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "13": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "14": {
+      "answer": "36",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "15": {
+      "answer": "10",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "16": {
+      "answer": "49",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "17": {
+      "answer": "15",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "18": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "19": {
+      "answer": "19",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "21": {
+      "answer": "10",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "23": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "25": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "26": {
+      "answer": "24",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "27": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "29": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "30": {
+      "answer": "30",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "31": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    }
+  },
+  "11_DigitalElectronics_SR": {
+    "3": {
+      "answer": "2",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "8": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "10": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "11": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "13": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "16": {
+      "answer": "3",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "18": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "19": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "22": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "28": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "29": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "30": {
+      "answer": "1",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "33": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "37": {
+      "answer": "6",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "40": {
+      "answer": "8",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "43": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "27": {
+      "answer": "B,C,D",
+      "mode": "set",
+      "base": null,
+      "aliases": []
+    },
+    "1": {
+      "answer": "(0,0,1) (1,0,1) (1,1,0) (1,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "4": {
+      "answer": "(0,1,0) (1,1,0) (0,0,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "6": {
+      "answer": "(0,0,1) (0,1,1) (1,0,1) (1,1,1) (1,1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "7": {
+      "answer": "(0,1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "12": {
+      "answer": "(0,1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "15": {
+      "answer": "(0,0,0) (1,0,0) (1,1,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "21": {
+      "answer": "(0,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "23": {
+      "answer": "(0,0,0) (1,0,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "24": {
+      "answer": "(0,1,1,1) (0,0,1,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "26": {
+      "answer": "(0,1,0,1) (0,0,0,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "34": {
+      "answer": "(1,0,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "36": {
+      "answer": "(0,0,1) (0,1,1) (1,0,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "38": {
+      "answer": "(1,1,1) (1,0,1) (0,1,1) (0,0,1) (1,0,0) (0,0,0)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "41": {
+      "answer": "(0,0,1)",
+      "mode": "tuples",
+      "base": null,
+      "aliases": []
+    },
+    "31": {
+      "answer": "4",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    }
+  },
+  "12_AssemblyLanguage_SR": {
+    "1": {
+      "answer": "5",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "2": {
+      "answer": "385",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "3": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "4": {
+      "answer": "0",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    },
+    "5": {
+      "answer": "7",
+      "mode": "number",
+      "base": 10,
+      "aliases": []
+    }
+  }
+}

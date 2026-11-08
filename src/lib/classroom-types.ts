@@ -17,7 +17,10 @@ export type Result = {
   number: number;
   answer: string;
   correctAnswer: string;
-  correct: boolean;
+  correct: boolean | null;
+  reviewedBy?: string;
+  reviewedAt?: string;
+  manualReview?: boolean;
 };
 export type SavedAttempt = {
   id: string;
@@ -32,11 +35,13 @@ export type SavedAttempt = {
   score: number;
   total: number;
   percentage: number;
+  pendingCount?: number;
   results: Result[];
 };
 export type Classroom = {
   assignments?: import('./assignment-catalog').AssignedHomework[];
   assignmentManagement?: boolean;
+  worksheetReview?: boolean;
   member: Member;
   students: Member[];
   teachers: Member[];

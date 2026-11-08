@@ -9,6 +9,8 @@ import { PageHeader } from "@/components/ui";
 import { QuestionBank } from "@/components/question-bank";
 import { ContestLibrary } from "@/components/contest-library";
 import { contestPackets } from "@/lib/contest-packets";
+import worksheets from '@/data/imported-worksheets.json';
+import { WorksheetLibrary } from '@/components/worksheet-library';
 async function Content() {
   await connection();
   let classroom;
@@ -25,6 +27,7 @@ async function Content() {
         description="Browse official contest packets, practice with automatic grading, and manage custom questions."
       />
       <div className="mb-8"><ContestLibrary packets={contestPackets} /></div>
+      <WorksheetLibrary packets={worksheets.map((p) => ({ id: p.id, title: p.title, division: p.division, problemPdf: p.problemPdf, solutionPdf: p.solutionPdf, sourceNote: p.sourceNote, count: p.questions.length, reviewCount: p.questions.filter((q) => q.mode === 'manual').length }))} />
       <QuestionBank />
     </>
   );

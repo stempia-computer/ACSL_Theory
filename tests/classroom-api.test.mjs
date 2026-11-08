@@ -460,3 +460,47 @@ test('assigned problem sets: halves, access control, grading, retries and persis
   assert.equal(halves[0].length, 14); assert.equal(halves[1].length, 14);
   assert.equal(new Set(halves.flat()).size, 28);
 });
+
+test('imported worksheets: >40 questions, private assignments, pending review and staff grading', async () => {
+ const saved = await request(teacher,'saveStudent',{email:'worksheet@example.com',name:'Worksheet student',active:true,division:'Intermediate',grade:'10'});
+ assert.equal(saved.status,200);
+ const learner=saved.body.member;
+ const create={id:'assigned-'+randomUUID(),sourceId:'worksheet-intermediate-11',title:'Digital electronics',due:'2026-12-01',part:'all',studentIds:[learner.id]};
+ const assigned=await request(teacher,'createAssignment',create);
+ assert.equal(assigned.status,200,JSON.stringify(assigned.body));
+ assert.equal(assigned.body.assignment.questionIds.length,43);
+ const payload={id:randomUUID(),assignmentId:create.id,answers:Object.fromEntries(assigned.body.assignment.questionIds.map(id=>[id,'my response']))};
+ const submitted=await request(learner.email,'submit',payload);
+ assert.equal(submitted.status,200,JSON.stringify(submitted.body));
+ const attempt=submitted.body.attempt;
+ assert.ok(attempt.pendingCount>0);
+ const pending=attempt.results.find(r=>r.correct===null);
+ const marking={attemptId:attempt.id,questionId:pending.id,correct:true};
+ assert.equal((await request(learner.email,'reviewAnswer',marking)).status,403);
+ const result=await request(teacher,'reviewAnswer',marking);
+ assert.equal(result.status,200,JSON.stringify(result.body));
+ assert.equal(result.body.attempt.score,1);
+ assert.equal(result.body.attempt.pendingCount,attempt.pendingCount-1);
+ assert.equal(result.body.attempt.results.find(r=>r.id===pending.id).reviewedBy,teacher);
+ assert.equal((await request(teacher,'reviewAnswer',marking)).body.attempt.score,1);
+ assert.equal((await request(teacher,'reviewAnswer',{...marking,correct:false})).body.attempt.score,0);
+ assert.ok(!(await request(other)).body.attempts.some(a=>a.id===attempt.id));
+ assert.equal((await request(learner.email)).body.attempts.find(a=>a.id===attempt.id).pendingCount,attempt.pendingCount-1);
+ // A student's retry must retain the teacher's saved decision.
+ assert.equal((await request(learner.email,'submit',payload)).body.attempt.pendingCount,attempt.pendingCount-1);
+ const halves=[];
+ for(const part of ['first','second']){
+  const r=await request(teacher,'createAssignment',{...create,id:'assigned-'+randomUUID(),part});
+  assert.equal(r.status,200);halves.push(r.body.assignment.questionIds);
+ }
+ assert.deepEqual(halves.map(h=>h.length),[22,21]);assert.equal(new Set(halves.flat()).size,43);
+ const regex=await request(teacher,'createAssignment',{...create,id:'assigned-'+randomUUID(),sourceId:'worksheet-intermediate-09',title:'Regular expressions'});
+ const html=await(await fetch(base+'/assignments/'+regex.body.assignment.id,{headers:{Cookie:await cookie(learner.email)}})).text();
+ assert.ok(html.includes('type="checkbox"'));assert.ok(!html.includes('worksheet-pdfs/9_RegularExpressions_IN_Sol.pdf'));
+ if(process.env.ACSL_BROWSER_TEST){
+  const child=spawn('python',['tests/helpers/worksheet-browser.py',base,await cookie(teacher),await cookie(learner.email),regex.body.assignment.id],{stdio:['ignore','pipe','pipe']});
+  let output='';child.stdout.on('data',b=>output+=b);child.stderr.on('data',b=>output+=b);
+  const [code]=await once(child,'exit');assert.equal(code,0,output);console.log(output.trim());
+ }
+
+});

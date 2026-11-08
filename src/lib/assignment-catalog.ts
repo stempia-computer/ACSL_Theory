@@ -1,12 +1,14 @@
 import { contestPackets } from './contest-packets';
 import { worksheetQuestions, type WorksheetAssignment } from './worksheet-data';
 import type { Member } from './classroom-types';
+import importedWorksheets from '@/data/imported-worksheets.json';
 
 export type AssignedHomework = WorksheetAssignment & {
   sourceId: string; studentIds: string[]; createdBy: string;
 };
 const divisions = ['classroom', 'junior', 'intermediate', 'senior'];
 export const assignmentCatalog = [
+  ...importedWorksheets.map((p) => ({ id: p.id, title: p.title, division: p.division, kind: 'Worksheet', questionIds: p.questions.map((q) => q.id), reviewCount: p.questions.filter((q) => q.mode === 'manual').length, sourceNote: p.sourceNote })),
   ...divisions.flatMap((division) => {
     const questions = worksheetQuestions.filter((q) => q.id.startsWith(division + '-'));
     return questions.length ? [{ id: 'worksheet-' + division + '-cns', title: `${division[0].toUpperCase() + division.slice(1)} · Computer Number Systems`, division, kind: 'Worksheet', questionIds: questions.map((q) => q.id) }] : [];
@@ -18,7 +20,12 @@ export const assignmentCatalog = [
 ];
 export function assignedQuestions(assignment: Pick<AssignedHomework, 'sourceId' | 'questionIds'>) {
   const packet = contestPackets.find((p) => p.id === assignment.sourceId);
+  const imported = importedWorksheets.find((p) => p.id === assignment.sourceId);
   return assignment.questionIds.map((id) => {
+    const item = imported?.questions.find((q) => q.id === id);
+    if (imported && item) return { ...item, questionImage: undefined, choices: item.choices || undefined, multiple: !!item.choices,
+      hint: `${item.heading}${item.mode === 'manual' ? ' · Teacher review required / 선생님 검토 필요' : item.mode === 'tuples' ? ' · Enter tuples, e.g. (0,1,0), (1,1,0)' : item.mode === 'bitpattern' ? ' · Use * for either bit; separate patterns with commas' : item.mode === 'set' ? ' · Separate answers with commas' : ''}`,
+      problemPdf: `${imported.problemPdf}#page=${item.page}`, solutionPdf: item.solutionPage ? `${imported.solutionPdf}#page=${item.solutionPage}` : undefined };
     const worksheet = worksheetQuestions.find((q) => q.id === id);
     if (worksheet) return { ...worksheet, choices: undefined, problemPdf: undefined, solutionPdf: undefined };
     const q = packet?.questions.find((q) => `${packet.id}:q${q.number}` === id);
