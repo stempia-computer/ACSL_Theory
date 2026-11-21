@@ -93,3 +93,21 @@ manifest. Never derive arbitrary grading keys from PDF instructions.
 | Senior | 10 | 32 | 26 | 6 |
 | Senior | 11 | 43 | 32 | 11 |
 | Senior | 12 | 5 | 5 | 0 |
+
+## Classroom and other recipient divisions
+
+The assignment builder defaults to **Worksheets by topic**, with separate
+**Student division**, **Material division**, and **Contest** controls. Teachers
+can explicitly assign Intermediate originals to Classroom or Junior students;
+the source title and PDF remain labeled Intermediate. The saved assignment's
+division is the recipient division, and only the selected student IDs receive it.
+Existing API requests without a recipient division retain same-division behavior.
+
+The supplied Intermediate files cover all nine Contest 2–4 topics. Chapter 4–6
+are grouped under Contest 2, 7–9 under Contest 3, and 10–12 under Contest 4,
+regardless of the historical contest number printed on individual exercises.
+Sample Contest links are not imported as worksheets. Existing past-contest papers
+remain separately selectable. `/assignment` redirects to `/assignments`.
+
+The 18 PDFs resupplied on November 20, 2026 (Pacific time) were SHA-256 identical
+to the existing imported files; no duplicate problem sets were created.

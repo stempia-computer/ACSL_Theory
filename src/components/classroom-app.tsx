@@ -844,7 +844,7 @@ function Review({
                 {r.problemPdf ? <div className="flex gap-4 py-3"><a className="text-indigo-700 underline" href={r.problemPdf} target="_blank" rel="noreferrer"><T>Open problem PDF</T></a>{r.solutionPdf && <a className="text-indigo-700 underline" href={r.solutionPdf} target="_blank" rel="noreferrer"><T>Open solution PDF</T></a>}</div> : ["question", "solution"].map((type) => (
                   <Image
                     key={type}
-                    src={`/worksheets/${attempt.division.toLowerCase()}/${type}-${String(r.number).padStart(2, "0")}.png`}
+                    src={`/worksheets/${r.id.match(/^(junior|intermediate|senior)-cns-/)?.[1] || attempt.division.toLowerCase()}/${type}-${String(r.number).padStart(2, "0")}.png`}
                     alt={`${type} ${r.number}`}
                     width={1200}
                     height={600}

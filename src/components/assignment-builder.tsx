@@ -3,12 +3,15 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from './language';
 import type { Member } from '@/lib/classroom-types';
-type Source = { id: string; title: string; division: string; kind: string; questionIds: string[]; reviewCount?: number; sourceNote?: string };
+type Source = { id: string; title: string; division: string; kind: string; contest: string; questionIds: string[]; reviewCount?: number; sourceNote?: string };
 export function AssignmentBuilder({ students, catalog, enabled, reviewEnabled }: { students: Member[]; catalog: Source[]; enabled: boolean; reviewEnabled: boolean }) {
   const { language } = useLanguage();
   const tr = (en: string, ko: string) => language === 'ko' ? ko : en;
   const router = useRouter();
   const [division, setDivision] = useState('junior');
+  const [materialDivision, setMaterialDivision] = useState('');
+  const [kind, setKind] = useState('Worksheet');
+  const [contest, setContest] = useState('');
   const [sourceId, setSource] = useState('');
   const [part, setPart] = useState('all');
   const [title, setTitle] = useState('');
@@ -18,12 +21,13 @@ export function AssignmentBuilder({ students, catalog, enabled, reviewEnabled }:
   const [notice, setNotice] = useState('');
   const [pending, setPending] = useState<Record<string, unknown> | null>(null);
   const source = catalog.find((s) => s.id === sourceId);
+  const visible = catalog.filter((s) => s.kind === kind && (!materialDivision || s.division === materialDivision) && (!contest || s.contest === contest));
   const eligible = students.filter((s) => s.active && s.division?.toLowerCase() === division);
   const count = source ? part === 'all' ? source.questionIds.length : part === 'first' ? Math.ceil(source.questionIds.length / 2) : Math.floor(source.questionIds.length / 2) : 0;
   const input = 'w-full rounded-lg border bg-white p-3';
   async function submit(event: React.FormEvent) {
     event.preventDefault(); if (busy) return;
-    const payload = pending || { id: 'assigned-' + crypto.randomUUID(), sourceId, part, title, due, studentIds: ids };
+    const payload = pending || { id: 'assigned-' + crypto.randomUUID(), sourceId, division, part, title, due, studentIds: ids };
     setPending(payload); setBusy(true); setNotice('');
     try {
       const r = await fetch('/api/classroom', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'createAssignment', data: payload }) });
@@ -36,13 +40,21 @@ export function AssignmentBuilder({ students, catalog, enabled, reviewEnabled }:
     {enabled && !reviewEnabled && <p role="alert" className="mb-4 text-amber-800">{tr('Update Apps Script to enable the new worksheets and teacher grading.', '새 워크시트와 선생님 채점을 사용하려면 Apps Script를 업데이트하세요.')} <a className="underline" href="/google-sheets-setup">{tr('Setup guide', '설정 안내')}</a></p>}
     {!enabled ? <p role="alert">{tr('Update the Apps Script from Google Sheets setup and deploy a new version to enable assignment management.', '과제 배정을 사용하려면 Google Sheets 연결 안내의 Apps Script를 업데이트하고 새 버전으로 배포하세요.')} <a href="/google-sheets-setup" className="text-indigo-700 underline">{tr('Setup guide', '설정 안내')}</a></p> : <form onSubmit={submit} className="space-y-4">
       <fieldset disabled={busy || !!pending} className="space-y-4 disabled:opacity-60">
-        <label className="block">Division<select className={input} value={division} onChange={(e) => { setDivision(e.target.value); setSource(''); setIds([]); }}>
+        <label className="block">{tr('Student division', '배정할 학생 디비전')}<select aria-label="Student division" className={input} value={division} onChange={(e) => { setDivision(e.target.value); setIds([]); }}>
           {['classroom','junior','intermediate','senior'].map((d) => <option key={d} value={d}>{d[0].toUpperCase()+d.slice(1)}</option>)}
         </select></label>
+        <p className="text-sm text-slate-600">{tr('You may assign a worksheet from another division. Its original division is shown in the title.', '다른 디비전의 워크시트도 배정할 수 있습니다. 자료의 원래 디비전은 제목에 표시됩니다.')}</p>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <label>{tr('Material type', '자료 유형')}<select aria-label="Material type" className={input} value={kind} onChange={(e) => { setKind(e.target.value); setSource(''); setContest(''); }}><option value="Worksheet">{tr('Worksheets by topic', '단원별 워크시트')}</option><option value="Contest">{tr('Past contest papers', '기출 대회 문제')}</option></select></label>
+          <label>{tr('Material division', '자료 디비전')}<select aria-label="Material division" className={input} value={materialDivision} onChange={(e) => { setMaterialDivision(e.target.value); setSource(''); }}><option value="">{tr('All material divisions', '모든 자료 디비전')}</option>{['classroom','junior','intermediate','senior'].map((d) => <option key={d} value={d}>{d[0].toUpperCase()+d.slice(1)}</option>)}</select></label>
+          <label>Contest<select aria-label="Worksheet contest" className={input} value={contest} onChange={(e) => { setContest(e.target.value); setSource(''); }}><option value="">{tr('All contests', '전체 Contest')}</option>{[1,2,3,4].map((n) => <option key={n} value={`contest-${n}`}>Contest {n}</option>)}{kind === 'Contest' && <option value="all-star">All-Star</option>}</select></label>
+        </div>
         <label className="block">{tr('Problem set title', '문제집 제목')}<select aria-label="Problem set title" required className={input} value={sourceId} onChange={(e) => { setSource(e.target.value); setTitle(catalog.find((s) => s.id === e.target.value)?.title || ''); setPart('all'); }}>
           <option value="">{tr('Choose a problem set', '문제집 선택')}</option>
-          {catalog.filter((s) => s.division === division).map((s) => <option disabled={s.reviewCount !== undefined && !reviewEnabled} key={s.id} value={s.id}>{s.kind} · {s.title} ({s.questionIds.length})</option>)}
+          {visible.map((s) => <option disabled={s.reviewCount !== undefined && !reviewEnabled} key={s.id} value={s.id}>{s.title} ({s.questionIds.length})</option>)}
         </select></label>
+        {!visible.length && <p role="status">{tr('No uploaded worksheets match these filters. Try another material division.', '이 조건에 맞는 등록 자료가 없습니다. 자료 디비전을 바꿔 보세요.')}</p>}
+        {source && source.division !== division && <p className="text-indigo-700">{tr(`Using ${source.division} material for ${division} students.`, `${source.division} 자료를 ${division} 학생에게 배정합니다.`)}</p>}
         {!!source?.reviewCount && <p className="text-amber-800">{tr(`${source.reviewCount} questions in this set need teacher review. Other questions are automatically graded.`, `이 문제집의 ${source.reviewCount}문제는 선생님 검토가 필요합니다. 나머지는 자동 채점됩니다.`)}</p>}
         {source?.sourceNote && <p className="text-amber-800">{source.sourceNote}</p>}
         <label className="block">{tr('Question range', '문제 범위')}<select aria-label="Question range" className={input} value={part} onChange={(e) => setPart(e.target.value)}>

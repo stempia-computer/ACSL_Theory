@@ -504,3 +504,31 @@ test('imported worksheets: >40 questions, private assignments, pending review an
  }
 
 });
+
+test('all uploaded Contest 2–4 topics can be assigned to Classroom students using Intermediate originals', async () => {
+ const saved=await request(teacher,'saveStudent',{email:'classroom-worksheets@example.com',name:'Classroom worksheets',active:true,division:'Classroom',grade:'9'});
+ assert.equal(saved.status,200);const learner=saved.body.member;
+ const create={id:'assigned-'+randomUUID(),sourceId:'worksheet-intermediate-04',division:'classroom',title:'Classroom prefix practice',due:'2026-12-01',part:'first',studentIds:[learner.id]};
+ assert.equal((await request(student,'createAssignment',create)).status,403);
+ assert.equal((await request(teacher,'createAssignment',{...create,division:'junior'})).status,400);
+ for(const chapter of [4,5,6,7,8,9,10,11,12]){
+  const r=await request(teacher,'createAssignment',{...create,id:'assigned-'+randomUUID(),sourceId:'worksheet-intermediate-'+String(chapter).padStart(2,'0')});
+  assert.equal(r.status,200,JSON.stringify(r.body));assert.equal(r.body.assignment.division,'classroom');
+ }
+ const assigned=await request(teacher,'createAssignment',create);
+ assert.equal(assigned.status,200);
+ const submitted=await request(learner.email,'submit',{id:randomUUID(),assignmentId:create.id,answers:{'worksheet-intermediate-04:q2':'3'}});
+ assert.equal(submitted.status,200,JSON.stringify(submitted.body));assert.equal(submitted.body.attempt.score,1);
+ assert.equal(submitted.body.attempt.division,'classroom');
+ assert.ok(submitted.body.attempt.results[1].problemPdf.includes('4_PrefixInfixPostfix_IN.pdf'));
+ assert.ok(!(await request(student)).body.assignments.some(a=>a.id===create.id));
+ const html=await(await fetch(base+'/assignments/'+create.id,{headers:{Cookie:await cookie(learner.email)}})).text();
+ assert.ok(html.includes('Answer to question 2'));
+ const alias=await fetch(base+'/assignment',{redirect:'manual'});
+ assert.equal(alias.status,307);assert.equal(alias.headers.get('location'),'/assignments');
+ if(process.env.ACSL_BROWSER_TEST){
+  const child=spawn('python',['tests/helpers/worksheet-catalog-browser.py',base,await cookie(teacher),await cookie(learner.email)],{stdio:['ignore','pipe','pipe']});
+  let output='';child.stdout.on('data',b=>output+=b);child.stderr.on('data',b=>output+=b);
+  const [code]=await once(child,'exit');assert.equal(code,0,output);console.log(output.trim());
+ }
+});

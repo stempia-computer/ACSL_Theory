@@ -8,13 +8,13 @@ export type AssignedHomework = WorksheetAssignment & {
 };
 const divisions = ['classroom', 'junior', 'intermediate', 'senior'];
 export const assignmentCatalog = [
-  ...importedWorksheets.map((p) => ({ id: p.id, title: p.title, division: p.division, kind: 'Worksheet', questionIds: p.questions.map((q) => q.id), reviewCount: p.questions.filter((q) => q.mode === 'manual').length, sourceNote: p.sourceNote })),
+  ...importedWorksheets.map((p) => ({ id: p.id, title: p.title, division: p.division, kind: 'Worksheet', contest: `contest-${Math.ceil(p.chapter / 3)}`, questionIds: p.questions.map((q) => q.id), reviewCount: p.questions.filter((q) => q.mode === 'manual').length, sourceNote: p.sourceNote })),
   ...divisions.flatMap((division) => {
     const questions = worksheetQuestions.filter((q) => q.id.startsWith(division + '-'));
-    return questions.length ? [{ id: 'worksheet-' + division + '-cns', title: `${division[0].toUpperCase() + division.slice(1)} · Computer Number Systems`, division, kind: 'Worksheet', questionIds: questions.map((q) => q.id) }] : [];
+    return questions.length ? [{ id: 'worksheet-' + division + '-cns', title: `${division[0].toUpperCase() + division.slice(1)} · Computer Number Systems`, division, kind: 'Worksheet', contest: 'contest-1', questionIds: questions.map((q) => q.id) }] : [];
   }),
   ...contestPackets.filter((p) => p.questions.every((q) => q.correctAnswer)).map((p) => ({
-    id: p.id, title: p.title, division: p.division.toLowerCase(), kind: 'Contest',
+    id: p.id, title: p.title, division: p.division.toLowerCase(), kind: 'Contest', contest: p.contest,
     questionIds: p.questions.map((q) => `${p.id}:q${q.number}`),
   })),
 ];
@@ -38,18 +38,21 @@ export function assignedQuestions(assignment: Pick<AssignedHomework, 'sourceId' 
 export function createHomework(value: unknown, students: Member[], email: string): AssignedHomework {
   const d = value as Record<string, unknown>;
   const source = assignmentCatalog.find((s) => s.id === d?.sourceId);
-  if (!source || typeof d.title !== 'string' || !d.title.trim() || d.title.length > 160 ||
+  // The material keeps its original division; teachers explicitly choose the recipient division.
+  // Omitted division preserves the previous API behavior for existing clients.
+  const targetDivision = d?.division === undefined ? source?.division : d.division;
+  if (!source || typeof targetDivision !== 'string' || !divisions.includes(targetDivision) || typeof d.title !== 'string' || !d.title.trim() || d.title.length > 160 ||
     typeof d.id !== 'string' || !/^assigned-[0-9a-f-]{36}$/i.test(d.id) ||
     typeof d.due !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(d.due) || !Number.isFinite(Date.parse(d.due)) ||
     !['all', 'first', 'second'].includes(String(d.part)) || !Array.isArray(d.studentIds) || !d.studentIds.length ||
     new Set(d.studentIds).size !== d.studentIds.length ||
-    d.studentIds.some((id) => !students.some((s) => s.id === id && s.active && s.division?.toLowerCase() === source.division)))
+    d.studentIds.some((id) => !students.some((s) => s.id === id && s.active && s.division?.toLowerCase() === targetDivision)))
     throw new Error('Check the title, due date and students.');
   const middle = Math.ceil(source.questionIds.length / 2);
   const ids = d.part === 'first' ? source.questionIds.slice(0, middle) : d.part === 'second' ? source.questionIds.slice(middle) : source.questionIds;
   if (!ids.length) throw new Error('No questions selected.');
   const numbers = assignedQuestions({ sourceId: source.id, questionIds: ids }).map((q) => q.number);
-  return { id: d.id, sourceId: source.id, title: d.title.trim(), division: source.division,
+  return { id: d.id, sourceId: source.id, title: d.title.trim(), division: targetDivision,
     due: d.due, questionIds: ids, first: Math.min(...numbers), last: Math.max(...numbers),
     studentIds: d.studentIds as string[], createdBy: email };
 }

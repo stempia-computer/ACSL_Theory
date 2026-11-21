@@ -104,6 +104,7 @@ with sync_playwright() as p:
  archive_page.get_by_role('button',name='Submit and grade',exact=True).click()
  archive_page.get_by_text('0 / 6',exact=False).wait_for()
  archive_page.goto(base+'/assignments')
+ archive_page.get_by_label('Material type',exact=True).select_option('Contest')
  archive_page.get_by_label('Problem set title',exact=True).select_option('2425-contest-1-jr')
  archive_page.get_by_label('Question range',exact=True).select_option('first')
  archive_page.get_by_label('Assignment title',exact=True).fill('Browser assigned contest')
